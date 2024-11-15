@@ -11,15 +11,15 @@ class CustomLbl: UILabel {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupButton()
+        setupLabel()
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setupButton()
+        setupLabel()
     }
 
-    private func setupButton() {
+    private func setupLabel() {
         self.font = UIFont(name: "CircularStd-Medium", size: 16)
         self.layer.cornerRadius = 10
     }

@@ -20,7 +20,6 @@ class SecondBtn: UIButton {
     }
 
     private func setupButton() {
-        self.titleLabel?.font = UIFont(name: "CircularStd-Medium", size: 15)
-        self.layer.cornerRadius = 10
+        self.titleLabel?.font = UIFont(name: "CircularStd-Bold", size: 13)
     }
 }
