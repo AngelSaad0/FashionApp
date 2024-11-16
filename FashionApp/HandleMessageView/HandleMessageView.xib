@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HandleMessageView" customModule="FashionApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="606" height="431"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bell" translatesAutoresizingMaskIntoConstraints="NO" id="3ml-ay-dui">
+                    <rect key="frame" x="253" y="77.333333333333329" width="100" height="99.999999999999986"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="kxJ-XF-ETA"/>
+                        <constraint firstAttribute="height" constant="100" id="vce-fc-eg8"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="No Notification yet" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoc-G0-2sD" customClass="GabaritoFontLbl24">
+                    <rect key="frame" x="207.33333333333337" y="201.33333333333334" width="191.66666666666663" height="28.666666666666657"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYv-Bm-udq" customClass="ContinueBtn" customModule="FashionApp" customModuleProvider="target">
+                    <rect key="frame" x="219" y="254" width="168" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="KsY-3q-f3n"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Explore Categories" cornerStyle="capsule">
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="baseBackgroundColor" name="#8E6CEF"/>
+                    </buttonConfiguration>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="qoc-G0-2sD" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="CYO-LE-Sh0"/>
+                <constraint firstItem="qoc-G0-2sD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Hy2-4R-MaW"/>
+                <constraint firstItem="qoc-G0-2sD" firstAttribute="top" secondItem="3ml-ay-dui" secondAttribute="bottom" constant="24" id="VWe-bZ-Gd9"/>
+                <constraint firstItem="YYv-Bm-udq" firstAttribute="top" secondItem="qoc-G0-2sD" secondAttribute="bottom" constant="24" id="c63-Dg-aee"/>
+                <constraint firstItem="3ml-ay-dui" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="i1A-Xf-2hK"/>
+                <constraint firstItem="YYv-Bm-udq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="itB-io-jSC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="147" y="-6"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bell" width="100" height="100"/>
+        <namedColor name="#8E6CEF">
+            <color red="0.55699998140335083" green="0.42399999499320984" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

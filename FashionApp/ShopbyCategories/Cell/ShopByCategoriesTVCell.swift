@@ -28,7 +28,7 @@ class ShopByCategoriesTVCell: UITableViewCell {
     }
 
     func config(_ item: CategoryModel) {
-        itemTitle.text = item.image
+        itemTitle.text = item.title
         itemImg.image = UIImage(named: item.image)
     }
 
