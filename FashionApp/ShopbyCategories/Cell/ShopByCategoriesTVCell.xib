@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="127" id="KGk-i7-Jjw" customClass="ShopByCategoriesTVCell" customModule="FashionApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="454" height="127"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="454" height="127"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0pA-tO-Qw1">
+                        <rect key="frame" x="24" y="4" width="406" height="119"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Accessories" translatesAutoresizingMaskIntoConstraints="NO" id="XxI-rN-OLs">
+                                <rect key="frame" x="12" y="39.666666666666664" width="40" height="39.999999999999993"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="958-q1-NQR"/>
+                                    <constraint firstAttribute="width" constant="40" id="yKw-qB-W17"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accessories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5L-sj-NNV">
+                                <rect key="frame" x="68" y="50.333333333333336" width="338" height="18.666666666666664"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="backButtonColor"/>
+                        <constraints>
+                            <constraint firstItem="D5L-sj-NNV" firstAttribute="centerY" secondItem="XxI-rN-OLs" secondAttribute="centerY" id="5z2-XF-x3w"/>
+                            <constraint firstItem="XxI-rN-OLs" firstAttribute="leading" secondItem="0pA-tO-Qw1" secondAttribute="leading" constant="12" id="GHE-Pm-zHk"/>
+                            <constraint firstItem="D5L-sj-NNV" firstAttribute="leading" secondItem="XxI-rN-OLs" secondAttribute="trailing" constant="16" id="di4-19-Um3"/>
+                            <constraint firstAttribute="trailing" secondItem="D5L-sj-NNV" secondAttribute="trailing" id="dzg-Qd-gDI"/>
+                            <constraint firstItem="XxI-rN-OLs" firstAttribute="centerY" secondItem="0pA-tO-Qw1" secondAttribute="centerY" id="pJ8-tp-9EJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="0pA-tO-Qw1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="EBW-qR-ZeY"/>
+                    <constraint firstItem="0pA-tO-Qw1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="NPH-fY-BOk"/>
+                    <constraint firstAttribute="bottom" secondItem="0pA-tO-Qw1" secondAttribute="bottom" constant="4" id="Pfr-oN-NV8"/>
+                    <constraint firstAttribute="trailing" secondItem="0pA-tO-Qw1" secondAttribute="trailing" constant="24" id="h2q-gx-h2a"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backView" destination="0pA-tO-Qw1" id="bSB-QS-Txa"/>
+                <outlet property="itemImg" destination="XxI-rN-OLs" id="snt-iv-ygW"/>
+                <outlet property="itemTitle" destination="D5L-sj-NNV" id="Vxc-KP-aNR"/>
+            </connections>
+            <point key="canvasLocation" x="190.83969465648855" y="-133.45070422535213"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Accessories" width="57" height="56"/>
+        <namedColor name="backButtonColor">
+            <color red="0.9570000171661377" green="0.9570000171661377" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

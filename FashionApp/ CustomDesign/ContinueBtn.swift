@@ -21,7 +21,7 @@ class ContinueBtn: UIButton {
     }
 
     private func setupButton() {
-        self.titleLabel?.font = UIFont(name: "CircularStd-Medium", size: 16)
+        self.titleLabel?.font = UIFont(name: "CircularStd-Book", size: 16)
         self.layer.cornerRadius = 24
     }
 }
