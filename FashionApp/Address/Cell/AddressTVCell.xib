@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="232" id="KGk-i7-Jjw" customClass="AddressTVCell" customModule="FashionApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="452" height="232"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="452" height="232"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="87C-ey-Ij4">
+                        <rect key="frame" x="24" y="6" width="404" height="220"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2715 Ash Dr. San Jose, South" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8F-Vg-6BN">
+                                <rect key="frame" x="16" y="100" width="307" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7j-OV-zsW">
+                                <rect key="frame" x="353" y="99.666666666666671" width="35" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="DoY-2q-lof"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" name="#8E6CEF"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="backButtonColor"/>
+                        <constraints>
+                            <constraint firstItem="N7j-OV-zsW" firstAttribute="leading" secondItem="m8F-Vg-6BN" secondAttribute="trailing" constant="30" id="9Dl-VR-Bx7"/>
+                            <constraint firstItem="N7j-OV-zsW" firstAttribute="centerY" secondItem="87C-ey-Ij4" secondAttribute="centerY" id="ERg-Gd-Hah"/>
+                            <constraint firstItem="m8F-Vg-6BN" firstAttribute="centerY" secondItem="87C-ey-Ij4" secondAttribute="centerY" id="a1I-dl-Dc2"/>
+                            <constraint firstItem="m8F-Vg-6BN" firstAttribute="leading" secondItem="87C-ey-Ij4" secondAttribute="leading" constant="16" id="iVq-ih-xjq"/>
+                            <constraint firstAttribute="trailing" secondItem="N7j-OV-zsW" secondAttribute="trailing" constant="16" id="z41-na-CUC"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="87C-ey-Ij4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="7SM-3j-gmC"/>
+                    <constraint firstAttribute="bottom" secondItem="87C-ey-Ij4" secondAttribute="bottom" constant="6" id="7h3-oP-8vG"/>
+                    <constraint firstAttribute="trailing" secondItem="87C-ey-Ij4" secondAttribute="trailing" constant="24" id="X2Q-0R-1Mn"/>
+                    <constraint firstItem="87C-ey-Ij4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="ffD-OD-Qcb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addressLbl" destination="m8F-Vg-6BN" id="nOb-Ul-sTN"/>
+                <outlet property="backImg" destination="87C-ey-Ij4" id="ji8-Uz-dUd"/>
+                <outlet property="editLbl" destination="N7j-OV-zsW" id="cAk-mL-6CQ"/>
+            </connections>
+            <point key="canvasLocation" x="239.69465648854961" y="-67.605633802816911"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="#8E6CEF">
+            <color red="0.55699998140335083" green="0.42399999499320984" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="backButtonColor">
+            <color red="0.9570000171661377" green="0.9570000171661377" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

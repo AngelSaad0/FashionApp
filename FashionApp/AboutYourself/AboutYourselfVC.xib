@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -15,7 +15,14 @@
                 <outlet property="arrowImg" destination="o9G-JH-oni" id="6pl-9f-BvN"/>
                 <outlet property="dropdownButton" destination="gPV-Yl-SDi" id="uYw-QR-rt2"/>
                 <outlet property="roundedView" destination="F57-WX-OYF" id="ySE-05-gPE"/>
+                <outlet property="titleLbl" destination="pOR-wL-hVF" id="BjI-Bi-EA3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="lbls" destination="cm5-B3-iWy" collectionClass="NSMutableArray" id="EXU-XO-mrI"/>
+                <outletCollection property="lbls" destination="JbG-fM-xNn" collectionClass="NSMutableArray" id="TNs-5i-fBB"/>
+                <outletCollection property="lbls" destination="D7j-Oe-q6a" collectionClass="NSMutableArray" id="CaK-q7-Wc0"/>
+                <outletCollection property="btns" destination="HeT-OA-HdA" collectionClass="NSMutableArray" id="FYm-Q5-QFI"/>
+                <outletCollection property="btns" destination="pTN-mt-vIU" collectionClass="NSMutableArray" id="LAq-W0-pjN"/>
+                <outletCollection property="btns" destination="3IA-F5-o0W" collectionClass="NSMutableArray" id="dfW-FI-dDE"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -23,7 +30,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us About yourself" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOR-wL-hVF" customClass="LogoLabel" customModule="FashionApp" customModuleProvider="target">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us About yourself" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOR-wL-hVF">
                     <rect key="frame" x="24" y="161" width="229" height="28"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                     <nil key="textColor"/>
@@ -84,7 +91,7 @@
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowdown" translatesAutoresizingMaskIntoConstraints="NO" id="o9G-JH-oni">
                             <rect key="frame" x="305" y="16" width="24" height="24"/>
-                            <color key="tintColor" name="#272727"/>
+                            <color key="backgroundColor" name="#F4F4F4"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="24" id="2Bh-Y8-cnB"/>
                                 <constraint firstAttribute="width" constant="24" id="oyj-Fp-3pm"/>
@@ -102,7 +109,13 @@
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPV-Yl-SDi" userLabel="dropdownButton">
                     <rect key="frame" x="24" y="430.66666666666669" width="345" height="56"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
                     <connections>
                         <action selector="dropdownButtonCliked:" destination="-1" eventType="touchUpInside" id="ttY-zJ-V3X"/>
                     </connections>
@@ -118,10 +131,13 @@
                     <state key="normal" title="Finish">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="finishBtnClicked:" destination="-1" eventType="touchUpInside" id="CNh-Cr-OOS"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="#1D182A"/>
             <constraints>
                 <constraint firstItem="pOR-wL-hVF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="8Cn-5X-b4v"/>
                 <constraint firstItem="gPV-Yl-SDi" firstAttribute="trailing" secondItem="F57-WX-OYF" secondAttribute="trailing" id="94i-Bt-Vt6"/>
@@ -148,6 +164,9 @@
     </objects>
     <resources>
         <image name="arrowdown" width="72" height="72"/>
+        <namedColor name="#1D182A">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="#272727">
             <color red="0.15299999713897705" green="0.15299999713897705" blue="0.15299999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -159,9 +178,6 @@
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

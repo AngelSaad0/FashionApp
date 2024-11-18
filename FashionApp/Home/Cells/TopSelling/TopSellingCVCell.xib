@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TopSellingCVCell" customModule="FashionApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="439" height="596"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="439" height="596"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topsell3" translatesAutoresizingMaskIntoConstraints="NO" id="jg3-95-Oha">
+                        <rect key="frame" x="0.0" y="0.0" width="439" height="531.66666666666663"/>
+                        <color key="backgroundColor" name="#1D182A"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Men's Harrington Jacket" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfW-i4-ccZ">
+                        <rect key="frame" x="4" y="539.66666666666663" width="431" height="20.333333333333371"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$148.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qH1-3K-j6h">
+                        <rect key="frame" x="4" y="568" width="431" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="12" id="ZYm-wj-AlU"/>
+                            <constraint firstAttribute="height" constant="12" id="znu-U2-Unu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAO-fM-rD1">
+                        <rect key="frame" x="400" y="9" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="WbR-mg-fwL"/>
+                            <constraint firstAttribute="height" constant="25" id="gKg-eI-9gC"/>
+                        </constraints>
+                        <color key="tintColor" systemColor="labelColor"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system">
+                            <color key="baseForegroundColor" name="heartColor"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="favoriteBtnClicked:" destination="gTV-IL-0wX" eventType="touchUpInside" id="dZz-IR-ECg"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="VAO-fM-rD1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="9" id="8DR-8K-hkn"/>
+                <constraint firstAttribute="trailing" secondItem="VAO-fM-rD1" secondAttribute="trailing" constant="14" id="9Sc-cc-T5B"/>
+                <constraint firstItem="jg3-95-Oha" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Cxg-d1-LV1"/>
+                <constraint firstItem="vfW-i4-ccZ" firstAttribute="top" secondItem="jg3-95-Oha" secondAttribute="bottom" constant="8" id="GIV-3w-Fbp"/>
+                <constraint firstAttribute="trailing" secondItem="qH1-3K-j6h" secondAttribute="trailing" constant="4" id="HZE-tp-u9X"/>
+                <constraint firstAttribute="bottom" secondItem="qH1-3K-j6h" secondAttribute="bottom" constant="16" id="LYm-1g-7Fk"/>
+                <constraint firstItem="qH1-3K-j6h" firstAttribute="top" secondItem="vfW-i4-ccZ" secondAttribute="bottom" constant="8" id="ghG-JC-Ret"/>
+                <constraint firstAttribute="trailing" secondItem="vfW-i4-ccZ" secondAttribute="trailing" constant="4" id="l8Q-Rm-pBG"/>
+                <constraint firstItem="jg3-95-Oha" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nqy-tb-gnj"/>
+                <constraint firstAttribute="trailing" secondItem="jg3-95-Oha" secondAttribute="trailing" id="uGa-Tj-fwR"/>
+                <constraint firstItem="qH1-3K-j6h" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="xz5-Ka-l3z"/>
+                <constraint firstItem="vfW-i4-ccZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="zL2-Xb-s47"/>
+            </constraints>
+            <size key="customSize" width="439" height="596"/>
+            <connections>
+                <outlet property="itemImg" destination="jg3-95-Oha" id="Eft-wy-I5S"/>
+                <outlet property="itemPrice" destination="qH1-3K-j6h" id="M97-06-BXV"/>
+                <outlet property="itemTitle" destination="vfW-i4-ccZ" id="JZT-L0-TeM"/>
+            </connections>
+            <point key="canvasLocation" x="86.25954198473282" y="-3.5211267605633805"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="topsell3" width="159" height="220"/>
+        <namedColor name="#1D182A">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="heartColor">
+            <color red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

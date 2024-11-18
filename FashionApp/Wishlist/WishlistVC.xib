@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WishlistVC" customModule="FashionApp" customModuleProvider="target">
+            <connections>
+                <outlet property="tableview" destination="cAP-8s-m87" id="Opf-oy-1uo"/>
+                <outlet property="titleLbl" destination="b7d-uK-SZz" id="DbI-lS-tJe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wishlist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7d-uK-SZz">
+                    <rect key="frame" x="166.66666666666666" y="74.666666666666671" width="59.666666666666657" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="19" id="ar3-il-9vK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfh-4C-3ns">
+                    <rect key="frame" x="27" y="64" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="0S8-kQ-fog"/>
+                        <constraint firstAttribute="width" constant="40" id="mOb-Sr-GbN"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="backButton" cornerStyle="capsule">
+                        <color key="baseForegroundColor" systemColor="labelColor"/>
+                        <color key="baseBackgroundColor" name="backButtonColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="backBtnClicked:" destination="-1" eventType="touchUpInside" id="Mbm-YS-Sjj"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cAP-8s-m87">
+                    <rect key="frame" x="0.0" y="127.66666666666669" width="393" height="656.33333333333326"/>
+                    <color key="backgroundColor" name="#1D182A"/>
+                    <color key="sectionIndexBackgroundColor" name="#1D182A"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="#1D182A"/>
+            <constraints>
+                <constraint firstItem="Wfh-4C-3ns" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="27" id="2Xw-Mc-S7c"/>
+                <constraint firstItem="cAP-8s-m87" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4xd-a5-KN0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cAP-8s-m87" secondAttribute="bottom" constant="34" id="OFN-ok-blQ"/>
+                <constraint firstItem="b7d-uK-SZz" firstAttribute="centerY" secondItem="Wfh-4C-3ns" secondAttribute="centerY" id="W7n-bE-muK"/>
+                <constraint firstItem="Wfh-4C-3ns" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="ZdJ-LL-VXX"/>
+                <constraint firstItem="b7d-uK-SZz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="f9L-c3-9Hb"/>
+                <constraint firstItem="cAP-8s-m87" firstAttribute="top" secondItem="b7d-uK-SZz" secondAttribute="bottom" constant="34" id="gmb-tE-w9o"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cAP-8s-m87" secondAttribute="trailing" id="owg-rw-Ucb"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="-1"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backButton" width="16" height="16"/>
+        <namedColor name="#1D182A">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="backButtonColor">
+            <color red="0.9570000171661377" green="0.9570000171661377" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

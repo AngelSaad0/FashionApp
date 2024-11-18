@@ -24,18 +24,23 @@ class ShopByCategoriesNameVC: UIViewController {
         collectionView.register(UINib(nibName: "TopSellingCVCell", bundle: nil), forCellWithReuseIdentifier: "TopSellingCVCell")
     }
 
+    @IBAction func backBtnClicked(_ sender: UIButton) {
+        dismissDetail()
+    }
+    
+
+
     func setupDumyData() {
         collectionItems = [
-            TopSellingModel(title: "Men's Harrington Jacket", price: "$148.00", image: "topsell1"),
-            TopSellingModel(title: "Men's Casual T-Shirt", price: "$14.00", image: "topsell2"),
-            TopSellingModel(title: "Unisex Hoodie", price: "$18.00", image: "topsell3"),
-            TopSellingModel(title: "Leather Wallet", price: "$349.00", image: "topsell4"),
-            TopSellingModel(title: "Classic Cap", price: "$50.00", image: "topsell5"),
-            TopSellingModel(title: "Men's Harrington Jacket", price: "$148.00", image: "topsell6"),
-            TopSellingModel(title: "Men's Casual T-Shirt", price: "$14.00", image: "topsell7"),
-            TopSellingModel(title: "Unisex Hoodie", price: "$18.00", image: "topsell8"),
-            TopSellingModel(title: "Leather Wallet", price: "$349.00", image: "topsell9"),
-            TopSellingModel(title: "Unisex Hoodie", price: "$18.00", image: "topsell3"),
+            TopSellingModel(title: "Men's Harrington Jacket", price: "$148.00", image: "topsell1", color: "Lemon", size: "M"),
+                TopSellingModel(title: "Men's Casual T-Shirt", price: "$14.00", image: "topsell2", color: "White", size: "L"),
+                TopSellingModel(title: "Unisex Hoodie", price: "$18.00", image: "topsell3", color: "Black", size: "XL"),
+                TopSellingModel(title: "Leather Wallet", price: "$349.00", image: "topsell4", color: "Brown", size: "One Size"),
+                TopSellingModel(title: "Classic Cap", price: "$50.00", image: "topsell5", color: "Navy Blue", size: "Adjustable"),
+                TopSellingModel(title: "Men's Harrington Jacket", price: "$148.00", image: "topsell6", color: "Lemon", size: "M"),
+                TopSellingModel(title: "Men's Casual T-Shirt", price: "$14.00", image: "topsell7", color: "Grey", size: "M"),
+                TopSellingModel(title: "Unisex Hoodie", price: "$18.00", image: "topsell8", color: "Red", size: "L"),
+                TopSellingModel(title: "Leather Wallet", price: "$349.00", image: "topsell9", color: "Black", size: "One Size")
         ]
     }
 

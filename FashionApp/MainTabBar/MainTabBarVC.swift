@@ -18,10 +18,10 @@ class MainTabBarVC: UITabBarController {
     // MARK: -  setup UI for Main TabBar
     private func setupUI() {
         let homeVC = createViewController(for: HomeVC.self, image: "home")
-        let orderVC = createViewController(for: OrdersVC.self, image: "order")
         let notificationVC = createViewController(for: NotificationsVC.self, image:"note")
+        let orderVC = createViewController(for: OrdersVC.self, image: "order")
         let accountVC = createViewController(for: AccountVC.self, image:"account")
-        viewControllers = [homeVC, orderVC, notificationVC,accountVC]
+        viewControllers = [homeVC, notificationVC, orderVC, accountVC]
     }
 
     // MARK: -  create ViewController

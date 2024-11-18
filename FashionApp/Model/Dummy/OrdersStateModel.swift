@@ -8,6 +8,5 @@
 import Foundation
 struct OrdersStateModel {
     var state: Bool
-    let title: String
-    let action:(()->())?
+    let stateTitle: Status
 }

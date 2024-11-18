@@ -9,21 +9,24 @@ import UIKit
 
 class ResetPasswordVC: UIViewController {
 
+    @IBOutlet var returnToLogin: UIButton!
+    @IBOutlet var messageLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
 
-        // Do any additional setup after loading the view.
     }
 
 
-    /*
-    // MARK: - Navigation
+    func setupUI() {
+        returnToLogin.setCircularFont(size: 24)
+        returnToLogin.setCircularFont(size: 16)
+        returnToLogin.layer.cornerRadius = 20
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
 
+    @IBAction func returnToLoginBtn(_ sender: Any) {
+        UIWindow.setRootViewController(viewController: SignInVC())
+    }
 }

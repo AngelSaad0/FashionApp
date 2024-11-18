@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ny-u6-n1Q">
-                    <rect key="frame" x="39" y="75" width="40" height="40"/>
+                    <rect key="frame" x="27" y="63" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="JKN-fS-AbX"/>
                         <constraint firstAttribute="width" constant="40" id="slv-BV-xh6"/>
@@ -30,29 +30,32 @@
                         <color key="baseForegroundColor" systemColor="labelColor"/>
                         <color key="baseBackgroundColor" name="backButtonColor"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="backBtnClicked:" destination="-1" eventType="touchUpInside" id="yhi-md-1Mn"/>
+                    </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shop by Categories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBc-La-BZG" customClass="GabaritoFontLbl26" customModule="FashionApp" customModuleProvider="target">
-                    <rect key="frame" x="24" y="131" width="202.66666666666666" height="28.666666666666657"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shop by Categories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBc-La-BZG">
+                    <rect key="frame" x="24" y="119.00000000000001" width="202.66666666666666" height="28.666666666666671"/>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="y6o-6y-ZSg">
-                    <rect key="frame" x="0.0" y="174.99999999999994" width="393" height="627"/>
+                    <rect key="frame" x="0.0" y="163.66666666666669" width="393" height="638.33333333333326"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="5Ny-u6-n1Q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="27" id="4zn-Y4-lmE"/>
                 <constraint firstItem="EBc-La-BZG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="dGd-Kw-nUu"/>
                 <constraint firstItem="EBc-La-BZG" firstAttribute="top" secondItem="5Ny-u6-n1Q" secondAttribute="bottom" constant="16" id="e0Y-CD-WEg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="y6o-6y-ZSg" secondAttribute="trailing" id="gQJ-Z0-zd4"/>
-                <constraint firstItem="5Ny-u6-n1Q" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="75" id="gvd-f1-rjU"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="y6o-6y-ZSg" secondAttribute="bottom" constant="16" id="mFS-Pm-z3h"/>
                 <constraint firstItem="y6o-6y-ZSg" firstAttribute="top" secondItem="EBc-La-BZG" secondAttribute="bottom" constant="16" id="nMK-cK-gT2"/>
                 <constraint firstItem="y6o-6y-ZSg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oaO-QT-3Xs"/>
-                <constraint firstItem="5Ny-u6-n1Q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="39" id="r3C-50-Ioa"/>
+                <constraint firstItem="5Ny-u6-n1Q" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="63" id="wQ0-5T-e5P"/>
             </constraints>
             <point key="canvasLocation" x="-292.36641221374043" y="-1.4084507042253522"/>
         </view>
