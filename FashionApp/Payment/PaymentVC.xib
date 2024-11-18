@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentVC" customModule="FashionApp" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="J8M-Xh-AHu" id="2LK-aO-MnN"/>
+                <outlet property="titleLbl" destination="b7d-uK-SZz" id="RhR-pp-aT0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -38,15 +40,26 @@
                         <color key="baseForegroundColor" systemColor="labelColor"/>
                         <color key="baseBackgroundColor" name="backButtonColor"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="backBtnClicked:" destination="-1" eventType="touchUpInside" id="P2b-Ee-Kxg"/>
+                    </connections>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="J8M-Xh-AHu">
+                    <rect key="frame" x="0.0" y="113.66666666666669" width="393" height="684.33333333333326"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Wfh-4C-3ns" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="27" id="2Xw-Mc-S7c"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="J8M-Xh-AHu" secondAttribute="bottom" constant="20" id="L04-F8-eBc"/>
+                <constraint firstItem="J8M-Xh-AHu" firstAttribute="top" secondItem="b7d-uK-SZz" secondAttribute="bottom" constant="20" id="UvG-KF-awC"/>
                 <constraint firstItem="b7d-uK-SZz" firstAttribute="centerY" secondItem="Wfh-4C-3ns" secondAttribute="centerY" id="W7n-bE-muK"/>
                 <constraint firstItem="Wfh-4C-3ns" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="ZdJ-LL-VXX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="J8M-Xh-AHu" secondAttribute="trailing" id="d6m-DT-jP2"/>
                 <constraint firstItem="b7d-uK-SZz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="f9L-c3-9Hb"/>
+                <constraint firstItem="J8M-Xh-AHu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="med-PQ-7Ma"/>
             </constraints>
             <point key="canvasLocation" x="132" y="-1"/>
         </view>

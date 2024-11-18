@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProductDetailsCVCell" customModule="FashionApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="235" height="221"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="235" height="221"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9oc-UT-zA8">
+                        <rect key="frame" x="0.0" y="0.0" width="235" height="221"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topsell2" translatesAutoresizingMaskIntoConstraints="NO" id="f4Y-3k-EKd">
+                                <rect key="frame" x="2" y="2" width="231" height="217"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="#1D182A"/>
+                        <constraints>
+                            <constraint firstItem="f4Y-3k-EKd" firstAttribute="top" secondItem="9oc-UT-zA8" secondAttribute="top" constant="2" id="15a-Ju-Dri"/>
+                            <constraint firstAttribute="trailing" secondItem="f4Y-3k-EKd" secondAttribute="trailing" constant="2" id="Dqk-1Z-ByS"/>
+                            <constraint firstAttribute="bottom" secondItem="f4Y-3k-EKd" secondAttribute="bottom" constant="2" id="JIX-fS-tjU"/>
+                            <constraint firstItem="f4Y-3k-EKd" firstAttribute="leading" secondItem="9oc-UT-zA8" secondAttribute="leading" constant="2" id="tcx-w3-hCh"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" name="#1D182A"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="9oc-UT-zA8" secondAttribute="trailing" id="GHo-Pn-uLB"/>
+                <constraint firstItem="9oc-UT-zA8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="NM1-sh-6dL"/>
+                <constraint firstItem="9oc-UT-zA8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="auO-VZ-ems"/>
+                <constraint firstAttribute="bottom" secondItem="9oc-UT-zA8" secondAttribute="bottom" id="yii-WK-zxh"/>
+            </constraints>
+            <size key="customSize" width="235" height="221"/>
+            <connections>
+                <outlet property="img" destination="f4Y-3k-EKd" id="p6j-vX-Pgl"/>
+            </connections>
+            <point key="canvasLocation" x="77.099236641221367" y="-40.492957746478872"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="topsell2" width="161" height="220"/>
+        <namedColor name="#1D182A">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

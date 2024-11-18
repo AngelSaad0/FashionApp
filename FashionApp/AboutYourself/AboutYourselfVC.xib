@@ -60,7 +60,7 @@
                                 </attributedString>
                             </state>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTN-mt-vIU" customClass="ContinueBtn" customModule="FashionApp" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTN-mt-vIU">
                             <rect key="frame" x="182.66666666666663" y="0.0" width="162.33333333333337" height="52"/>
                             <color key="backgroundColor" name="#F4F4F4"/>
                             <state key="normal" title="Button"/>
@@ -120,7 +120,7 @@
                         <action selector="dropdownButtonCliked:" destination="-1" eventType="touchUpInside" id="ttY-zJ-V3X"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3IA-F5-o0W" customClass="ContinueBtn" customModule="FashionApp" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3IA-F5-o0W">
                     <rect key="frame" x="24" y="736" width="345" height="52"/>
                     <color key="backgroundColor" name="#8E6CEF"/>
                     <constraints>

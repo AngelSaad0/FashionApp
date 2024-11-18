@@ -10,6 +10,7 @@ enum Message {
     case order
     case search
     case sentEmail
+    case emptyCart
 
     var details: (title: String, icon: String) {
         switch self {
@@ -21,6 +22,8 @@ enum Message {
             return ("Sorry, we couldn't find any matching result for your Search.", "search")
         case .sentEmail:
             return ("We Sent you an Email to reset your password.", "sentEmail")
+        case .emptyCart:
+            return ("Your Cart is Empty","parcel")
         }
     }
     var actionTitle: String {

@@ -8,6 +8,8 @@
 import UIKit
 
 class CartVC: UIViewController {
+
+    @IBOutlet var mainView: UIView!
     @IBOutlet var tableView: UITableView!
 
     @IBOutlet var tileLbl: UILabel!
@@ -22,8 +24,21 @@ class CartVC: UIViewController {
     @IBOutlet var taxLbl: UILabel!
     @IBOutlet var totalLbl: UILabel!
     @IBOutlet var allLbLFonts: [UILabel]!
-    var cartArray:[TopSellingModel] = []
+    var cartArray:[Products] = [] {
+        didSet{
+            handelEmptyTable()
+        }
+    }
     var dummyOrderSummary:OrderSummary?
+
+    lazy var messageView: HandleMessageView = {
+        let  messageHeight: CGFloat = 300
+        let centerMainView = UIScreen.main.bounds.height/2 - messageHeight/2
+        let view = HandleMessageView(frame: CGRect(x: 0, y: centerMainView, width: UIScreen.main.bounds.width, height: messageHeight))
+        view.confige(HandleMessageModel(message: .emptyCart, action: {}))
+
+        return view
+    }()
 
 
     override func viewDidLoad() {
@@ -48,12 +63,15 @@ class CartVC: UIViewController {
         var subtotal = 0.0
         for item in cartArray {
             if let price = Double(item.price.replacingOccurrences(of: "$", with: "")) {
-                subtotal += price * Double(item.quantity)
+                subtotal += price * Double(item.quantity ?? Int(0.0))
             }
         }
 
         let tax = subtotal * 0.03
-        let shippingCost = 8.00
+        var shippingCost = 8.00
+        if cartArray.isEmpty{
+            shippingCost = 0.0
+        }
         let total = subtotal + tax + shippingCost
 
         dummyOrderSummary = OrderSummary(subtotal: subtotal, shippingCost: shippingCost, tax: tax, total: total)
@@ -76,37 +94,46 @@ class CartVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "CartTVCell", bundle: nil), forCellReuseIdentifier: "CartTVCell")
+        recalculateOrderSummary()
     }
 
 
     @IBAction func removeAllBtnClicked(_ sender: Any) {
+        cartArray.removeAll()
+        tableView.reloadData()
+        recalculateOrderSummary()
+    }
+
+
+
+
+    @IBAction func BackBtnClicked(_ sender: Any) {
+        dismissDetail()
     }
 
 
     @IBAction func checkoutBtnClicked(_ sender: Any) {
+        presentDetail(CheckoutVC())
     }
-
-
-
-
-
+    
+    func handelEmptyTable () {
+        if cartArray.isEmpty {
+            if !view.subviews.contains(messageView) {
+                view.addSubview(messageView)
+            }
+            mainView.isHidden = true
+        } else {
+            messageView.removeFromSuperview()
+            mainView.isHidden = false
+        }
+    }
 
 }
 
 
 extension CartVC {
     func setupDummyData() {
-        cartArray = [
-            TopSellingModel(title: "Men's Harrington Jacket", price: "$148.00", image: "topsell1", color: "Lemon", size: "M"),
-            TopSellingModel(title: "Men's Casual T-Shirt", price: "$14.00", image: "topsell2", color: "White", size: "L"),
-            TopSellingModel(title: "Unisex Hoodie", price: "$18.00", image: "topsell3", color: "Black", size: "XL"),
-            TopSellingModel(title: "Leather Wallet", price: "$349.00", image: "topsell4", color: "Brown", size: "One Size"),
-            TopSellingModel(title: "Classic Cap", price: "$50.00", image: "topsell5", color: "Navy Blue", size: "Adjustable"),
-            TopSellingModel(title: "Men's Harrington Jacket", price: "$148.00", image: "topsell6", color: "Lemon", size: "M"),
-            TopSellingModel(title: "Men's Casual T-Shirt", price: "$14.00", image: "topsell7", color: "Grey", size: "M"),
-            TopSellingModel(title: "Unisex Hoodie", price: "$18.00", image: "topsell8", color: "Red", size: "L"),
-            TopSellingModel(title: "Leather Wallet", price: "$349.00", image: "topsell9", color: "Black", size: "One Size")
-        ]
+
         dummyOrderSummary = OrderSummary(
             subtotal: 200.00,
             shippingCost: 8.00,
@@ -137,6 +164,11 @@ extension CartVC : UITableViewDelegate,UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         88
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        cartArray.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .fade)
+        tableView.reloadData()
     }
 
 

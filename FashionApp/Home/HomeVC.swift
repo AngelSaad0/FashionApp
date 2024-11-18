@@ -13,8 +13,6 @@ class HomeVC: UIViewController{
     @IBOutlet var collectionView: UICollectionView!
 
     var catagoryCollection:[CategoryModel] = []
-    var topSellingCollection: [TopSellingModel] = []
-    var newInCollection: [TopSellingModel] = []
     var sectionTitle: [HomeHeaderModel] = []
 
     override func viewDidLoad() {
@@ -44,9 +42,9 @@ extension HomeVC : UICollectionViewDelegate,UICollectionViewDataSource {
         case 0 :
             return catagoryCollection.count
         case 1 :
-            return topSellingCollection.count
+            return productsList.count
         default:
-            return newInCollection.count
+            return productsList.count
         }
     }
 
@@ -59,14 +57,23 @@ extension HomeVC : UICollectionViewDelegate,UICollectionViewDataSource {
 
         case 1 :
             let cellB = collectionView.dequeueReusableCell(withReuseIdentifier: "TopSellingCVCell", for: indexPath) as! TopSellingCVCell
-            cellB.config(topSellingCollection[indexPath.row])
+            cellB.config(productsList[indexPath.row])
             return cellB
 
         default:
             let cellC = collectionView.dequeueReusableCell(withReuseIdentifier: "TopSellingCVCell", for: indexPath) as! TopSellingCVCell
-            cellC.config(newInCollection[indexPath.row])
+            cellC.config(productsList[indexPath.row])
             return cellC
         }
+
+
+
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc  = ProductDetailsVC()
+        vc.detatails = productsList[indexPath.row]
+        collectionView.deselectItem(at: [indexPath.row], animated: true)
+        presentDetail(vc)
     }
 
     
@@ -191,24 +198,6 @@ extension HomeVC {
             CategoryModel(title: "Accessories", image: "Accessories"),
         ]
 
-        topSellingCollection = [
-            TopSellingModel(title: "Men's Harrington Jacket", price: "$148.00", image: "topsell1"),
-            TopSellingModel(title: "Men's Casual T-Shirt", price: "$14.00", image: "topsell2"),
-            TopSellingModel(title: "Unisex Hoodie", price: "$18.00", image: "topsell3"),
-            TopSellingModel(title: "Leather Wallet", price: "$349.00", image: "topsell4"),
-            TopSellingModel(title: "Classic Cap", price: "$50.00", image: "topsell5"),
-            TopSellingModel(title: "Men's Harrington Jacket", price: "$148.00", image: "topsell6"),
-            TopSellingModel(title: "Men's Casual T-Shirt", price: "$14.00", image: "topsell7"),
-            TopSellingModel(title: "Unisex Hoodie", price: "$18.00", image: "topsell8"),
-            TopSellingModel(title: "Leather Wallet", price: "$349.00", image: "topsell9"),
-        ]
-        newInCollection =  [
-            TopSellingModel(title: "Classic Cap", price: "$50.00", image: "topsell5"),
-            TopSellingModel(title: "Leather Wallet", price: "$349.00", image: "topsell4"),
-            TopSellingModel(title: "Unisex Hoodie", price: "$18.00", image: "topsell3"),
-            TopSellingModel(title: "Men's Harrington Jacket", price: "$148.00", image: "topsell1"),
-            TopSellingModel(title: "Men's Casual T-Shirt", price: "$14.00", image: "topsell2"),
-        ]
 
     }
 

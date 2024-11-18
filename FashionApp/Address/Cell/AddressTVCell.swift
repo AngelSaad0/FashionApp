@@ -30,6 +30,7 @@ class AddressTVCell: UITableViewCell {
     }
 
     func config(_ item: String) {
+        addressLbl.text = item
 
     }
 

@@ -37,7 +37,7 @@ class TopSellingCVCell: UICollectionViewCell {
         sender.setImage(UIImage(systemName: imagName), for: .normal)
     }
     
-    func config(_ item: TopSellingModel) {
+    func config(_ item: Products) {
 
         itemTitle.text = item.title
         itemPrice.text = item.price
