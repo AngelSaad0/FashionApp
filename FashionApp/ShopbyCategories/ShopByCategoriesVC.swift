@@ -8,10 +8,12 @@
 import UIKit
 
 class ShopByCategoriesVC: UIViewController {
+    @IBOutlet var titleLbl: UILabel!
     @IBOutlet var tableView: UITableView!
     var catagoryItems: [CategoryModel] = catagoryDummyData
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleLbl.setCustomFont(font: .GabaritoBold, size: 32)
         setupTableView()
     }
 
@@ -30,7 +32,7 @@ extension ShopByCategoriesVC: UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { catagoryItems.count }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueTVCell(index: indexPath) as ShopByCategoriesTVCell
+        let cell = tableView.dequeueTVCell(index: indexPath, cell: ShopByCategoriesTVCell.self)
         cell.config(catagoryItems[indexPath.row])
         return cell
     }

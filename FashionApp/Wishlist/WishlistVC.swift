@@ -38,7 +38,7 @@ extension WishlistVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { wishlistData.count }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueTVCell(index: indexPath) as WishlistTVCell
+        let cell = tableView.dequeueTVCell(index: indexPath,cell: WishlistTVCell.self)
         cell.config(wishlistData[indexPath.row])
         return cell
     }

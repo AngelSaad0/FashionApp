@@ -106,6 +106,9 @@ class ProductDetailsVC: UIViewController {
     @IBAction func backBtnCliked(_ sender: Any) {
         dismissDetail()
     }
+
+    @IBAction func addToBagBtnClicked(_ sender: Any) {
+    }
     
 }
 
@@ -115,9 +118,9 @@ extension ProductDetailsVC :UICollectionViewDelegate,UICollectionViewDataSource,
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell  = collectionView.dequeueCVCell(for: indexPath) as ProductDetailsCVCell
-        cell.img.image  = UIImage(named: images[indexPath.row])
-        return cell
+        let cell  = collectionView.dequeueCVCell(for: indexPath,cell: ProductDetailsCVCell.self)
+        cell?.img.image  = UIImage(named: images[indexPath.row])
+        return cell ?? UICollectionViewCell()
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -137,7 +140,7 @@ extension ProductDetailsVC: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueTVCell(index: indexPath) as! ProductReviewCell
+        let cell = tableView.dequeueTVCell(index: indexPath,cell: ProductReviewCell.self)
         cell.config(detatails!.reviews[indexPath.row])
         return cell
     }

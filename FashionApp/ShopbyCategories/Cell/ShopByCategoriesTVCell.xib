@@ -57,6 +57,7 @@ ories</string>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="#1D182A"/>
             <connections>
                 <outlet property="backView" destination="0pA-tO-Qw1" id="bSB-QS-Txa"/>
                 <outlet property="itemImg" destination="XxI-rN-OLs" id="snt-iv-ygW"/>

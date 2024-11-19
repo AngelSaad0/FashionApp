@@ -10,6 +10,8 @@ import UIKit
 class HomeHeaderReusable: UICollectionReusableView {
 
     @IBOutlet weak var lblSectionHeader: UILabel!
+
+    @IBOutlet var seeAllBtn: UIButton!
     var action:(()->())?
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,7 +19,12 @@ class HomeHeaderReusable: UICollectionReusableView {
 
     func config(_ item: HomeHeaderModel) {
         lblSectionHeader.text = item.title.rawValue
+        lblSectionHeader.setCustomFont(font: .GabaritoBold, size: 16)
+        seeAllBtn.setCustomFont(font: .GabaritoBold, size: 16)
         action = item.action
+        if item.title == .NewIn {
+            lblSectionHeader.textColor = ._8_E_6_CEF
+        }
     }
     @IBAction func seeBtnCliked(_ sender: UIButton) {
         action?()

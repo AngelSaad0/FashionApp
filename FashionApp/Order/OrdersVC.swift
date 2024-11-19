@@ -81,7 +81,7 @@ extension OrdersVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueCVCell(for: indexPath) as OrdersCVCell
+        let cell = collectionView.dequeueCVCell(for: indexPath,cell: OrdersCVCell.self)!
         cell.confige(statuses[indexPath.row])
         return cell
     }
@@ -112,7 +112,7 @@ extension OrdersVC: UITableViewDelegate , UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueTVCell(index: indexPath) as! OrdersTVCell
+        let cell = tableView.dequeueTVCell(index: indexPath,cell: OrdersTVCell.self)
         cell.config(filltersOrders[indexPath.row])
         return cell
     }

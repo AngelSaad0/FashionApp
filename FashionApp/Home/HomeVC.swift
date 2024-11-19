@@ -8,16 +8,25 @@
 
 import UIKit
 
-class HomeVC: UIViewController{
-
+class HomeVC: UIViewController {
+    @IBOutlet var searchBar: UISearchBar!
+    @IBOutlet var genderLbl: UILabel!
+    @IBOutlet var gendeBtn: UIButton!
+    @IBOutlet var arrowImg: UIImageView!
     @IBOutlet var collectionView: UICollectionView!
+    let options = [ "Woman","Man", "Kids", "All"]
+    var isDropdownVisible = false
+
     var catagoryCollection:[CategoryModel]  = catagoryDummyData
     var sectionTitle: [HomeHeaderModel] = []
+    lazy var dropdownTableView = UITableView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         setupDummyData()
         setupCollection()
+        setupDropdownTableView()
     }
 
     @IBAction func accountBtnClicked(_ sender: Any) {
@@ -27,8 +36,56 @@ class HomeVC: UIViewController{
     @IBAction func cartBtnClicked(_ sender: Any) {
         presentDetail(CartVC())
     }
+
+    @IBAction func genderBtnClicked(_ sender: Any) {
+        toggleDropdown()
+    }
+
 }
 extension HomeVC {
+
+    private func setupUI() {
+        genderLbl.setCustomFont(font: .GabaritoBold, size: 15)
+    }
+
+    private func setupTapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(selectGenderTapped))
+        view.addGestureRecognizer(tapGesture)
+    }
+
+    @objc func selectGenderTapped() {
+        if isDropdownVisible {
+            toggleDropdown()
+        }
+    }
+
+    private func setupDropdownTableView() {
+        dropdownTableView.delegate = self
+        dropdownTableView.dataSource = self
+        dropdownTableView.isHidden = true
+        dropdownTableView.separatorStyle = .none
+        dropdownTableView.layer.borderColor = UIColor.lightGray.cgColor
+        dropdownTableView.backgroundColor = ._1_D_182_A
+        dropdownTableView.layer.borderWidth = 1
+        dropdownTableView.layer.cornerRadius = 8
+        view.addSubview(dropdownTableView)
+        dropdownTableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            dropdownTableView.topAnchor.constraint(equalTo: gendeBtn.bottomAnchor, constant: 5),
+            dropdownTableView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            dropdownTableView.widthAnchor.constraint(equalTo: gendeBtn.widthAnchor,multiplier: 0.6),
+            dropdownTableView.heightAnchor.constraint(equalTo: gendeBtn.heightAnchor, multiplier: CGFloat(options.count))
+        ])
+    }
+    private func toggleDropdown() {
+        isDropdownVisible.toggle()
+        dropdownTableView.isHidden = !isDropdownVisible
+        updateDropdownButtonImage(isDropdownVisible: isDropdownVisible)
+    }
+    private func updateDropdownButtonImage(isDropdownVisible: Bool) {
+        let arrowImageName = isDropdownVisible ? "arrowup" : "arrowdown"
+        arrowImg.image = UIImage(named: arrowImageName)
+    }
 
     private func setupCollection() {
         let layout = UICollectionViewCompositionalLayout {sectionIndex,_ in
@@ -41,7 +98,6 @@ extension HomeVC {
                 return self.drawNewInSection()
             }
         }
-
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.setCollectionViewLayout(layout, animated: true)
@@ -50,13 +106,14 @@ extension HomeVC {
         collectionView.register(UINib(nibName: "HomeHeaderReusable", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HomeHeaderReusable")
     }
 
+
     private func setupDummyData() {
         sectionTitle = [
             HomeHeaderModel(title: .Categories, action: {
                 self.presentDetail(ShopByCategoriesVC())
             }),
-            HomeHeaderModel(title: .TopSelling, action: {}),
-            HomeHeaderModel(title: .NewIn, action: {}),
+            HomeHeaderModel(title: .TopSelling, action: { self.presentDetail(ShopByCategoriesVC())}),
+            HomeHeaderModel(title: .NewIn, action: { self.presentDetail(ShopByCategoriesVC())}),
         ]
     }
 }
@@ -81,17 +138,17 @@ extension HomeVC : UICollectionViewDelegate,UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
         case 0 :
-            let cellA = collectionView.dequeueCVCell(for: indexPath) as! CategoriesCVCell
+            let cellA = collectionView.dequeueCVCell(for: indexPath, cell: CategoriesCVCell.self)!
             cellA.config(catagoryCollection[indexPath.row])
             return cellA
 
         case 1 :
-            let cellB = collectionView.dequeueCVCell(for: indexPath) as! TopSellingCVCell
+            let cellB  = collectionView.dequeueCVCell(for: indexPath, cell: TopSellingCVCell.self)!
             cellB.config(productsList[indexPath.row])
             return cellB
 
         default:
-            let cellC = collectionView.dequeueCVCell(for: indexPath) as! TopSellingCVCell
+            let cellC = collectionView.dequeueCVCell(for: indexPath, cell: TopSellingCVCell.self)!
             cellC.config(productsList[indexPath.row])
             return cellC
         }
@@ -158,6 +215,32 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
             return header
         }
         return UICollectionReusableView()
+    }
+}
+extension HomeVC: UITableViewDelegate,UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        options.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        cell.contentView.backgroundColor = ._1_D_182_A
+        cell.textLabel?.textColor = .label
+        cell.textLabel?.text = options[indexPath.row]
+        cell.textLabel?.setCustomFont(font: .GabaritoBold, size: 15)
+        cell.textLabel?.textAlignment = .center
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        genderLbl.text =  options[indexPath.row]
+        toggleDropdown()
+    }
+
+
+}
+extension HomeVC: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        presentDetail(SearchByNameVC())
     }
 }
 

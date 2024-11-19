@@ -54,7 +54,7 @@ extension AccountVC: UITableViewDelegate,UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueTVCell(index: indexPath) as AccountTVCell
+        let cell = tableView.dequeueTVCell(index: indexPath,cell: AccountTVCell.self)
         cell.config(settings[indexPath.row].rawValue)
         return cell
     }

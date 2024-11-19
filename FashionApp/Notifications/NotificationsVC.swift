@@ -52,7 +52,7 @@ extension NotificationsVC: UITableViewDelegate,UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueTVCell(index: indexPath) as! ShopByCategoriesTVCell
+        let cell = tableView.dequeueTVCell(index: indexPath,cell: ShopByCategoriesTVCell.self)
         cell.config(notivationData[indexPath.row])
         return cell
     }

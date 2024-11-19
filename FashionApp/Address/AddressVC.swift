@@ -38,7 +38,7 @@ extension AddressVC: UITableViewDelegate,UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueTVCell(index: indexPath) as! AddressTVCell
+        let cell = tableView.dequeueTVCell(index: indexPath,cell: AddressTVCell.self)
         cell.config(dummyAddresses[indexPath.row])
         return cell
     }

@@ -33,3 +33,11 @@ let notivationDummyData = [
 
 ]
 
+let fillerSearch = [
+    CategoryModel(title: "0", image: "filter"),
+    CategoryModel(title: "On Sale", image: "arrowdown"),
+    CategoryModel(title: "Price", image: "arrowdown"),
+    CategoryModel(title: "Sort by", image: "arrowdown"),
+    CategoryModel(title: "Men", image: "arrowdown"),
+]
+

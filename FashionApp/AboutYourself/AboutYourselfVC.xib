@@ -13,8 +13,8 @@
             <connections>
                 <outlet property="ageRangLbl" destination="D7j-Oe-q6a" id="lvF-Yj-oNX"/>
                 <outlet property="arrowImg" destination="o9G-JH-oni" id="6pl-9f-BvN"/>
-                <outlet property="dropdownButton" destination="gPV-Yl-SDi" id="uYw-QR-rt2"/>
-                <outlet property="roundedView" destination="gPV-Yl-SDi" id="DHZ-cV-giq"/>
+                <outlet property="dropdownButton" destination="gPV-Yl-SDi" id="1cU-qx-TdR"/>
+                <outlet property="finshBtn" destination="3IA-F5-o0W" id="kwe-nZ-bD3"/>
                 <outlet property="titleLbl" destination="pOR-wL-hVF" id="BjI-Bi-EA3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="lbls" destination="cm5-B3-iWy" collectionClass="NSMutableArray" id="EXU-XO-mrI"/>
@@ -23,6 +23,8 @@
                 <outletCollection property="btns" destination="HeT-OA-HdA" collectionClass="NSMutableArray" id="j0e-iA-MdV"/>
                 <outletCollection property="btns" destination="pTN-mt-vIU" collectionClass="NSMutableArray" id="8hu-NY-Yki"/>
                 <outletCollection property="btns" destination="gPV-Yl-SDi" collectionClass="NSMutableArray" id="g0V-aS-Hm7"/>
+                <outletCollection property="btns" destination="3IA-F5-o0W" collectionClass="NSMutableArray" id="h2Q-h8-Ueh"/>
+                <outletCollection property="roundedView" destination="F57-WX-OYF" collectionClass="NSMutableArray" id="ZSd-ab-JZy"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

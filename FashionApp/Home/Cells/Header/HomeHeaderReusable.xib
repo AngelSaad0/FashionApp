@@ -39,6 +39,7 @@
             </constraints>
             <connections>
                 <outlet property="lblSectionHeader" destination="NXb-fz-6rb" id="aBt-lo-gf8"/>
+                <outlet property="seeAllBtn" destination="8Yr-hx-M5w" id="2tN-v8-Mq2"/>
             </connections>
             <point key="canvasLocation" x="298.47328244274809" y="-91.549295774647888"/>
         </collectionReusableView>

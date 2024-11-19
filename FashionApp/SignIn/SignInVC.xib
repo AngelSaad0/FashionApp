@@ -16,7 +16,7 @@
                 <outlet property="emailTxt" destination="WTO-Ip-7PF" id="IDN-2s-bqq"/>
                 <outlet property="emailView" destination="vke-YW-FII" id="D6A-0E-ZvT"/>
                 <outlet property="haveAccountLbl" destination="9po-l3-Zb6" id="eug-Sc-736"/>
-                <outlet property="titleLbl" destination="eDP-lx-MKL" id="qNT-RE-Grt"/>
+                <outlet property="titleLbl" destination="eDP-lx-MKL" id="6hm-JS-PlO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="roundedView" destination="dcJ-OK-GXM" collectionClass="NSMutableArray" id="E5W-JU-QVR"/>
                 <outletCollection property="roundedView" destination="Daw-Mg-vqv" collectionClass="NSMutableArray" id="hFK-JX-eUd"/>
@@ -184,14 +184,47 @@
                         </view>
                     </subviews>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgE-Jf-14U">
+                    <rect key="frame" x="23" y="415.33333333333331" width="347" height="49"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <connections>
+                        <action selector="continueWithAppleBtnClicked:" destination="-1" eventType="touchUpInside" id="Rdh-sR-cbk"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yM-bg-n2S">
+                    <rect key="frame" x="23" y="476.33333333333331" width="347" height="48.999999999999943"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <connections>
+                        <action selector="continueWithGoogleBtnClicked:" destination="-1" eventType="touchUpInside" id="Nu5-dX-SWI"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lq-8y-Bnx">
+                    <rect key="frame" x="23" y="537.33333333333337" width="347" height="49"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <connections>
+                        <action selector="continueWithFacebookBtnClicked:" destination="-1" eventType="touchUpInside" id="Pr1-9x-qY3"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="eDP-lx-MKL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="27" id="2lB-tW-M6K"/>
+                <constraint firstItem="9yM-bg-n2S" firstAttribute="bottom" secondItem="Daw-Mg-vqv" secondAttribute="bottom" id="4pq-GZ-DQ7"/>
+                <constraint firstItem="9yM-bg-n2S" firstAttribute="leading" secondItem="Daw-Mg-vqv" secondAttribute="leading" id="91v-K9-GPI"/>
+                <constraint firstItem="2lq-8y-Bnx" firstAttribute="trailing" secondItem="zfg-FP-NRr" secondAttribute="trailing" id="CPV-yo-tox"/>
+                <constraint firstItem="2lq-8y-Bnx" firstAttribute="leading" secondItem="zfg-FP-NRr" secondAttribute="leading" id="Cx3-ox-1YG"/>
+                <constraint firstItem="9yM-bg-n2S" firstAttribute="trailing" secondItem="Daw-Mg-vqv" secondAttribute="trailing" id="GIh-u9-q0o"/>
+                <constraint firstItem="2lq-8y-Bnx" firstAttribute="top" secondItem="zfg-FP-NRr" secondAttribute="top" id="IuB-s9-8Fb"/>
                 <constraint firstItem="7Eq-la-cAE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="23" id="KfD-iC-AaA"/>
+                <constraint firstItem="UgE-Jf-14U" firstAttribute="trailing" secondItem="dcJ-OK-GXM" secondAttribute="trailing" id="LY2-yI-e8m"/>
+                <constraint firstItem="9yM-bg-n2S" firstAttribute="top" secondItem="Daw-Mg-vqv" secondAttribute="top" id="Phl-FK-PeF"/>
                 <constraint firstItem="FN9-1D-NNB" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.0555556" id="T7e-z6-1ij"/>
+                <constraint firstItem="UgE-Jf-14U" firstAttribute="bottom" secondItem="dcJ-OK-GXM" secondAttribute="bottom" id="Tvp-4r-kZN"/>
+                <constraint firstItem="UgE-Jf-14U" firstAttribute="top" secondItem="dcJ-OK-GXM" secondAttribute="top" id="Vs2-zs-aev"/>
                 <constraint firstItem="7Eq-la-cAE" firstAttribute="top" secondItem="eDP-lx-MKL" secondAttribute="bottom" constant="32" id="Xze-SL-Llh"/>
+                <constraint firstItem="2lq-8y-Bnx" firstAttribute="bottom" secondItem="zfg-FP-NRr" secondAttribute="bottom" id="YsF-py-7BF"/>
+                <constraint firstItem="UgE-Jf-14U" firstAttribute="leading" secondItem="dcJ-OK-GXM" secondAttribute="leading" id="bWQ-5H-1iX"/>
                 <constraint firstItem="Uz8-C4-Odf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="23" id="ekM-hc-jiT"/>
                 <constraint firstItem="zHY-vT-XDi" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.0555556" id="hi4-uX-aZQ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Uz8-C4-Odf" secondAttribute="trailing" constant="23" id="oHb-1c-LQs"/>
@@ -205,8 +238,8 @@
     </objects>
     <resources>
         <image name="Apple svg" width="61" height="74"/>
-        <image name="Facebook - png 0" width="73" height="72"/>
-        <image name="Google - png 0" width="73" height="72"/>
+        <image name="Facebook - png 0" width="25" height="24"/>
+        <image name="Google - png 0" width="25" height="24"/>
         <namedColor name="#8E6CEF">
             <color red="0.55699998140335083" green="0.42399999499320984" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

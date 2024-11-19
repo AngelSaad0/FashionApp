@@ -43,7 +43,7 @@ extension PaymentVC: UITableViewDelegate,UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueTVCell(index: indexPath) as! PaymentTVCell
+        let cell = tableView.dequeueTVCell(index: indexPath,cell: PaymentTVCell.self)
         let section = paymentData[indexPath.section]
         let item = section.items[indexPath.row]
         let iconName = section.icons.isEmpty ? nil:section.icons[indexPath.row]

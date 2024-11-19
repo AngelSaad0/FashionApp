@@ -31,7 +31,7 @@ extension ShopByCategoriesNameVC: UICollectionViewDelegate, UICollectionViewData
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueCVCell(for: indexPath) as! TopSellingCVCell
+        let cell = collectionView.dequeueCVCell(for: indexPath, cell: TopSellingCVCell.self)!
         cell.config(productsList[indexPath.row])
         return cell
     }

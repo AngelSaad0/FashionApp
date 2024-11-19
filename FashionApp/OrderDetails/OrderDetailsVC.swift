@@ -62,7 +62,7 @@ extension OrderDetailsVC: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueTVCell(index: indexPath) as! OrderDetailsTVCell
+        let cell = tableView.dequeueTVCell(index: indexPath,cell: OrderDetailsTVCell.self)
         let index = indexPath.row
         cell.comfig(orderDetails!,statue: status![index])
         return cell

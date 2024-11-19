@@ -42,7 +42,7 @@ extension ProductDropDownVC: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueTVCell(index: indexPath) as! ProductDropDownTVCell
+        let cell = tableView.dequeueTVCell(index: indexPath,cell: ProductDropDownTVCell.self)
         if colorArray != nil {
             cell.configCellForColor(colorArray![indexPath.row])
         } else  if sizeArray != nil{

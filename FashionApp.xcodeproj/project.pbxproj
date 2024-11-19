@@ -247,6 +247,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		A951C8AF2CECF0E9006828F8 /* SearchByName */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SearchByName;
+			sourceTree = "<group>";
+		};
 		A96F64602CEAA36700B5939B /* Cell */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Cell;
@@ -737,6 +742,7 @@
 		A9AC2C7F2CEA7BF5008C3D6D /* FashionApp */ = {
 			isa = PBXGroup;
 			children = (
+				A951C8AF2CECF0E9006828F8 /* SearchByName */,
 				A9AC2C3E2CEA7BF5008C3D6D /* Home */,
 				A951C7DD2CEC0376006828F8 /* ProductDetails */,
 				A951C88A2CECD2CA006828F8 /* ProductDropDown */,
@@ -828,6 +834,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				A951C8AF2CECF0E9006828F8 /* SearchByName */,
 				A96F64602CEAA36700B5939B /* Cell */,
 				A96F64D92CEBA5B900B5939B /* cell */,
 			);

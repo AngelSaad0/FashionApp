@@ -9,7 +9,7 @@ import UIKit
 
 class LoginPasswordVC: UIViewController {
     @IBOutlet weak var passwordView: UIView!
-    @IBOutlet var forgetTxt: UITextField!
+    @IBOutlet var forgetPasswordTxt: UITextField!
     @IBOutlet var forgetLbl: UILabel!
     @IBOutlet var titleLbl: UILabel!
     @IBOutlet var continueBtn: UIButton!
@@ -20,11 +20,12 @@ class LoginPasswordVC: UIViewController {
     }
     private func updateUI() {
         passwordView.addCornerRadius(8)
+        continueBtn.addCornerRadius(20)
         titleLbl.setCustomFont(font: .CircularStdBold, size: 32)
         continueBtn.setCustomFont(font: .CircularStdBook, size: 16)
-        resetBtn.setCustomFont(font: .CircularStdBold, size: 15)
+        resetBtn.setCustomFont(font: .CircularStdBold, size: 14)
         forgetLbl.setCustomFont(font: .CircularStdBook, size: 12)
-        forgetTxt.setCustomFont(font: .CircularStdBook, size: 12)
+        forgetPasswordTxt.setCustomFont(font: .CircularStdBook, size: 16)
         }
 
     @IBAction func resetBtnClicked(_ sender: Any) {

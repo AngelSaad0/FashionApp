@@ -8,12 +8,13 @@
 import UIKit
 
 class SignInVC: UIViewController {
+
     @IBOutlet var emailView: UIView!
     @IBOutlet var roundedView: [UIView]!
-    @IBOutlet var emailTxt: UITextField!
     @IBOutlet var titleLbl: UILabel!
     @IBOutlet var haveAccountLbl: UILabel!
     @IBOutlet var continueWithLbl: [UILabel]!
+    @IBOutlet var emailTxt: UITextField!
     @IBOutlet var continueBtn: UIButton!
     @IBOutlet var createOneBtn: UIButton!
     override func viewDidLoad() {
@@ -22,12 +23,12 @@ class SignInVC: UIViewController {
     }
 
     private func updateUI() {
-        titleLbl.setCustomFont(font: .GabaritoBold, size: 32)
-        emailTxt.setCustomFont(font: .CircularStdBold, size: 12)
-        haveAccountLbl.setCustomFont(font: .CircularStdBook,size: 12)
-        createOneBtn.setCustomFont(font: .CircularStdBold, size: 15)
+        titleLbl.setCustomFont(font: .CircularStdBold, size: 32)
+        emailTxt.setCustomFont(font: .CircularStdBook, size: 16)
         continueBtn.setCustomFont(font: .CircularStdBook, size: 16)
-        continueWithLbl.forEach{$0.setCustomFont(font: .CircularStdBook, size: 16)}
+        createOneBtn.setCustomFont(font: .CircularStdBold, size: 13)
+        continueWithLbl.forEach{$0.setCustomFont(font: .CircularStdBold, size: 16)}
+        haveAccountLbl.setCustomFont(font: .CircularStdBook,size: 12)
         emailView.addCornerRadius(8)
         roundedView.forEach{$0.addCornerRadius(20)}
     }
@@ -38,5 +39,14 @@ class SignInVC: UIViewController {
 
     @IBAction func contineBtnClicked(_ sender: Any) {
         presentDetail(LoginPasswordVC())
+    }
+
+    @IBAction func continueWithAppleBtnClicked(_ sender: Any) {
+    }
+
+    @IBAction func continueWithGoogleBtnClicked(_ sender: Any) {
+    }
+
+    @IBAction func continueWithFacebookBtnClicked(_ sender: Any) {
     }
 }
