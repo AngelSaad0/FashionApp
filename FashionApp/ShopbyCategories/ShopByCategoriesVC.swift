@@ -8,59 +8,37 @@
 import UIKit
 
 class ShopByCategoriesVC: UIViewController {
-
     @IBOutlet var tableView: UITableView!
-    var catagoryItems: [CategoryModel] = []
-
-
+    var catagoryItems: [CategoryModel] = catagoryDummyData
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupDummyData()
         setupTableView()
     }
 
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "ShopByCategoriesTVCell", bundle: nil), forCellReuseIdentifier: "ShopByCategoriesTVCell")
+        tableView.registerTVNib(cell: ShopByCategoriesTVCell.self)
     }
 
     @IBAction func backBtnClicked(_ sender: Any) {
         dismissDetail()
     }
-    
-    private func setupDummyData() {
-        catagoryItems = [
-            CategoryModel(title: "Hoodies", image: "Hoodies"),
-            CategoryModel(title: "Shorts", image: "Shorts"),
-            CategoryModel(title: "Shoes", image: "Shoes"),
-            CategoryModel(title: "Bag", image: "Bag"),
-            CategoryModel(title: "Accessories", image: "Accessories"),
-            CategoryModel(title: "Hoodies", image: "Hoodies"),
-            CategoryModel(title: "Shorts", image: "Shorts"),
-            CategoryModel(title: "Shoes", image: "Shoes"),
-            CategoryModel(title: "Bag", image: "Bag"),
-            CategoryModel(title: "Accessories", image: "Accessories"),
-        ]
-    }
-
-
 }
 
 extension ShopByCategoriesVC: UITableViewDelegate , UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return catagoryItems.count
-    }
-    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { catagoryItems.count }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ShopByCategoriesTVCell") as! ShopByCategoriesTVCell
+        let cell = tableView.dequeueTVCell(index: indexPath) as ShopByCategoriesTVCell
         cell.config(catagoryItems[indexPath.row])
         return cell
+    }
 
-    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 72
+        72
     }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         presentDetail(ShopByCategoriesNameVC())

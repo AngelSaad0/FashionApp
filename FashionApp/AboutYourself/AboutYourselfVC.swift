@@ -8,17 +8,13 @@
 import UIKit
 
 class AboutYourselfVC: UIViewController{
-
-
     @IBOutlet var titleLbl: UILabel!
     @IBOutlet var lbls:[UILabel]!
     @IBOutlet var btns:[UIButton]!
-
     @IBOutlet var ageRangLbl: UILabel!
     @IBOutlet var arrowImg: UIImageView!
     @IBOutlet var dropdownButton: UIButton!
     @IBOutlet var roundedView: UIView!
-
     let dropdownTableView = UITableView()
     let options = [ "Under 18","18-24", "25-34", "35-44", "45-54", "55+", "65-74", "75+"]
     var isDropdownVisible = false
@@ -28,26 +24,25 @@ class AboutYourselfVC: UIViewController{
         setupUI()
         setupDropdownTableView()
     }
-
-
     func setupUI() {
-        roundedView.layer.cornerRadius = 20
-        lbls.forEach{$0.setCircularFont(size: 16)}
-        btns.forEach{$0.setCircularFont(size: 16)}
-        btns.forEach{$0.layer.cornerRadius = 20}
-        titleLbl.setCircularBoldFont(size: 24)
+        roundedView.addCornerRadius(20)
+        lbls.forEach{$0.setCustomFont(font: .CircularStdBook, size: 16) }
+        btns.forEach{$0.setCustomFont(font: .CircularStdBook, size: 16)}
+        btns.forEach{$0.addCornerRadius(20)}
+        titleLbl.setCustomFont(font: .CircularStdBold, size: 24)
     }
-
-
     @IBAction func finishBtnClicked(_ sender: Any) {
         UIWindow.setRootViewController(viewController: MainTabBarVC())
     }
     
     @IBAction func dropdownButtonCliked(_ sender: UIButton) {
         toggleDropdown()
-
     }
 
+
+}
+
+extension AboutYourselfVC : UITableViewDelegate, UITableViewDataSource  {
     private func toggleDropdown() {
         isDropdownVisible.toggle()
         dropdownTableView.isHidden = !isDropdownVisible
@@ -79,12 +74,6 @@ class AboutYourselfVC: UIViewController{
         let arrowImageName = isDropdownVisible ? "arrowup" : "arrowdown"
         arrowImg.image = UIImage(named: arrowImageName)
     }
-
-
-
-}
-
-extension AboutYourselfVC : UITableViewDelegate, UITableViewDataSource  {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return options.count

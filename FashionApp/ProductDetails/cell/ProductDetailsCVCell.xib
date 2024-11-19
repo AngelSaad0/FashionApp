@@ -22,6 +22,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topsell2" translatesAutoresizingMaskIntoConstraints="NO" id="f4Y-3k-EKd">
                                 <rect key="frame" x="2" y="2" width="231" height="217"/>
+                                <color key="backgroundColor" name="#1D182A"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="#1D182A"/>

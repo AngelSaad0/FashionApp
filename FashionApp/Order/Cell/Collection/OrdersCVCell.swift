@@ -8,32 +8,22 @@
 import UIKit
 
 class OrdersCVCell: UICollectionViewCell {
-
     @IBOutlet var titleLbl: UILabel!
-    @IBOutlet var backView: UIView!
-
+    @IBOutlet var containerView: UIView!
     var buttonTapHandler: (() -> Void)?
-
     // MARK: - Initializers
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
     }
-
-
     func setupUI() {
-        backView.layer.cornerRadius = 16
-        titleLbl.setCircularFont(size: 12)
+        containerView.addCornerRadius(16)
+        titleLbl.setCustomFont(font: .CircularStdBook, size: 12)
     }
-
-   
 
     func confige(_ item: OrdersStateModel) {
-
         titleLbl.text = item.stateTitle.rawValue
-        backView.backgroundColor = item.state ? ._8_E_6_CEF : .backButton
+        containerView.backgroundColor = item.state ? ._8_E_6_CEF : .backButton
     }
-
-
 }
 

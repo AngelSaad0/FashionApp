@@ -11,28 +11,24 @@ class OrdersTVCell: UITableViewCell {
 
     @IBOutlet weak var orderNumberLbl: UILabel!
     @IBOutlet weak var orderCountLbl: UILabel!
-    @IBOutlet var backImage: UIView!
-
+    @IBOutlet var containerView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
     }
 
     func setupUI() {
-        orderNumberLbl.setCircularFont(size: 16)
-        orderCountLbl.setCircularFont(size: 12)
-        backImage.layer.cornerRadius = 8
+        orderNumberLbl.setCustomFont(font: .CircularStdBook, size: 16)
+        orderNumberLbl.setCustomFont(font: .CircularStdBook, size: 12)
+        containerView.addCornerRadius(8)
     }
 
     func config(_ item: OrdersModel) {
         orderNumberLbl.text = "Order  #\(item.id)"
         orderCountLbl.text = "\(item.orderCount) items"
-
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: false)
-
     }
-
 
 }

@@ -13,11 +13,12 @@ struct Products {
     let sizes: [String]
     let description: String
     let reviews: [Review]
-    var quantity: Int?
+    var quantity: Int = 1
     let rating: Double?
 }
 struct Review {
-    let username: String   
+    let username: String
+    let userimage : String
     let rating: Int
     let comment: String
 }
@@ -32,26 +33,13 @@ let productsList: [Products] = [
         sizes: ["S", "M", "L", "XL"],
         description: "Built for life and made to last, this Harrington jacket is part of our premium collection. It features a lightweight design with a timeless look, making it perfect for any season. The durable material ensures long-lasting wear.",
         reviews: [
-            Review(username: "JohnD", rating: 5, comment: "Great quality and fit!"),
-            Review(username: "StyleGuru88", rating: 4, comment: "Stylish and comfortable, but slightly overpriced.")
+            Review(username: "JohnD", userimage: "user1", rating: 5, comment: "Great quality and fit!"),
+            Review(username: "StyleGuru88", userimage: "user2", rating: 4, comment: "Stylish and comfortable, but slightly overpriced.")
         ],
         quantity: 10,
         rating: 5
     ),
-    Products(
-        title: "Men's Casual T-Shirt",
-        price: "14.00",
-        image: "topsell2",
-        colors: ["White", "Grey", "Blue"],
-        sizes: ["S", "M", "L"],
-        description: "This casual T-shirt is designed with breathable fabric for everyday comfort. Its minimalist design makes it versatile for casual outings or layering under jackets.",
-        reviews: [
-            Review(username: "CasualChic", rating: 5, comment: "Perfect for everyday wear. Great value!"),
-            Review(username: "Alex123", rating: 3, comment: "Good material but the size runs a bit small.")
-        ],
-        quantity: 25,
-        rating: 4
-    ),
+
     Products(
         title: "Unisex Hoodie",
         price: "18.00",
@@ -60,8 +48,8 @@ let productsList: [Products] = [
         sizes: ["M", "L", "XL", "XXL"],
         description: "Soft, cozy, and stylish, this unisex hoodie offers the ultimate casual comfort. Perfect for lounging or stepping out in style.",
         reviews: [
-            Review(username: "CozyLover", rating: 5, comment: "Super comfy and warm!"),
-            Review(username: "HoodieFan99", rating: 4, comment: "Nice hoodie but wish it had more colors.")
+            Review(username: "Ahmed", userimage: "user4", rating: 5, comment: "Super comfy and warm!"),
+            Review(username: "Eman", userimage: "user5", rating: 4, comment: "Nice hoodie but wish it had more colors.")
         ],
         quantity: 15,
         rating: 5
@@ -74,8 +62,8 @@ let productsList: [Products] = [
         sizes: ["One Size"],
         description: "Crafted from premium leather, this wallet combines elegance and functionality. Multiple compartments make it perfect for organizing your cards and cash.",
         reviews: [
-            Review(username: "LuxuryLife", rating: 5, comment: "Amazing quality and stylish design."),
-            Review(username: "PracticalUser", rating: 4, comment: "Durable but a bit expensive.")
+            Review(username: "LuxuryLife", userimage: "user6", rating: 5, comment: "Amazing quality and stylish design."),
+            Review(username: "PracticalUser", userimage: "user7", rating: 4, comment: "Durable but a bit expensive.")
         ],
         quantity: 8,
         rating: 4
@@ -88,8 +76,8 @@ let productsList: [Products] = [
         sizes: ["Adjustable"],
         description: "A timeless accessory for every wardrobe, this classic cap is designed for comfort and style. Its adjustable strap ensures a perfect fit for all.",
         reviews: [
-            Review(username: "CapCollector", rating: 5, comment: "Love the fit and color options."),
-            Review(username: "OutdoorFan", rating: 4, comment: "Great for sunny days.")
+            Review(username: "CapCollector", userimage: "user8", rating: 5, comment: "Love the fit and color options."),
+            Review(username: "OutdoorFan", userimage: "user9", rating: 4, comment: "Great for sunny days.")
         ],
         quantity: 20,
         rating: 4
@@ -102,8 +90,8 @@ let productsList: [Products] = [
         sizes: ["One Size"],
         description: "Soft and lightweight, this scarf is perfect for adding a touch of elegance to any outfit.",
         reviews: [
-            Review(username: "Fashionista", rating: 5, comment: "Beautiful and versatile!"),
-            Review(username: "AnnaW", rating: 4, comment: "Nice scarf but could be a bit longer.")
+            Review(username: "Fashionista", userimage: "user1", rating: 5, comment: "Beautiful and versatile!"),
+            Review(username: "AnnaW", userimage: "user2", rating: 4, comment: "Nice scarf but could be a bit longer.")
         ],
         quantity: 18,
         rating: 4
@@ -116,11 +104,25 @@ let productsList: [Products] = [
         sizes: ["8", "9", "10", "11"],
         description: "Stylish and durable, these leather boots are perfect for both casual and formal occasions.",
         reviews: [
-            Review(username: "BootLover", rating: 5, comment: "Great craftsmanship and comfort."),
-            Review(username: "MikeT", rating: 4, comment: "Fits well but takes time to break in.")
+            Review(username: "BootLover", userimage: "user3", rating: 5, comment: "Great craftsmanship and comfort."),
+            Review(username: "MikeT", userimage: "user4", rating: 4, comment: "Fits well but takes time to break in.")
         ],
         quantity: 12,
         rating: 4
+    ),
+    Products(
+        title: "Women's Handbag",
+        price: "180.00",
+        image:"topsell1",
+        colors: ["Black", "Brown", "Beige"],
+        sizes: ["One Size"],
+        description: "This stylish handbag is designed for elegance and practicality, making it perfect for everyday use.",
+        reviews: [
+            Review(username: "BagLover", userimage: "user8", rating: 5, comment: "Great design and spacious!"),
+            Review(username: "SophiaT", userimage: "user1", rating: 4, comment: "Nice handbag but straps feel a bit thin.")
+        ],
+        quantity: 10,
+        rating: 5
     ),
     Products(
         title: "Wireless Earbuds",
@@ -130,8 +132,8 @@ let productsList: [Products] = [
         sizes: ["One Size"],
         description: "Experience true wireless freedom with these high-quality earbuds featuring exceptional sound clarity.",
         reviews: [
-            Review(username: "MusicLover", rating: 5, comment: "Excellent sound quality and battery life."),
-            Review(username: "Techie23", rating: 4, comment: "Great earbuds but case feels flimsy.")
+            Review(username: "MusicLover", userimage: "user5", rating: 5, comment: "Excellent sound quality and battery life."),
+            Review(username: "Techie23", userimage: "user6", rating: 4, comment: "Great earbuds but case feels flimsy.")
         ],
         quantity: 30,
         rating: 5
@@ -144,8 +146,8 @@ let productsList: [Products] = [
         sizes: ["One Size"],
         description: "This elegant watch combines modern design with traditional craftsmanship for a timeless accessory.",
         reviews: [
-            Review(username: "TimeKeeper", rating: 5, comment: "Looks classy and works perfectly."),
-            Review(username: "SamM", rating: 4, comment: "Beautiful watch but a bit heavy.")
+            Review(username: "TimeKeeper", userimage: "user6", rating: 5, comment: "Looks classy and works perfectly."),
+            Review(username: "SamM", userimage: "user7", rating: 4, comment: "Beautiful watch but a bit heavy.")
         ],
         quantity: 5,
         rating: 4
@@ -158,8 +160,8 @@ let productsList: [Products] = [
         sizes: ["One Size"],
         description: "This stylish handbag is designed for elegance and practicality, making it perfect for everyday use.",
         reviews: [
-            Review(username: "BagLover", rating: 5, comment: "Great design and spacious!"),
-            Review(username: "SophiaT", rating: 4, comment: "Nice handbag but straps feel a bit thin.")
+            Review(username: "BagLover", userimage: "user8", rating: 5, comment: "Great design and spacious!"),
+            Review(username: "SophiaT", userimage: "user1", rating: 4, comment: "Nice handbag but straps feel a bit thin.")
         ],
         quantity: 10,
         rating: 5

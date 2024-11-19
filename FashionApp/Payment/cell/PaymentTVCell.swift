@@ -20,7 +20,7 @@ class PaymentTVCell: UITableViewCell {
     func setupUI() {
         containerView.layer.cornerRadius = 8
         containerView.layer.masksToBounds = true
-        itemLabel.setCircularFont(size: 16)
+        itemLabel.setCustomFont(font: .CircularStdBook, size: 16)
     }
 
     func configure(item: String, iconName: String?) {

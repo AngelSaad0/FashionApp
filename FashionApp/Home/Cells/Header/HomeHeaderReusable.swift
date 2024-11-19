@@ -10,19 +10,15 @@ import UIKit
 class HomeHeaderReusable: UICollectionReusableView {
 
     @IBOutlet weak var lblSectionHeader: UILabel!
-
     var action:(()->())?
-
     override func awakeFromNib() {
         super.awakeFromNib()
-
     }
 
     func config(_ item: HomeHeaderModel) {
-        lblSectionHeader.text = item.title
+        lblSectionHeader.text = item.title.rawValue
         action = item.action
     }
-
     @IBAction func seeBtnCliked(_ sender: UIButton) {
         action?()
     }

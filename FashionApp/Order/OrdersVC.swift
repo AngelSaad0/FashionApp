@@ -11,13 +11,11 @@ class OrdersVC: UIViewController {
 
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var tableView: UITableView!
-
-
     var filltersOrders:[OrdersModel] = [] {
-           didSet{
-               handelEmptyTable()
-           }
-       }
+        didSet{
+            handelEmptyTable()
+        }
+    }
 
     lazy var messageView: HandleMessageView = {
         let view = HandleMessageView()
@@ -26,23 +24,22 @@ class OrdersVC: UIViewController {
         return view
     }()
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+    }
+    private func setupUI() {
         filltersOrders = orders
         handelEmptyTable()
-
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(UINib(nibName: "OrdersCVCell", bundle: nil), forCellWithReuseIdentifier: "OrdersCVCell")
-
+        collectionView.registerCVNib(cell: OrdersCVCell.self)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "OrdersTVCell", bundle: nil), forCellReuseIdentifier: "OrdersTVCell")
+        tableView.registerTVNib(cell: OrdersTVCell.self)
     }
 
     private func setupMessageViewConstraint() {
-
         NSLayoutConstraint.activate([
             messageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             messageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -84,13 +81,12 @@ extension OrdersVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OrdersCVCell", for: indexPath) as! OrdersCVCell
+        let cell = collectionView.dequeueCVCell(for: indexPath) as OrdersCVCell
         cell.confige(statuses[indexPath.row])
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
         for index in statuses.indices {
             statuses[index].state = false
         }
@@ -104,7 +100,6 @@ extension OrdersVC: UICollectionViewDelegate, UICollectionViewDataSource {
 extension OrdersVC: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
         let width: CGFloat = 83
         let height: CGFloat = collectionView.bounds.height
         return CGSize(width: width, height: height)
@@ -115,9 +110,9 @@ extension OrdersVC: UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filltersOrders.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "OrdersTVCell") as! OrdersTVCell
+        let cell = tableView.dequeueTVCell(index: indexPath) as! OrdersTVCell
         cell.config(filltersOrders[indexPath.row])
         return cell
     }
@@ -132,8 +127,5 @@ extension OrdersVC: UITableViewDelegate , UITableViewDataSource {
         vc.orderDetails = orders[indexPath.row]
         presentDetail(vc)
     }
-
-
-
 }
 

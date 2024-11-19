@@ -8,11 +8,9 @@ import UIKit
 
 class CheckoutVC: UIViewController {
     @IBOutlet var tableView: UITableView!
-    
     @IBOutlet var tileLbl: UILabel!
     @IBOutlet var cornerRaduisView: [UIView]!
     @IBOutlet var checkoutBtn: UIButton!
-
     @IBOutlet var btnView: UIView!
     @IBOutlet var subtotalLbl: UILabel!
     @IBOutlet var shippingCostLbl: UILabel!
@@ -21,8 +19,6 @@ class CheckoutVC: UIViewController {
     @IBOutlet var allLbLFonts: [UILabel]!
     var items: [(title: String, subtitle: String)] = []
     var dummyOrderSummary:OrderSummary?
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDummyData()
@@ -30,17 +26,15 @@ class CheckoutVC: UIViewController {
         setupTableView()
 
     }
-
-
     func setupUI() {
-        btnView.layer.cornerRadius = 20
-        cornerRaduisView.forEach{$0.layer.cornerRadius = 8}
-        checkoutBtn.setCircularFont(size: 16)
-        allLbLFonts.forEach{$0.setCircularFont(size: 16)}
-        totalLbl.setGabaritoFont(size: 16)
-        tileLbl.setCircularFont(size: 24)
-
+        btnView.addCornerRadius(20)
+        cornerRaduisView.forEach{$0.addCornerRadius(8)}
+        tileLbl.setCustomFont(font: .CircularStdBold, size: 24)
+        checkoutBtn.setCustomFont(font: .CircularStdBook, size: 16)
+        allLbLFonts.forEach{$0.setCustomFont(font: .CircularStdBook,size: 16)}
+        totalLbl.setCustomFont(font: .GabaritoBold, size: 16)
     }
+
     func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -67,9 +61,9 @@ class CheckoutVC: UIViewController {
 extension CheckoutVC {
     func setupDummyData() {
         items = [
-                ("Shipping Address", "Add Shipping Address"),
-                ("Payment Method", "Add Payment Method")
-            ]
+            ("Shipping Address", "Add Shipping Address"),
+            ("Payment Method", "Add Payment Method")
+        ]
         dummyOrderSummary = OrderSummary(
             subtotal: 200.00,
             shippingCost: 8.00,

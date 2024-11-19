@@ -10,7 +10,7 @@ import UIKit
 class NotificationsVC: UIViewController {
 
     @IBOutlet var tableView: UITableView!
-    var notivationArray:[CategoryModel] = [] {
+    var notivationData:[CategoryModel] = notivationDummyData {
         didSet{
             handelEmptyTable()
         }
@@ -25,18 +25,16 @@ class NotificationsVC: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpDummyData()
         handelEmptyTable()
 
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.register(UINib(nibName: "ShopByCategoriesTVCell", bundle: nil), forCellReuseIdentifier: "ShopByCategoriesTVCell")
+        tableView.registerTVNib(cell: ShopByCategoriesTVCell.self)
     }
 
-
     func handelEmptyTable () {
-        if notivationArray.isEmpty {
+        if notivationData.isEmpty {
             if !view.subviews.contains(messageView) {
                 view.addSubview(messageView)
             }
@@ -47,42 +45,26 @@ class NotificationsVC: UIViewController {
         }
     }
 
-    func setUpDummyData() {
-        notivationArray = [
-            CategoryModel(title: "Gilbert, you placed and order check your order history for full details", image: "notification"),
-            CategoryModel(title: "Gilbert, Thank you for shopping with us we have canceled order #24568.", image: "notificationbing"),
-            CategoryModel(title: "Gilbert, your Order #24568 has been  confirmed check  your order history for full details", image: "notificationbing"),
-            CategoryModel(title: "Gilbert, you placed and order check your order history for full details", image: "notificationbing"),
-
-        ]
-
-    }
-
-
-
 }
 extension NotificationsVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return notivationArray.count
-
+        return notivationData.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ShopByCategoriesTVCell") as! ShopByCategoriesTVCell
-        cell.config(notivationArray[indexPath.row])
+        let cell = tableView.dequeueTVCell(index: indexPath) as! ShopByCategoriesTVCell
+        cell.config(notivationData[indexPath.row])
         return cell
+    }
 
-    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+         80
     }
+
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            notivationArray.remove(at: indexPath.row)
+            notivationData.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-
         }
     }
-
-
 }

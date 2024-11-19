@@ -12,15 +12,12 @@ class HandleMessageView: UIView {
     @IBOutlet var messageImg: UIImageView!
     @IBOutlet var messageLbl: UILabel!
     @IBOutlet var massageBtn: UIButton!
-
     var handelAction: (()->())?
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         commanInit()
         updateUI()
     }
-
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         commanInit()
@@ -28,8 +25,8 @@ class HandleMessageView: UIView {
     }
 
     func updateUI() {
-        messageLbl.setGabaritoFont(size: 24)
-        massageBtn.setCircularFont(size: 16)
+        messageLbl.setCustomFont(font: .GabaritoBold, size: 24)
+        massageBtn.setCustomFont(font: .CircularStdBook, size: 16)
     }
 
     func confige(_ item: HandleMessageModel) {

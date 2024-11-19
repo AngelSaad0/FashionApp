@@ -8,7 +8,6 @@
 import UIKit
 
 class CreateAccountVC: UIViewController {
-
     @IBOutlet var roundedView: [UIView]!
     @IBOutlet var titleLbl: UILabel!
     @IBOutlet var allTxt: [UITextField]!
@@ -22,16 +21,15 @@ class CreateAccountVC: UIViewController {
     }
 
     private func updateUI() {
+        continueBtn.addCornerRadius(20)
         roundedView.forEach{$0.layer.cornerRadius = 12}
-        continueBtn.layer.cornerRadius = 24
-        continueBtn.setCircularBoldFont(size: 16)
-        resetBtn.setCircularFont(size: 15)
-        forgetLbl.setCircularFont(size: 12)
-        allTxt.forEach{$0.setCircularFont(size: 16)}
-        titleLbl.setCircularBoldFont(size: 32)
+        titleLbl.setCustomFont(font: .CircularStdBold, size: 32)
+        continueBtn.setCustomFont(font: .CircularStdBold, size: 16)
+        allTxt.forEach{$0.setCustomFont(font: .CircularStdBook, size: 16)}
+        resetBtn.setCustomFont(font: .CircularStdBook, size: 15)
+        forgetLbl.setCustomFont(font: .CircularStdBook, size: 12)
 
         }
-
 
     @IBAction func continueBtnClicked(_ sender: Any) {
         presentDetail(AboutYourselfVC())

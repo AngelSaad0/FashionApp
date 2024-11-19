@@ -74,7 +74,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="backImage" destination="zxg-aq-k9x" id="HNx-7n-zge"/>
+                <outlet property="containerView" destination="zxg-aq-k9x" id="HNx-7n-zge"/>
                 <outlet property="orderCountLbl" destination="GVD-9H-5Sm" id="SFU-gl-1W1"/>
                 <outlet property="orderNumberLbl" destination="z3H-96-RTt" id="8eh-dE-vmk"/>
             </connections>

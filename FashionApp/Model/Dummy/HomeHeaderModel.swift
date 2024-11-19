@@ -8,6 +8,12 @@
 import Foundation
 
 struct HomeHeaderModel {
-    let title: String
+    let title: HeaderNames
     let action: ()->()
+}
+enum HeaderNames: String {
+    case Categories = "Categories"
+    case TopSelling = "Top Selling"
+    case NewIn = "New In"
+
 }

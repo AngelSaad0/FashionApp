@@ -11,7 +11,7 @@ class CartTVCell: UITableViewCell {
 
 
     @IBOutlet var itemImg: UIImageView!
-    @IBOutlet var backView: UIView!
+    @IBOutlet var containerView: UIView!
     @IBOutlet var itemName: UILabel!
     @IBOutlet var itemPrice: UILabel!
     @IBOutlet var itemSize: UILabel!
@@ -20,14 +20,11 @@ class CartTVCell: UITableViewCell {
     @IBOutlet var allLblForBoldFont: [UILabel]!
     @IBOutlet var itemCount: UILabel!
     @IBOutlet var btns: [UIButton]!
-    @IBOutlet var plusButton: UIButton!
     @IBOutlet var minusButton: [UIButton]!
-
+    @IBOutlet var plusButton: UIButton!
 
     private var item: Products?
     var onItemCountChange: ((Products, Int) -> Void)?
-
-
 
     private var count = 1 {
         didSet {
@@ -47,9 +44,9 @@ class CartTVCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     func setupUI() {
-        backView.layer.cornerRadius = 8
-        allLblForSamllFont.forEach{$0.setCircularFont(size: 13)}
-        allLblForBoldFont.forEach{$0.setCircularBoldFont(size: 15)}
+        containerView.addCornerRadius(8)
+        allLblForSamllFont.forEach{$0.setCustomFont(font: .CircularStdBook, size: 13)}
+        allLblForBoldFont.forEach{$0.setCustomFont(font: .CircularStdBold, size: 15)}
         btns.forEach{$0.layer.cornerRadius = $0.frame.height/2}
     }
 
@@ -58,9 +55,9 @@ class CartTVCell: UITableViewCell {
         itemImg.image = UIImage(named: item.image)
         itemName.text = item.title
         itemPrice.text = item.price
-//        itemSize.text = "- \(item.sizes)"
-//        itemColor.text = "- \(item.color)"
-//        count = item.quantity
+        //        itemSize.text = "- \(item.sizes)"
+        //        itemColor.text = "- \(item.color)"
+        //        count = item.quantity
     }
     private func updatePrice() {
         guard let item = item else { return }
@@ -71,7 +68,6 @@ class CartTVCell: UITableViewCell {
     }
 
     @IBAction func plusButtonClicked(_ sender: Any) {
-       
         count += 1
     }
 

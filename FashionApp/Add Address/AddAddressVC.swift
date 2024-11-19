@@ -13,23 +13,17 @@ class AddAddressVC: UIViewController {
     @IBOutlet var allTtx: [UITextField]!
     @IBOutlet var allCornerView: [UIView]!
     @IBOutlet var saveBtn: UIButton!
-    
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
-
     func setupUI() {
-        titleLbl.setCircularBoldFont(size: 24)
-        saveBtn.setCircularFont(size: 16)
-        saveBtn.layer.cornerRadius = 20
-        allTtx.forEach{$0.setCircularFont(size: 16)}
-        allCornerView.forEach{$0.layer.cornerRadius = 8}
-
+        titleLbl.setCustomFont(font: .CircularStdBold, size: 24)
+        saveBtn.setCustomFont(font: .CircularStdBook, size: 16)
+        allTtx.forEach{$0.setCustomFont(font: .CircularStdBook, size: 16)}
+        saveBtn.addCornerRadius(20)
+        allCornerView.forEach{$0.addCornerRadius(8)}
     }
-
 
     @IBAction func backBtnClicked(_ sender: Any) {
         dismissDetail()

@@ -163,7 +163,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" name="#1D182A"/>
             <connections>
-                <outlet property="backView" destination="UIt-7O-Xif" id="zYQ-Z5-KLY"/>
+                <outlet property="containerView" destination="UIt-7O-Xif" id="zYQ-Z5-KLY"/>
                 <outlet property="itemColor" destination="BjY-BV-cOY" id="eZK-gG-gvB"/>
                 <outlet property="itemCount" destination="0zT-CU-yrh" id="DyO-dt-zEw"/>
                 <outlet property="itemImg" destination="jAR-77-Tsl" id="UwA-be-cgj"/>

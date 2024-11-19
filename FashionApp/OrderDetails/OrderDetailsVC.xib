@@ -13,9 +13,9 @@
             <connections>
                 <outlet property="addressLbl" destination="SLA-Xd-FP9" id="dBd-R7-P7f"/>
                 <outlet property="orderCountLbl" destination="TqI-HO-MU5" id="E2Q-Dl-VLz"/>
-                <outlet property="orderItem" destination="w3n-Yi-2QY" id="9cZ-NI-Xy7"/>
+                <outlet property="orderItemLbl" destination="w3n-Yi-2QY" id="9cZ-NI-Xy7"/>
                 <outlet property="phoneLbl" destination="xtQ-w7-G25" id="uD7-bI-GbN"/>
-                <outlet property="shippngDetails" destination="h4o-0F-sNa" id="poN-dJ-bPm"/>
+                <outlet property="shippngDetailsLbl" destination="h4o-0F-sNa" id="poN-dJ-bPm"/>
                 <outlet property="tableView" destination="ejL-wK-Duk" id="JSo-OJ-t7f"/>
                 <outlet property="titleLbl" destination="bSa-D7-WgW" id="TFk-Ow-AVz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

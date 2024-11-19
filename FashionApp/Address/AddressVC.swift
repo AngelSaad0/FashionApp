@@ -11,7 +11,6 @@ class AddressVC: UIViewController {
 
     @IBOutlet var titleLbl: UILabel!
     @IBOutlet var tableview: UITableView!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -19,13 +18,13 @@ class AddressVC: UIViewController {
     }
 
     func setupUI() {
-        titleLbl.setCircularBoldFont(size: 24)
+        titleLbl.setCustomFont(font: .CircularStdBold, size: 24)
     }
 
     func setupTableView() {
         tableview.delegate = self
         tableview.dataSource = self
-        tableview.register(UINib(nibName: "AddressTVCell", bundle: nil), forCellReuseIdentifier: "AddressTVCell")
+        tableview.registerTVNib(cell: AddressTVCell.self)
     }
 
     @IBAction func backBtnClicked(_ sender: Any) {
@@ -39,7 +38,7 @@ extension AddressVC: UITableViewDelegate,UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AddressTVCell") as! AddressTVCell
+        let cell = tableView.dequeueTVCell(index: indexPath) as! AddressTVCell
         cell.config(dummyAddresses[indexPath.row])
         return cell
     }

@@ -11,4 +11,16 @@ struct PaymentSection {
     let items: [String]
     let icons: [String] 
 }
+let  paymentDummyData = [
+    PaymentSection(
+        title: "Cards",
+        items: ["**** 4187", "**** 9387"],
+        icons: ["payment", "payment"]
+    ),
+    PaymentSection(
+        title: "Paypal",
+        items: ["Cloth@gmail.com"],
+        icons: ["paypal_default"]
+    )
+]
 

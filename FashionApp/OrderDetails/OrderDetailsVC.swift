@@ -8,7 +8,6 @@
 import UIKit
 
 class OrderDetailsVC: UIViewController {
-
     @IBOutlet var cornerRadiusViews: [UIView]!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var titleLbl: UILabel!
@@ -16,13 +15,10 @@ class OrderDetailsVC: UIViewController {
     @IBOutlet var phoneLbl: UILabel!
     @IBOutlet var addressLbl: UILabel!
     @IBOutlet var viewAllBtn: UIButton!
-    @IBOutlet var shippngDetails: UILabel!
-    @IBOutlet var orderItem: UILabel!
-    
+    @IBOutlet var shippngDetailsLbl: UILabel!
+    @IBOutlet var orderItemLbl: UILabel!
     var orderDetails:OrdersModel?
     var status: [Status]?
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -33,24 +29,18 @@ class OrderDetailsVC: UIViewController {
     func setupTableView () {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "OrderDetailsTVCell", bundle: nil), forCellReuseIdentifier: "OrderDetailsTVCell")
+        tableView.registerTVNib(cell: OrderDetailsTVCell.self)
     }
 
     func setupUI() {
-
-        cornerRadiusViews.forEach{$0.layer.cornerRadius = 8}
-
-        titleLbl.setGabaritoFont(size: 16)
-        orderCountLbl.setCircularFont(size: 16)
-        phoneLbl.setCircularFont(size: 12)
-        addressLbl.setCircularFont(size: 12)
-
-
-        shippngDetails.setGabaritoFont(size: 16)
-        orderItem.setGabaritoFont(size: 16)
-        viewAllBtn.setGabaritoFont(size: 12)
-
-
+        cornerRadiusViews.forEach{$0.addCornerRadius(8)}
+        titleLbl.setCustomFont(font: .GabaritoBold, size: 16)
+        shippngDetailsLbl.setCustomFont(font: .GabaritoBold, size: 16)
+        orderItemLbl.setCustomFont(font: .GabaritoBold, size: 16)
+        viewAllBtn.setCustomFont(font: .GabaritoBold, size: 12)
+        viewAllBtn.setCustomFont(font: .CircularStdBook, size: 16)
+        phoneLbl.setCustomFont(font: .CircularStdBook, size: 12)
+        addressLbl.setCustomFont(font: .CircularStdBook, size: 12)
     }
 
     func setupDummyData() {
@@ -62,25 +52,22 @@ class OrderDetailsVC: UIViewController {
         addressLbl.text = orderDetails.address
     }
 
-
     @IBAction func viewAllBtnClicked(_ sender: UIButton) {
         dismissDetail()
     }
-    
-
 }
 extension OrderDetailsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "OrderDetailsTVCell") as! OrderDetailsTVCell
+        let cell = tableView.dequeueTVCell(index: indexPath) as! OrderDetailsTVCell
         let index = indexPath.row
         cell.comfig(orderDetails!,statue: status![index])
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
     }

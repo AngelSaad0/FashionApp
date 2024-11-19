@@ -9,30 +9,28 @@ import UIKit
 
 class WishlistTVCell: UITableViewCell {
 
-    @IBOutlet var backView: UIView!
-    
-    @IBOutlet var itemCount: UILabel!
-    @IBOutlet var itemTitle: UILabel!
+    @IBOutlet var containerView: UIView!
+    @IBOutlet var quantityLbl: UILabel!
+    @IBOutlet var titleLbl: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         updateUI()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
+
     func updateUI() {
-        backView.layer.cornerRadius = 8
-        itemTitle.setGabaritoFont(size: 16)
-        itemCount.setCircularFont(size: 12)
+        containerView.addCornerRadius(8)
+        titleLbl.setCustomFont(font: .GabaritoBold, size: 16)
+        quantityLbl.setCustomFont(font: .CircularStdBook, size: 12)
     }
-
-    func config(_ item: WishlistItem) {
-        itemCount.text = "\(item.productCount) Products"
-        itemTitle.text = item.title
+    
+    func config(_ product: WishlistModel) {
+        quantityLbl.text = "\(product.productCount) Products"
+        titleLbl.text = product.title
     }
 
 }

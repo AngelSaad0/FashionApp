@@ -16,17 +16,14 @@ class ForgotPasswordVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-
     }
 
     private func setupUI() {
-        emailTxt.setCircularFont(size: 16)
-        titleLbl.setCircularBoldFont(size: 32)
-        contineBtn.setCircularFont(size: 16)
-
-        emailView.layer.cornerRadius = 8
-        contineBtn.layer.cornerRadius = 20
-
+        titleLbl.setCustomFont(font: .CircularStdBold, size: 32)
+        emailTxt.setCustomFont(font: .CircularStdBook, size: 16)
+        contineBtn.setCustomFont(font: .CircularStdBook, size: 16)
+        emailView.addCornerRadius(8)
+        contineBtn.addCornerRadius(20)
     }
 
     @IBAction func contineBtnclicked(_ sender: Any) {
@@ -36,5 +33,5 @@ class ForgotPasswordVC: UIViewController {
     @IBAction func backBtnClicked(_ sender: Any) {
         dismissDetail()
     }
-    
+
 }

@@ -19,7 +19,7 @@ class AccountTVCell: UITableViewCell {
 
     func setupUI() {
         backView.layer.cornerRadius = 8
-        titleLbl.setCircularFont(size: 16)
+        titleLbl.setCustomFont(font: .CircularStdBook, size: 16)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

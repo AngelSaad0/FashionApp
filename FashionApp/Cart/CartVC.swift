@@ -11,13 +11,11 @@ class CartVC: UIViewController {
 
     @IBOutlet var mainView: UIView!
     @IBOutlet var tableView: UITableView!
-
     @IBOutlet var tileLbl: UILabel!
     @IBOutlet var cornerRaduisView: [UIView]!
     @IBOutlet var removeAllBtn: UIButton!
     @IBOutlet var checkoutBtn: UIButton!
     @IBOutlet var couponTxtField: UITextField!
-
     @IBOutlet var couponBtn: UIButton!
     @IBOutlet var subtotalLbl: UILabel!
     @IBOutlet var shippingCostLbl: UILabel!
@@ -63,7 +61,7 @@ class CartVC: UIViewController {
         var subtotal = 0.0
         for item in cartArray {
             if let price = Double(item.price.replacingOccurrences(of: "$", with: "")) {
-                subtotal += price * Double(item.quantity ?? Int(0.0))
+                subtotal += price * Double(item.quantity)
             }
         }
 
@@ -82,12 +80,12 @@ class CartVC: UIViewController {
         couponBtn.layer.cornerRadius = couponBtn.frame.height/2
         checkoutBtn.layer.cornerRadius = 20
         cornerRaduisView.forEach{$0.layer.cornerRadius = 8}
-        checkoutBtn.setCircularFont(size: 16)
-        couponTxtField.setCircularFont(size: 12)
-        removeAllBtn.setCircularFont(size: 16)
-        allLbLFonts.forEach{$0.setCircularFont(size: 16)}
-        totalLbl.setGabaritoFont(size: 16)
-        tileLbl.setCircularFont(size: 24)
+        tileLbl.setCustomFont(font: .CircularStdBold, size: 24)
+        checkoutBtn.setCustomFont(font: .CircularStdBook, size: 16)
+        removeAllBtn.setCustomFont(font: .CircularStdBook,size: 16)
+        allLbLFonts.forEach{$0.setCustomFont(font: .CircularStdBook,size: 16)}
+        totalLbl.setCustomFont(font: .GabaritoBold, size: 16)
+        couponTxtField.setCustomFont(font: .CircularStdBook,size: 12)
 
     }
     func setupTableView() {
@@ -104,18 +102,14 @@ class CartVC: UIViewController {
         recalculateOrderSummary()
     }
 
-
-
-
     @IBAction func BackBtnClicked(_ sender: Any) {
         dismissDetail()
     }
 
-
     @IBAction func checkoutBtnClicked(_ sender: Any) {
         presentDetail(CheckoutVC())
     }
-    
+
     func handelEmptyTable () {
         if cartArray.isEmpty {
             if !view.subviews.contains(messageView) {
@@ -127,13 +121,11 @@ class CartVC: UIViewController {
             mainView.isHidden = false
         }
     }
-
 }
 
 
 extension CartVC {
     func setupDummyData() {
-
         dummyOrderSummary = OrderSummary(
             subtotal: 200.00,
             shippingCost: 8.00,
@@ -141,7 +133,6 @@ extension CartVC {
             total: 208.00
         )
     }
-
 }
 extension CartVC : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

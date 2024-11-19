@@ -24,6 +24,7 @@
                 <outletCollection property="continueWithLbl" destination="PfP-sF-aOO" collectionClass="NSMutableArray" id="ep8-5b-AMP"/>
                 <outletCollection property="continueWithLbl" destination="CAR-3m-hbP" collectionClass="NSMutableArray" id="7gy-hm-DjX"/>
                 <outletCollection property="continueWithLbl" destination="Bh8-oU-SMB" collectionClass="NSMutableArray" id="cUE-j9-YAn"/>
+                <outletCollection property="roundedView" destination="JcT-2e-bCb" collectionClass="NSMutableArray" id="oE4-Xq-CO4"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

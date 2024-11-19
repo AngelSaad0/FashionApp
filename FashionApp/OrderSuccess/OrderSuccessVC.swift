@@ -20,14 +20,13 @@ class OrderSuccessVC: UIViewController {
     }
 
     func setupUI() {
-        containerView.layer.cornerRadius = 25
-        subTitleLbl.setCircularFont(size: 16)
-        titleLBL.setGabaritoFont(size: 32)
-        orderDetails.layer.cornerRadius = 20
-
-        orderDetails.setCircularFont(size: 16)
-
+        containerView.addCornerRadius(25)
+        orderDetails.addCornerRadius(20)
+        titleLBL.setCustomFont(font: .GabaritoBold, size: 32)
+        subTitleLbl.setCustomFont(font: .CircularStdBook, size: 16)
+        orderDetails.setCustomFont(font: .CircularStdBook, size: 16)
     }
+    
     @IBAction func orderDetailsCliked(_ sender: Any) {
 
     }
