@@ -36,7 +36,7 @@ extension MyFavouritesVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {productsList.count}
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueCVCell(for: indexPath, cell: TopSellingCVCell.self) as! TopSellingCVCell
+        let cell = collectionView.dequeueCVCell(for: indexPath, cell: TopSellingCVCell.self)!
         cell.config(productsList[indexPath.row])
         return cell
     }

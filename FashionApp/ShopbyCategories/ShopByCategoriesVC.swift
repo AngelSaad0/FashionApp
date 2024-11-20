@@ -10,7 +10,8 @@ import UIKit
 class ShopByCategoriesVC: UIViewController {
     @IBOutlet var titleLbl: UILabel!
     @IBOutlet var tableView: UITableView!
-    var catagoryItems: [CategoryModel] = catagoryDummyData
+    var catagoryItems = Category.allCases
+
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLbl.setCustomFont(font: .GabaritoBold, size: 32)

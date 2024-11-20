@@ -12,7 +12,8 @@ class ProductDropDownVC: UIViewController {
     @IBOutlet var containerView: UIView!
     @IBOutlet var titleLbl: UILabel!
     @IBOutlet var tableView: UITableView!
-    var sizeArray:[String]?
+
+    var antherOptions:[String]?
     var colorArray:[String]?
     var vcTitle:String?
     var userSelection: (Int) ->() = {_ in }
@@ -38,15 +39,15 @@ class ProductDropDownVC: UIViewController {
 
 extension ProductDropDownVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return colorArray?.count ?? sizeArray?.count ?? 0
+        return colorArray?.count ?? antherOptions?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueTVCell(index: indexPath,cell: ProductDropDownTVCell.self)
         if colorArray != nil {
             cell.configCellForColor(colorArray![indexPath.row])
-        } else  if sizeArray != nil{
-            cell.configCellForSize(sizeArray![indexPath.row])
+        } else  if antherOptions != nil{
+            cell.configCellForSize(antherOptions![indexPath.row])
         }
         return cell
     }

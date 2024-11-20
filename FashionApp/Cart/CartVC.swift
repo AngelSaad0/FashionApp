@@ -22,7 +22,7 @@ class CartVC: UIViewController {
     @IBOutlet var taxLbl: UILabel!
     @IBOutlet var totalLbl: UILabel!
     @IBOutlet var allLbLFonts: [UILabel]!
-    var cartArray:[Products] = [] {
+    var cartArray:[Products] = productsList {
         didSet{
             handelEmptyTable()
         }

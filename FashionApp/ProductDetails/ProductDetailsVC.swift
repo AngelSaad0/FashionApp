@@ -71,7 +71,7 @@ class ProductDetailsVC: UIViewController {
         guard let detatails = detatails  else {return}
         let vc = ProductDropDownVC()
         vc.vcTitle = "Size"
-        vc.sizeArray = detatails.sizes
+        vc.antherOptions = detatails.sizes
         if let presentationController = vc.presentationController as? UISheetPresentationController {
             presentationController.detents = [.medium()]
         }

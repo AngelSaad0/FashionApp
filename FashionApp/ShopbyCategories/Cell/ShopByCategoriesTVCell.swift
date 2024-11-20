@@ -28,4 +28,8 @@ class ShopByCategoriesTVCell: UITableViewCell {
         itemTitle.text = item.title
         itemImg.image = UIImage(named: item.image)
     }
+    func config(_ item: Category) {
+        itemTitle.text = item.details.title.rawValue
+        itemImg.image = UIImage(named: item.details.icon.rawValue)
+    }
 }

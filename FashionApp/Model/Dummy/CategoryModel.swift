@@ -5,25 +5,12 @@
 //  Created by Engy on 11/15/24.
 //
 
-import Foundation
+import UIKit
 
 struct CategoryModel {
     let title: String
     let image: String
 }
-
-let catagoryDummyData = [
-    CategoryModel(title: "Hoodies", image: "Hoodies"),
-    CategoryModel(title: "Shorts", image: "Shorts"),
-    CategoryModel(title: "Shoes", image: "Shoes"),
-    CategoryModel(title: "Bag", image: "Bag"),
-    CategoryModel(title: "Accessories", image: "Accessories"),
-    CategoryModel(title: "Hoodies", image: "Hoodies"),
-    CategoryModel(title: "Shorts", image: "Shorts"),
-    CategoryModel(title: "Shoes", image: "Shoes"),
-    CategoryModel(title: "Bag", image: "Bag"),
-    CategoryModel(title: "Accessories", image: "Accessories"),
-]
 
 let notivationDummyData = [
     CategoryModel(title: "Gilbert, you placed and order check your order history for full details", image: "notification"),

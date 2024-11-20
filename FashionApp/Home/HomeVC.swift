@@ -14,11 +14,11 @@ class HomeVC: UIViewController {
     @IBOutlet var gendeBtn: UIButton!
     @IBOutlet var arrowImg: UIImageView!
     @IBOutlet var collectionView: UICollectionView!
-    let options = [ "Woman","Man", "Kids", "All"]
     var isDropdownVisible = false
 
-    var catagoryCollection:[CategoryModel]  = catagoryDummyData
-    var sectionTitle: [HomeHeaderModel] = []
+    var catagoryCollection = Category.allCases
+    let options = Gender.allCases
+    var sectionTitle: [HomeHeaderModel]?
     lazy var dropdownTableView = UITableView()
 
     override func viewDidLoad() {
@@ -83,7 +83,7 @@ extension HomeVC {
         updateDropdownButtonImage(isDropdownVisible: isDropdownVisible)
     }
     private func updateDropdownButtonImage(isDropdownVisible: Bool) {
-        let arrowImageName = isDropdownVisible ? "arrowup" : "arrowdown"
+        let arrowImageName = isDropdownVisible ? Assets.arrowup.rawValue : Assets.arrowup.rawValue 
         arrowImg.image = UIImage(named: arrowImageName)
     }
 
@@ -103,7 +103,8 @@ extension HomeVC {
         collectionView.setCollectionViewLayout(layout, animated: true)
         collectionView.registerCVNib(cell: CategoriesCVCell.self)
         collectionView.registerCVNib(cell: TopSellingCVCell.self)
-        collectionView.register(UINib(nibName: "HomeHeaderReusable", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HomeHeaderReusable")
+        collectionView.registerSupplementaryView(view: HomeHeaderReusable.self, kind: UICollectionView.elementKindSectionHeader)
+
     }
 
 
@@ -209,10 +210,10 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
             return UICollectionReusableView()
         }
         if kind == UICollectionView.elementKindSectionHeader {
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HomeHeaderReusable", for: indexPath) as! HomeHeaderReusable
-            let item = sectionTitle[indexPath.section]
-            header.config(item)
-            return header
+            let header = collectionView.dequeueSupplementaryView(for: UICollectionView.elementKindSectionHeader, indexPath: indexPath, view: HomeHeaderReusable.self)
+            let item = (sectionTitle?[indexPath.section])!
+            header?.config(item)
+            return header ?? UICollectionReusableView()
         }
         return UICollectionReusableView()
     }
@@ -226,13 +227,13 @@ extension HomeVC: UITableViewDelegate,UITableViewDataSource {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         cell.contentView.backgroundColor = ._1_D_182_A
         cell.textLabel?.textColor = .label
-        cell.textLabel?.text = options[indexPath.row]
+        cell.textLabel?.text = options[indexPath.row].rawValue
         cell.textLabel?.setCustomFont(font: .GabaritoBold, size: 15)
         cell.textLabel?.textAlignment = .center
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        genderLbl.text =  options[indexPath.row]
+        genderLbl.text =  options[indexPath.row].rawValue
         toggleDropdown()
     }
 

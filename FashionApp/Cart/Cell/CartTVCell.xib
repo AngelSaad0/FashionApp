@@ -112,7 +112,7 @@
                                                             <action selector="plusButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Dxk-A4-Wfb"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zT-CU-yrh">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zT-CU-yrh">
                                                         <rect key="frame" x="24" y="0.0" width="22" height="24"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="22" id="eQZ-hM-MnW"/>

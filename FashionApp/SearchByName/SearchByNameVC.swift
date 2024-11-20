@@ -9,60 +9,69 @@ import UIKit
 
 class SearchByNameVC: UIViewController {
 
-    
     @IBOutlet var containerView: UIView!
     @IBOutlet var productCollectionView: UICollectionView!
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet var fillterCollectionView: UICollectionView!
     @IBOutlet var searchBar: UISearchBar!
-
     @IBOutlet var resultLbl: UILabel!
     @IBOutlet var fillerviews: [UIView]!
-    var catagoryItems: [CategoryModel] = catagoryDummyData
-    var fillerList:[CategoryModel] = []
+
+    var selectedCategory: String?
+    var searchText:String?
+    let tableView = UITableView()
+    var catagoryItems = Category.allCases
+    let filterOptions = FilterOption.allCases 
     var product:[Products] = productsList
-    var searchText = ""
-
-    var filltersOrders:[Products] = [] {
-        didSet{
-            handelEmptyTable()
-        }
-    }
-
     lazy var messageView: HandleMessageView = {
         let view = HandleMessageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.confige(HandleMessageModel(message: .order, action: {}))
         return view
     }()
-
-    var selectedCategory: String?
+    var filltersOrders:[Products] = [] {
+        didSet{
+            handelEmptyTable()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchBar.delegate = self
+        setupSearchBar()
         setupTableView()
         setupCollection()
-        containerView.isHidden = true
     }
 
-    private func setupUI() {
-        //        filltersOrders = orders
-        handelEmptyTable()
-        productCollectionView.delegate = self
-        productCollectionView.dataSource = self
-        productCollectionView.registerCVNib(cell: OrdersCVCell.self)
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.registerTVNib(cell: OrdersTVCell.self)
+    private func setupSearchBar() {
+        searchText = ""
+        searchBar.delegate = self
     }
+
     private func setupTableView() {
+        containerView.isHidden = true
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.backgroundColor = ._1_D_182_A
+        tableView.separatorStyle = .none
         tableView.registerTVNib(cell: ShopByCategoriesTVCell.self)
+        view.addSubview(tableView)
+        setupTableViewConstains()
+    }
+    private func setupTableViewConstains() {
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor,constant: 0),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: 20),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        ])
     }
     func setupCollection() {
-        productCollectionView.delegate = self
-        productCollectionView.dataSource = self
+        let cvs = [fillterCollectionView,productCollectionView]
+        cvs.forEach{
+            $0?.delegate = self
+            $0?.dataSource = self
+        }
+        fillterCollectionView.registerCVNib(cell: FillerCollectionCVCell.self)
         productCollectionView.registerCVNib(cell: TopSellingCVCell.self)
     }
 
@@ -74,7 +83,6 @@ class SearchByNameVC: UIViewController {
             messageView.heightAnchor.constraint(equalToConstant: 300)
         ])
     }
-
 
     func handelEmptyTable () {
         if filltersOrders.isEmpty {
@@ -90,18 +98,7 @@ class SearchByNameVC: UIViewController {
     }
 
     func fillterReuslts(index:Int) {
-        let status = statuses[index].stateTitle
-        if status == .Processing {
-            //            filltersOrders = orders
-        } else {
-            //            filltersOrders = orders.filter{$0.status == status}
-        }
-
-        tableView.reloadData()
-
     }
-
-
 
     @IBAction func backBtnCliked(_ sender: Any) {
         dismissDetail()
@@ -150,7 +147,6 @@ extension SearchByNameVC: UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         catagoryItems.count
     }
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueTVCell(index: indexPath, cell: ShopByCategoriesTVCell.self)
         cell.config(catagoryItems[indexPath.row])
@@ -178,29 +174,78 @@ extension SearchByNameVC: UITableViewDelegate , UITableViewDataSource {
         70
     }
 }
-// MARK: -  UICollectionViewDelegate , UICollectionViewDataSource
-extension SearchByNameVC: UICollectionViewDelegate, UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout{
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == collectionView {
-            productsList.count
-        } else {
-            fillerList.count
+// MARK: -  UICollectionViewDelegate
+extension SearchByNameVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        view.endEditing(true)
+        switch indexPath.row {
+        case 0: create(filterOption:.allFillter)
+        case 1: create(filterOption:.sortBy)
+        case 2: create(filterOption:.gender)
+        case 3: create(filterOption:.deals)
+        case 4: create(filterOption:.price)
+        default:break
         }
     }
+    private func create(filterOption:FilterOption) {
+        let vc = ProductDropDownVC()
+        vc.vcTitle = filterOption.title
+        vc.antherOptions = filterOption.options
+        if let presentationController = vc.presentationController as? UISheetPresentationController {
+            presentationController.detents = [.medium()]
+        }
+        present(vc, animated: true)
 
+    }
+}
+
+// MARK: -  UICollectionViewDataSource
+extension SearchByNameVC: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == productCollectionView {
+            return productsList.count
+        } else if collectionView ==  fillterCollectionView {
+            return filterOptions.count
+        }
+        return 0
+    }
+}
+
+// MARK: -  UICollectionViewDelegateFlowLayout
+extension SearchByNameVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueCVCell(for: indexPath, cell: TopSellingCVCell.self)!
-        cell.config(productsList[indexPath.row])
-        return cell
+        if collectionView == productCollectionView {
+            let cell = collectionView.dequeueCVCell(for: indexPath, cell: TopSellingCVCell.self)!
+            cell.config(productsList[indexPath.row])
+            return cell
+        } else if collectionView ==  fillterCollectionView {
+            let cell = collectionView.dequeueCVCell(for: indexPath, cell: FillerCollectionCVCell.self)!
+            cell.config(filterOptions[indexPath.row])
+            return cell
+        }
+        return UICollectionViewCell()
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if collectionView == productCollectionView {
+            return productCollectionViewLayout(collectionView: productCollectionView, (collectionViewLayout as? UICollectionViewFlowLayout)!)
+        }
+        else {
+            return fillterCollectionViewLayout(indexPath: indexPath)
+        }
+    }
+    private func productCollectionViewLayout(collectionView:UICollectionView,_ collectionViewLayout:UICollectionViewFlowLayout) -> CGSize {
         let numberOfCellInRow: CGFloat = 2
-        let flowlayout = collectionViewLayout as!UICollectionViewFlowLayout
+        let flowlayout = collectionViewLayout
         let collectionViewWidth = collectionView.bounds.width
         let spacingBetweenCell = flowlayout.minimumLineSpacing*(numberOfCellInRow-1)
         let adjustWidth = collectionViewWidth-spacingBetweenCell
         let width = adjustWidth/numberOfCellInRow
         return CGSize(width: width-24, height: width*(281/161))
     }
+    private func fillterCollectionViewLayout(indexPath:IndexPath) -> CGSize {
+        let defaultWidth: CGFloat = 78
+        let height: CGFloat = 30
+        let customWidth: CGFloat = indexPath.row == 0 ? 43 : defaultWidth
+        return CGSize(width: customWidth, height: height)
+    }
 }
-
