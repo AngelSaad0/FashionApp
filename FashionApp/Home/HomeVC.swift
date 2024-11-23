@@ -14,17 +14,15 @@ class HomeVC: UIViewController {
     @IBOutlet var gendeBtn: UIButton!
     @IBOutlet var arrowImg: UIImageView!
     @IBOutlet var collectionView: UICollectionView!
-    var isDropdownVisible = false
 
-    var catagoryCollection = Category.allCases
-    let options = Gender.allCases
-    var sectionTitle: [HomeHeaderModel]?
+    let viewModel = HomeViewModel()
+    var isDropdownVisible = false
     lazy var dropdownTableView = UITableView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        setupDummyData()
+        setupViewModel()
         setupCollection()
         setupDropdownTableView()
     }
@@ -44,21 +42,37 @@ class HomeVC: UIViewController {
 }
 extension HomeVC {
 
+    private func setupViewModel() {
+        viewModel.setupCollectionHeaderData()
+    }
+
     private func setupUI() {
         genderLbl.setCustomFont(font: .GabaritoBold, size: 15)
     }
 
-    private func setupTapGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(selectGenderTapped))
-        view.addGestureRecognizer(tapGesture)
+    private func setupCollection() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        setupCompositionalLayout()
+        collectionView.registerCVNib(cell: CategoriesCVCell.self)
+        collectionView.registerCVNib(cell: TopSellingCVCell.self)
+        collectionView.registerSupplementaryView(view: HomeHeaderReusable.self, kind: UICollectionView.elementKindSectionHeader)
     }
 
-    @objc func selectGenderTapped() {
-        if isDropdownVisible {
-            toggleDropdown()
+    private func setupCompositionalLayout() {
+        let layout = UICollectionViewCompositionalLayout {sectionIndex,_ in
+            switch sectionIndex {
+            case 0 :
+                return self.drawCategoriesSection()
+            case 1 :
+                return self.drawTopSellingSection()
+            default:
+                return self.drawNewInSection()
+            }
         }
-    }
+        collectionView.setCollectionViewLayout(layout, animated: true)
 
+    }
     private func setupDropdownTableView() {
         dropdownTableView.delegate = self
         dropdownTableView.dataSource = self
@@ -74,9 +88,21 @@ extension HomeVC {
             dropdownTableView.topAnchor.constraint(equalTo: gendeBtn.bottomAnchor, constant: 5),
             dropdownTableView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             dropdownTableView.widthAnchor.constraint(equalTo: gendeBtn.widthAnchor,multiplier: 0.6),
-            dropdownTableView.heightAnchor.constraint(equalTo: gendeBtn.heightAnchor, multiplier: CGFloat(options.count))
+            dropdownTableView.heightAnchor.constraint(equalTo: gendeBtn.heightAnchor, multiplier: CGFloat(viewModel.options.count))
         ])
     }
+
+    private func setupTapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(selectGenderTapped))
+        view.addGestureRecognizer(tapGesture)
+    }
+
+    @objc func selectGenderTapped() {
+        if isDropdownVisible {
+            toggleDropdown()
+        }
+    }
+
     private func toggleDropdown() {
         isDropdownVisible.toggle()
         dropdownTableView.isHidden = !isDropdownVisible
@@ -86,42 +112,18 @@ extension HomeVC {
         let arrowImageName = isDropdownVisible ? Assets.arrowup.rawValue : Assets.arrowup.rawValue 
         arrowImg.image = UIImage(named: arrowImageName)
     }
-
-    private func setupCollection() {
-        let layout = UICollectionViewCompositionalLayout {sectionIndex,_ in
-            switch sectionIndex {
-            case 0 :
-                return self.drawCategoriesSection()
-            case 1 :
-                return self.drawTopSellingSection()
-            default:
-                return self.drawNewInSection()
-            }
-        }
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.setCollectionViewLayout(layout, animated: true)
-        collectionView.registerCVNib(cell: CategoriesCVCell.self)
-        collectionView.registerCVNib(cell: TopSellingCVCell.self)
-        collectionView.registerSupplementaryView(view: HomeHeaderReusable.self, kind: UICollectionView.elementKindSectionHeader)
-
-    }
-
-
-    private func setupDummyData() {
-        sectionTitle = [
-            HomeHeaderModel(title: .Categories, action: {
-                self.presentDetail(ShopByCategoriesVC())
-            }),
-            HomeHeaderModel(title: .TopSelling, action: { self.presentDetail(ShopByCategoriesVC())}),
-            HomeHeaderModel(title: .NewIn, action: { self.presentDetail(ShopByCategoriesVC())}),
-        ]
+}
+// MARK: -  UICollectionViewDelegate
+extension HomeVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc  = ProductDetailsVC()
+        vc.detatails = productsList[indexPath.row]
+        collectionView.deselectItem(at: [indexPath.row], animated: true)
+        presentDetail(vc)
     }
 }
-
-
-
-extension HomeVC : UICollectionViewDelegate,UICollectionViewDataSource {
+// MARK: -  UICollectionViewDataSource
+extension HomeVC :UICollectionViewDataSource {
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 3
@@ -129,7 +131,7 @@ extension HomeVC : UICollectionViewDelegate,UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 0 :
-            return catagoryCollection.count
+            return viewModel.catagoryCollection.count
         case 1 :
             return productsList.count
         default:
@@ -140,7 +142,7 @@ extension HomeVC : UICollectionViewDelegate,UICollectionViewDataSource {
         switch indexPath.section {
         case 0 :
             let cellA = collectionView.dequeueCVCell(for: indexPath, cell: CategoriesCVCell.self)!
-            cellA.config(catagoryCollection[indexPath.row])
+            cellA.config(viewModel.catagoryCollection[indexPath.row])
             return cellA
 
         case 1 :
@@ -154,14 +156,6 @@ extension HomeVC : UICollectionViewDelegate,UICollectionViewDataSource {
             return cellC
         }
     }
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc  = ProductDetailsVC()
-        vc.detatails = productsList[indexPath.row]
-        collectionView.deselectItem(at: [indexPath.row], animated: true)
-        presentDetail(vc)
-    }
-
 }
 extension HomeVC: UICollectionViewDelegateFlowLayout {
 
@@ -211,7 +205,7 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
         }
         if kind == UICollectionView.elementKindSectionHeader {
             let header = collectionView.dequeueSupplementaryView(for: UICollectionView.elementKindSectionHeader, indexPath: indexPath, view: HomeHeaderReusable.self)
-            let item = (sectionTitle?[indexPath.section])!
+            let item = (viewModel.sectionTitle?[indexPath.section])!
             header?.config(item)
             return header ?? UICollectionReusableView()
         }
@@ -220,23 +214,22 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
 }
 extension HomeVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        options.count
+        viewModel.options.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         cell.contentView.backgroundColor = ._1_D_182_A
         cell.textLabel?.textColor = .label
-        cell.textLabel?.text = options[indexPath.row].rawValue
+        cell.textLabel?.text = viewModel.options[indexPath.row].rawValue
         cell.textLabel?.setCustomFont(font: .GabaritoBold, size: 15)
         cell.textLabel?.textAlignment = .center
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        genderLbl.text =  options[indexPath.row].rawValue
+        genderLbl.text =  viewModel.options[indexPath.row].rawValue
         toggleDropdown()
     }
-
 
 }
 extension HomeVC: UISearchBarDelegate {

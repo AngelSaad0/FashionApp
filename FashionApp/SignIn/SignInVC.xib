@@ -11,20 +11,21 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInVC" customModule="FashionApp" customModuleProvider="target">
             <connections>
-                <outlet property="continueBtn" destination="JcT-2e-bCb" id="aEf-ta-qYm"/>
-                <outlet property="createOneBtn" destination="b2L-Lu-wtP" id="PCF-Zp-4D2"/>
-                <outlet property="emailTxt" destination="WTO-Ip-7PF" id="IDN-2s-bqq"/>
-                <outlet property="emailView" destination="vke-YW-FII" id="D6A-0E-ZvT"/>
-                <outlet property="haveAccountLbl" destination="9po-l3-Zb6" id="eug-Sc-736"/>
-                <outlet property="titleLbl" destination="eDP-lx-MKL" id="6hm-JS-PlO"/>
+                <outlet property="continueAsGuestButton" destination="Nfv-hT-0PG" id="Z7V-p3-DRa"/>
+                <outlet property="continueButton" destination="JcT-2e-bCb" id="aEf-ta-qYm"/>
+                <outlet property="createAccountButton" destination="b2L-Lu-wtP" id="PCF-Zp-4D2"/>
+                <outlet property="emailContainerView" destination="vke-YW-FII" id="D6A-0E-ZvT"/>
+                <outlet property="emailTextField" destination="WTO-Ip-7PF" id="IDN-2s-bqq"/>
+                <outlet property="haveAccountLabel" destination="9po-l3-Zb6" id="eug-Sc-736"/>
+                <outlet property="titleLabel" destination="eDP-lx-MKL" id="6hm-JS-PlO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outletCollection property="roundedView" destination="dcJ-OK-GXM" collectionClass="NSMutableArray" id="E5W-JU-QVR"/>
-                <outletCollection property="roundedView" destination="Daw-Mg-vqv" collectionClass="NSMutableArray" id="hFK-JX-eUd"/>
-                <outletCollection property="roundedView" destination="zfg-FP-NRr" collectionClass="NSMutableArray" id="UdK-WB-1kt"/>
-                <outletCollection property="continueWithLbl" destination="PfP-sF-aOO" collectionClass="NSMutableArray" id="ep8-5b-AMP"/>
-                <outletCollection property="continueWithLbl" destination="CAR-3m-hbP" collectionClass="NSMutableArray" id="7gy-hm-DjX"/>
-                <outletCollection property="continueWithLbl" destination="Bh8-oU-SMB" collectionClass="NSMutableArray" id="cUE-j9-YAn"/>
-                <outletCollection property="roundedView" destination="JcT-2e-bCb" collectionClass="NSMutableArray" id="oE4-Xq-CO4"/>
+                <outletCollection property="roundedContainerViews" destination="dcJ-OK-GXM" collectionClass="NSMutableArray" id="E5W-JU-QVR"/>
+                <outletCollection property="roundedContainerViews" destination="Daw-Mg-vqv" collectionClass="NSMutableArray" id="hFK-JX-eUd"/>
+                <outletCollection property="roundedContainerViews" destination="zfg-FP-NRr" collectionClass="NSMutableArray" id="UdK-WB-1kt"/>
+                <outletCollection property="continueWithLabels" destination="PfP-sF-aOO" collectionClass="NSMutableArray" id="ep8-5b-AMP"/>
+                <outletCollection property="continueWithLabels" destination="CAR-3m-hbP" collectionClass="NSMutableArray" id="7gy-hm-DjX"/>
+                <outletCollection property="continueWithLabels" destination="Bh8-oU-SMB" collectionClass="NSMutableArray" id="cUE-j9-YAn"/>
+                <outletCollection property="roundedContainerViews" destination="JcT-2e-bCb" collectionClass="NSMutableArray" id="oE4-Xq-CO4"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -44,7 +45,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vke-YW-FII">
                             <rect key="frame" x="0.0" y="0.0" width="347" height="56"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTO-Ip-7PF">
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="last@test.com" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTO-Ip-7PF">
                                     <rect key="frame" x="12" y="2.6666666666666572" width="323" height="50.666666666666664"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -93,7 +94,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" name="#1D182A"/>
                             <constraints>
                                 <constraint firstItem="9po-l3-Zb6" firstAttribute="leading" secondItem="6Z5-g4-iF9" secondAttribute="leading" id="2po-GU-Sny"/>
                                 <constraint firstItem="b2L-Lu-wtP" firstAttribute="centerY" secondItem="6Z5-g4-iF9" secondAttribute="centerY" id="Gne-s5-ty0"/>
@@ -184,30 +185,40 @@
                         </view>
                     </subviews>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgE-Jf-14U">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgE-Jf-14U" userLabel="ButtonForApple">
                     <rect key="frame" x="23" y="415.33333333333331" width="347" height="49"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <connections>
                         <action selector="continueWithAppleBtnClicked:" destination="-1" eventType="touchUpInside" id="Rdh-sR-cbk"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yM-bg-n2S">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yM-bg-n2S" userLabel="ButtonForGoogle">
                     <rect key="frame" x="23" y="476.33333333333331" width="347" height="48.999999999999943"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <connections>
                         <action selector="continueWithGoogleBtnClicked:" destination="-1" eventType="touchUpInside" id="Nu5-dX-SWI"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lq-8y-Bnx">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lq-8y-Bnx" userLabel="ButtonForFace">
                     <rect key="frame" x="23" y="537.33333333333337" width="347" height="49"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <connections>
                         <action selector="continueWithFacebookBtnClicked:" destination="-1" eventType="touchUpInside" id="Pr1-9x-qY3"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfv-hT-0PG">
+                    <rect key="frame" x="120.66666666666669" y="610.33333333333337" width="152" height="30"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Continue As a Guest ?">
+                        <color key="titleColor" name="#8E6CEF"/>
+                    </state>
+                    <connections>
+                        <action selector="continueAsGuestButtonCliked:" destination="-1" eventType="touchUpInside" id="jxa-Kh-w9Z"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="#1D182A"/>
             <constraints>
                 <constraint firstItem="eDP-lx-MKL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="27" id="2lB-tW-M6K"/>
                 <constraint firstItem="9yM-bg-n2S" firstAttribute="bottom" secondItem="Daw-Mg-vqv" secondAttribute="bottom" id="4pq-GZ-DQ7"/>
@@ -219,6 +230,7 @@
                 <constraint firstItem="7Eq-la-cAE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="23" id="KfD-iC-AaA"/>
                 <constraint firstItem="UgE-Jf-14U" firstAttribute="trailing" secondItem="dcJ-OK-GXM" secondAttribute="trailing" id="LY2-yI-e8m"/>
                 <constraint firstItem="9yM-bg-n2S" firstAttribute="top" secondItem="Daw-Mg-vqv" secondAttribute="top" id="Phl-FK-PeF"/>
+                <constraint firstItem="Nfv-hT-0PG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PrB-sU-2Yk"/>
                 <constraint firstItem="FN9-1D-NNB" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.0555556" id="T7e-z6-1ij"/>
                 <constraint firstItem="UgE-Jf-14U" firstAttribute="bottom" secondItem="dcJ-OK-GXM" secondAttribute="bottom" id="Tvp-4r-kZN"/>
                 <constraint firstItem="UgE-Jf-14U" firstAttribute="top" secondItem="dcJ-OK-GXM" secondAttribute="top" id="Vs2-zs-aev"/>
@@ -227,6 +239,7 @@
                 <constraint firstItem="UgE-Jf-14U" firstAttribute="leading" secondItem="dcJ-OK-GXM" secondAttribute="leading" id="bWQ-5H-1iX"/>
                 <constraint firstItem="Uz8-C4-Odf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="23" id="ekM-hc-jiT"/>
                 <constraint firstItem="zHY-vT-XDi" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.0555556" id="hi4-uX-aZQ"/>
+                <constraint firstItem="Nfv-hT-0PG" firstAttribute="top" secondItem="2lq-8y-Bnx" secondAttribute="bottom" constant="24" id="lXa-dJ-fTc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Uz8-C4-Odf" secondAttribute="trailing" constant="23" id="oHb-1c-LQs"/>
                 <constraint firstItem="Uz8-C4-Odf" firstAttribute="top" secondItem="7Eq-la-cAE" secondAttribute="bottom" constant="71" id="qOg-cu-uw4"/>
                 <constraint firstItem="LSt-EC-y7C" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.0555556" id="qUe-CQ-Tm3"/>
@@ -240,6 +253,9 @@
         <image name="Apple svg" width="61" height="74"/>
         <image name="Facebook - png 0" width="25" height="24"/>
         <image name="Google - png 0" width="25" height="24"/>
+        <namedColor name="#1D182A">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="#8E6CEF">
             <color red="0.55699998140335083" green="0.42399999499320984" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
@@ -248,9 +264,6 @@
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

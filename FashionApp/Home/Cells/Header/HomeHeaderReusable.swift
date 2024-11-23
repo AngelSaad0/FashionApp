@@ -22,7 +22,7 @@ class HomeHeaderReusable: UICollectionReusableView {
         lblSectionHeader.setCustomFont(font: .GabaritoBold, size: 16)
         seeAllBtn.setCustomFont(font: .GabaritoBold, size: 16)
         action = item.action
-        if item.title == .NewIn {
+        if item.title == .newIn {
             lblSectionHeader.textColor = ._8_E_6_CEF
         }
     }

@@ -21,7 +21,7 @@ class CheckoutVC: UIViewController {
     var dummyOrderSummary:OrderSummary?
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupDummyData()
+//        setupDummyData()
         setupUI()
         setupTableView()
 

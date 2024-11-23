@@ -8,32 +8,54 @@
 import UIKit
 
 class LoginPasswordVC: UIViewController {
-    @IBOutlet weak var passwordView: UIView!
-    @IBOutlet var forgetPasswordTxt: UITextField!
-    @IBOutlet var forgetLbl: UILabel!
-    @IBOutlet var titleLbl: UILabel!
-    @IBOutlet var continueBtn: UIButton!
-    @IBOutlet var resetBtn: UIButton!
+    @IBOutlet var passwordContainerView: UIView!
+    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var forgotPasswordLabel: UILabel!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var continueButton: UIButton!
+    @IBOutlet var resetPasswordButton: UIButton!
+
+    var viewModel = LoginPasswordViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViewModel()
         updateUI()
     }
-    private func updateUI() {
-        passwordView.addCornerRadius(8)
-        continueBtn.addCornerRadius(20)
-        titleLbl.setCustomFont(font: .CircularStdBold, size: 32)
-        continueBtn.setCustomFont(font: .CircularStdBook, size: 16)
-        resetBtn.setCustomFont(font: .CircularStdBold, size: 14)
-        forgetLbl.setCustomFont(font: .CircularStdBook, size: 12)
-        forgetPasswordTxt.setCustomFont(font: .CircularStdBook, size: 16)
+
+    private func setupViewModel() {
+        viewModel.displayMessage = { message in
+            displayMessage(massage: message)
         }
+        viewModel.onNaviagtion = {
+            UIWindow.setRootViewController(viewController: MainTabBarVC())
+        }
+    }
+
+    private func updateUI() {
+        passwordContainerView.addCornerRadius(8)
+        continueButton.addCornerRadius(20)
+        titleLabel.setCustomFont(font: .CircularStdBold, size: 32)
+        continueButton.setCustomFont(font: .CircularStdBook, size: 16)
+        resetPasswordButton.setCustomFont(font: .CircularStdBold, size: 14)
+        forgotPasswordLabel.setCustomFont(font: .CircularStdBook, size: 12)
+        passwordTextField.setCustomFont(font: .CircularStdBook, size: 16)
+    }
 
     @IBAction func resetBtnClicked(_ sender: Any) {
         presentDetail(ForgotPasswordVC())
     }
 
     @IBAction func contineBtnClicked(_ sender: Any) {
-        UIWindow.setRootViewController(viewController: MainTabBarVC())
+        guard let password = passwordTextField.text?.trimmingCharacters(in: .whitespaces), !password.isEmpty else {
+            displayMessage(massage: .passwordEmpty)
+            return
+        }
+        viewModel.checkPassword(password: password)
+    }
+
+    @IBAction func backButtonCliked(_ sender: Any) {
+        dismissDetail()
     }
 
 }

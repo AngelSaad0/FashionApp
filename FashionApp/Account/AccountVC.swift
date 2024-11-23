@@ -18,13 +18,19 @@ class AccountVC: UIViewController {
     @IBOutlet var signOutBtn: UIButton!
     @IBOutlet var tableView: UITableView!
     var settings = AccountSetting.allCases
+    let viewModel = AccountViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViewModel()
         setupUI()
         setupTableView()
     }
-
+    private func setupViewModel() {
+        viewModel.onNaviagtion = {
+            UIWindow.setRootViewController(viewController: SignInVC())
+        }
+    }
     private func setupUI() {
         cornerRaduisView.addCornerRadius(8)
         accountNameLbl.setCustomFont(font: .GabaritoBold, size: 16)
@@ -43,7 +49,9 @@ class AccountVC: UIViewController {
     }
 
     @IBAction func signoutBtnClicked(_ sender: Any) {
-        UIWindow.setRootViewController(viewController: SignInVC())
+        self.showAlert(title: "", message: "Are you sure you want to log out?", okTitle: "Yes", cancelTitle: "No", okStyle: .destructive, okHandler: {_ in
+            self.viewModel.logOut()
+        })
     }
 }
 
