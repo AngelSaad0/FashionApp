@@ -8,5 +8,5 @@
 import Foundation
 struct OrdersStateModel {
     var state: Bool
-    let stateTitle: Status
+    let stateTitle: StatuOreder
 }

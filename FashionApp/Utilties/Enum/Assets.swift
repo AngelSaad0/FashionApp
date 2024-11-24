@@ -15,4 +15,6 @@ enum Assets:String {
     case arrowup = "arrowup"
     case filter = "filter"
     case arrowdown = "arrowdown"
+    case outOfStock = "out-of-stock"
+    case circleDotted = "circle.dotted.circle"
  }

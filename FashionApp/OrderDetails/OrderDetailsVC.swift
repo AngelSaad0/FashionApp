@@ -18,7 +18,7 @@ class OrderDetailsVC: UIViewController {
     @IBOutlet var shippngDetailsLbl: UILabel!
     @IBOutlet var orderItemLbl: UILabel!
     var orderDetails:OrdersModel?
-    var status: [Status]?
+    var status: [StatuOreder]?
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()

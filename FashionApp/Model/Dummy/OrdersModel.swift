@@ -14,5 +14,5 @@ struct OrdersModel {
     let phoneNumber: String
     let address: String
     let orderDate: String
-    let status: Status
+    let status: StatuOreder
 }

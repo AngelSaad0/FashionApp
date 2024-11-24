@@ -11,6 +11,7 @@ target 'FashionApp' do
  pod 'FBSDKLoginKit'
  pod 'Alamofire'
  pod 'SwiftMessages'
+ pod 'Kingfisher', '~> 7.0'
 
 
  

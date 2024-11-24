@@ -22,7 +22,7 @@ class CartVC: UIViewController {
     @IBOutlet var taxLbl: UILabel!
     @IBOutlet var totalLbl: UILabel!
     @IBOutlet var allLbLFonts: [UILabel]!
-    var cartArray:[Products] = productsList {
+    var cartArray:[TopSellingModel] = productsList {
         didSet{
             handelEmptyTable()
         }
@@ -47,6 +47,7 @@ class CartVC: UIViewController {
         setupTableView()
 
     }
+    
 
     func updatOrderSummary () {
         if let summary = dummyOrderSummary {

@@ -11,6 +11,7 @@ enum Message {
     case search
     case sentEmail
     case emptyCart
+    case outOfStock
 
     var details: (title: String, icon: String) {
         switch self {
@@ -24,6 +25,8 @@ enum Message {
             return ("We Sent you an Email to reset your password.", "sentEmail")
         case .emptyCart:
             return ("Your Cart is Empty","parcel")
+        case .outOfStock:
+            return ("Out Of Stock","out-of-stock")
         }
     }
     var actionTitle: String {

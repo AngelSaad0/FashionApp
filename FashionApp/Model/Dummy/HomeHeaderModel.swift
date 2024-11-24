@@ -12,7 +12,7 @@ struct HomeHeaderModel {
     let action: ()->()
 }
 enum HomeSectionType: String {
-    case categories = "Categories"
+    case brands = "Brands"
     case topSelling = "Top Selling"
     case newIn = "New In"
 

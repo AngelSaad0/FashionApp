@@ -8,8 +8,8 @@
 import Foundation
 
 enum Gender: String,CaseIterable {
-    case woman = "Woman"
-    case man = "Man"
+    case woman = "Women"
+    case man = "Men"
     case kids = "Kids"
     case all = "All"
 }

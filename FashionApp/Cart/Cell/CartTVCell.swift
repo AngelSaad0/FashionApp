@@ -23,8 +23,8 @@ class CartTVCell: UITableViewCell {
     @IBOutlet var minusButton: [UIButton]!
     @IBOutlet var plusButton: UIButton!
 
-    private var item: Products?
-    var onItemCountChange: ((Products, Int) -> Void)?
+    private var item: TopSellingModel?
+    var onItemCountChange: ((TopSellingModel, Int) -> Void)?
 
     private var count = 1 {
         didSet {
@@ -50,7 +50,7 @@ class CartTVCell: UITableViewCell {
         btns.forEach{$0.layer.cornerRadius = $0.frame.height/2}
     }
 
-    func config(_ item: Products) {
+    func config(_ item: TopSellingModel) {
         self.item = item
         itemImg.image = UIImage(named: item.image)
         itemName.text = item.title

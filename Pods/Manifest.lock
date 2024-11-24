@@ -75,6 +75,7 @@ PODS:
     - AppAuth/Core (~> 1.7)
     - GTMSessionFetcher/Core (< 4.0, >= 3.3)
   - GTMSessionFetcher/Core (3.5.0)
+  - Kingfisher (7.12.0)
   - PromisesObjC (2.4.0)
   - RecaptchaInterop (100.0.0)
   - SwiftMessages (10.0.1):
@@ -86,6 +87,7 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - Firebase/Auth
   - GoogleSignIn
+  - Kingfisher (~> 7.0)
   - SwiftMessages
 
 SPEC REPOS:
@@ -108,6 +110,7 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMAppAuth
     - GTMSessionFetcher
+    - Kingfisher
     - PromisesObjC
     - RecaptchaInterop
     - SwiftMessages
@@ -131,10 +134,11 @@ SPEC CHECKSUMS:
   GoogleUtilities: 26a3abef001b6533cf678d3eb38fd3f614b7872d
   GTMAppAuth: f69bd07d68cd3b766125f7e072c45d7340dea0de
   GTMSessionFetcher: 5aea5ba6bd522a239e236100971f10cb71b96ab6
+  Kingfisher: 53a10ea35051a436b5fb626ca2dd8f3144d755e9
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
   SwiftMessages: 759b4a0bf5c3a116a0d7e8a34b098ba83c458625
 
-PODFILE CHECKSUM: 9656b0ece55e8b632ecd4c5cea99d671d8f267af
+PODFILE CHECKSUM: 97f4884a16326ae0e1e375484960f383edc1b218
 
 COCOAPODS: 1.16.2

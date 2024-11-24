@@ -9,11 +9,27 @@ import UIKit
 
 class ShopByCategoriesNameVC: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
+
+    @IBOutlet var titleLabel: UILabel!
+    let viewModel =  ShopByCategoriesNameViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollection()
+        setupViewModel()
+        setupUI()
     }
+    func setupViewModel() {
+        viewModel.dataBinding = { [self] in
+            collectionView.reloadData()
+            titleLabel.text = "\(viewModel.title) (\( viewModel.productsList.count))"
+        }
+        viewModel.fetchDataFromNetwork()
 
+    }
+    func setupUI() {
+        titleLabel.setCustomFont(font: .GabaritoBold, size: 16)
+        titleLabel.text = "\(viewModel.title) (\( viewModel.productsList.count))"
+    }
     func setupCollection() {
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -27,12 +43,12 @@ class ShopByCategoriesNameVC: UIViewController {
 
 extension ShopByCategoriesNameVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        productsList.count
+        viewModel.productsList.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueCVCell(for: indexPath, cell: TopSellingCVCell.self)!
-        cell.config(productsList[indexPath.row])
+        cell.config(viewModel.productsList[indexPath.row])
         return cell
     }
 }

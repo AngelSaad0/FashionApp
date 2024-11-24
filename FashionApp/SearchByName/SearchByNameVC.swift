@@ -21,7 +21,7 @@ class SearchByNameVC: UIViewController {
     let tableView = UITableView()
     var catagoryItems = Category.allCases
     let filterOptions = FilterOption.allCases 
-    var product:[Products] = productsList
+    var product:[TopSellingModel] = productsList
     lazy var messageView: HandleMessageView = {
         let view = HandleMessageView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -190,7 +190,7 @@ extension SearchByNameVC: UICollectionViewDelegate {
     private func create(filterOption:FilterOption) {
         let vc = ProductDropDownVC()
         vc.vcTitle = filterOption.title
-        vc.antherOptions = filterOption.options
+//        vc.antherOptions = filterOption.options
         if let presentationController = vc.presentationController as? UISheetPresentationController {
             presentationController.detents = [.medium()]
         }
@@ -216,7 +216,7 @@ extension SearchByNameVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == productCollectionView {
             let cell = collectionView.dequeueCVCell(for: indexPath, cell: TopSellingCVCell.self)!
-            cell.config(productsList[indexPath.row])
+//            cell.config(productsList[indexPath.row])
             return cell
         } else if collectionView ==  fillterCollectionView {
             let cell = collectionView.dequeueCVCell(for: indexPath, cell: FillerCollectionCVCell.self)!

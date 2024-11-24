@@ -14,6 +14,7 @@ class UserDefaultsManager {
     var isBoarding:Bool = false
     var darkModeEnabled: Bool = false
 
+    var gender: String = ""
     var name: String = ""
     var firstName: String = ""
     var lastName: String = ""
@@ -37,6 +38,7 @@ class UserDefaultsManager {
         self.isLogin  = getSharedBool(forKey: "isLogin")
         self.isBoarding  = getSharedBool(forKey: "isBoarding")
         self.darkModeEnabled  = getSharedBool(forKey: "darkMode")
+        self.gender = getSharedString(forKey: "gender")
         self.name = getSharedString(forKey: "name")
         self.firstName = getSharedString(forKey: "firstName")
         self.lastName = getSharedString(forKey: "lastName")
@@ -63,6 +65,7 @@ class UserDefaultsManager {
         setSharedValue("isLogin", value: isLogin)
         setSharedValue("isBoarding", value: isBoarding)
         setSharedValue("darkMode",value: darkModeEnabled)
+        setSharedValue("gender", value: gender)
         setSharedValue("name", value: name)
         setSharedValue("firstName", value: firstName)
         setSharedValue("lastName", value: lastName)
@@ -81,6 +84,7 @@ class UserDefaultsManager {
         removeValue(forKey: "guest")
         removeValue(forKey: "isLogin")
         removeValue(forKey: "darkMode")
+        removeValue(forKey: "gender")
         removeValue(forKey: "name")
         removeValue(forKey: "firstName")
         removeValue(forKey: "lastName")

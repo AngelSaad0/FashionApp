@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum CatagoryTitle: String {
+enum CatagoryTitle: String,CaseIterable {
 case Accessories = "Accessories"
 case Hoodies = "Hoodies"
 case Shorts = "Shorts"

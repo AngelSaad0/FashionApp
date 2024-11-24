@@ -22,7 +22,7 @@ class OrderDetailsTVCell: UITableViewCell {
         img.image = UIImage(named: Images.none.rawValue)
     }
 
-    func comfig(_ item: OrdersModel,statue: Status) {
+    func comfig(_ item: OrdersModel,statue: StatuOreder) {
         stateLbl.text = statue.rawValue
         dateLbl.text = item.orderDate
         if statue.timeline <= item.status.timeline {

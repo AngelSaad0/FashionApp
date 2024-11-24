@@ -10,8 +10,7 @@ import UIKit
 class ShopByCategoriesVC: UIViewController {
     @IBOutlet var titleLbl: UILabel!
     @IBOutlet var tableView: UITableView!
-    var catagoryItems = Category.allCases
-
+    let viewModel = ShopByCategoriesViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLbl.setCustomFont(font: .GabaritoBold, size: 32)
@@ -30,11 +29,12 @@ class ShopByCategoriesVC: UIViewController {
 }
 
 extension ShopByCategoriesVC: UITableViewDelegate , UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { catagoryItems.count }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { viewModel.brandList.count
+       }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueTVCell(index: indexPath, cell: ShopByCategoriesTVCell.self)
-        cell.config(catagoryItems[indexPath.row])
+        cell.config(viewModel.brandList[indexPath.row])
         return cell
     }
 
@@ -44,7 +44,9 @@ extension ShopByCategoriesVC: UITableViewDelegate , UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        presentDetail(ShopByCategoriesNameVC())
+        let vc = ShopByCategoriesNameVC()
+        vc.viewModel.title = viewModel.brandList[indexPath.row].title
+        presentDetail(vc)
     }
 
 }

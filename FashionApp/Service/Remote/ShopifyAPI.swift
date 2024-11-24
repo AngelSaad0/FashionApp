@@ -6,210 +6,68 @@
 //
 
 import Foundation
-import Alamofire
 
 enum ShopifyAPI {
-    private static let storeURL = "https://nciost4.myshopify.com/admin/api/2024-07/graphql.json"
+    private static let ssl = "https://"
+    private static let storeURL = "nciost4.myshopify.com"
+    private static let apiVersion = "2024-07"
+    private static let apiKey = "f8ba956727eb81aad6e382971df07a3c"
     private static let accessToken = "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"
 
-    // Different GraphQL Queries/Mutations
-    case getSmartCollections
-    case getProducts
-    case getProduct(id: String)
-    case getOrders
-    case getOrder(id: String)
-    case getCustomers
-    case getCustomer(id: String)
-    case getCustomerByEmail(email: String)
-    case createDraftOrder(input: String)
-    case updateCustomerAddress(addressID: String, customerID: String, input: String)
-    case deleteDraftOrder(id: String)
+    case smartCollections
+    case products
+    case product(id: Int)
+    case orders
+    case order(id: String)
+    case customers
+    case customer(id: String)
+    case customerEmail(email: String)
+    case draftOrders
+    case draftOrder(id: Int)
+    case addresses(id: Int)
+    case address(addressID: Int, customerID: Int)
+    case defaultAddress(addressID: Int, customerID: Int)
+    case priceRules
+    case priceRule(title: String)
 
-    var graphqlQuery: String {
+    private var path: String {
         switch self {
-        case .getSmartCollections:
-            return """
-            query {
-                smartCollections(first: 10) {
-                    edges {
-                        node {
-                            id
-                            title
-                            productsCount
-                        }
-                    }
-                }
-            }
-            """
-        case .getProducts:
-            return """
-            query {
-                products(first: 10) {
-                    edges {
-                        node {
-                            id
-                            title
-                            description
-                            images(first: 1) {
-                                edges {
-                                    node {
-                                        src
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            """
-        case .getProduct(let id):
-            return """
-            query {
-                product(id: "\(id)") {
-                    id
-                    title
-                    description
-                    images(first: 5) {
-                        edges {
-                            node {
-                                src
-                            }
-                        }
-                    }
-                }
-            }
-            """
-        case .getOrders:
-            return """
-            query {
-                orders(first: 10) {
-                    edges {
-                        node {
-                            id
-                            name
-                            totalPriceSet {
-                                presentmentMoney {
-                                    amount
-                                    currencyCode
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            """
-        case .getOrder(let id):
-            return """
-            query {
-                order(id: "\(id)") {
-                    id
-                    name
-                    totalPriceSet {
-                        presentmentMoney {
-                            amount
-                            currencyCode
-                        }
-                    }
-                }
-            }
-            """
-        case .getCustomers:
-            return """
-            query {
-                customers(first: 10) {
-                    edges {
-                        node {
-                            id
-                            firstName
-                            lastName
-                            email
-                        }
-                    }
-                }
-            }
-            """
-        case .getCustomer(let id):
-            return """
-            query {
-                customer(id: "\(id)") {
-                    id
-                    firstName
-                    lastName
-                    email
-                    phone
-                    tags
-                }
-            }
-            """
-        case .getCustomerByEmail(let email):
-            return """
-            query {
-                customers(query: "email:\(email)", first: 1) {
-                    edges {
-                        node {
-                            id
-                            firstName
-                            lastName
-                            email
-                            phone
-                            tags
-                        }
-                    }
-                }
-            }
-            """
-        case .createDraftOrder(let input):
-            return """
-            mutation {
-                draftOrderCreate(input: \(input)) {
-                    draftOrder {
-                        id
-                        name
-                    }
-                    userErrors {
-                        field
-                        message
-                    }
-                }
-            }
-            """
-        case .updateCustomerAddress(let addressID, let customerID, let input):
-            return """
-            mutation {
-                customerAddressUpdate(id: "\(addressID)", customerId: "\(customerID)", input: \(input)) {
-                    customerAddress {
-                        id
-                    }
-                    userErrors {
-                        field
-                        message
-                    }
-                }
-            }
-            """
-        case .deleteDraftOrder(let id):
-            return """
-            mutation {
-                draftOrderDelete(id: "\(id)") {
-                    deletedId
-                    userErrors {
-                        field
-                        message
-                    }
-                }
-            }
-            """
+        case .smartCollections:
+            return "smart_collections.json"
+        case .products:
+            return "products.json"
+        case .product(let id):
+            return "products/\(id).json"
+        case .orders:
+            return "orders.json"
+        case .order(let id):
+            return "orders/\(id).json"
+        case .customers:
+            return "customers.json?since_id=1"
+        case .customer(id: let id):
+            return "customers/\(id).json"
+        case .customerEmail(email: let email):
+            return "customers.json?email=\(email)"
+        case .draftOrders:
+            return "draft_orders.json"
+        case .draftOrder(id: let id):
+            return "draft_orders/\(id).json"
+        case .addresses(id: let id):
+            return "customers/\(id)/addresses.json"
+        case .address(addressID: let addressID, customerID: let customerID):
+            return "customers/\(customerID)/addresses/\(addressID).json"
+        case .defaultAddress(let addressID, let customerID):
+            return "customers/\(customerID)/addresses/\(addressID)/default.json"
+        case .priceRules:
+            return "price_rules.json"
+        case .priceRule(title: let id):
+            return "price_rules.json?title=\(id)"
         }
+
     }
 
-    func shopifyGraphQLURL() -> String {
-        return "\(ShopifyAPI.storeURL)"
-    }
-
-    var headers: HTTPHeaders {
-        return [
-            "Content-Type": "application/json",
-            "X-Shopify-Access-Token": "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",
-        ]
+    func shopifyURLString() -> String {
+        let urlString = "\(ShopifyAPI.ssl)\(ShopifyAPI.apiKey):\(ShopifyAPI.accessToken)@\(ShopifyAPI.storeURL)/admin/api/\(ShopifyAPI.apiVersion)/\(path)"
+        return urlString
     }
 }

@@ -6,18 +6,19 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ShopByCategoriesTVCell: UITableViewCell {
     @IBOutlet var itemTitle: UILabel!
     @IBOutlet var itemImg: UIImageView!
-    @IBOutlet var backView: UIView!
+    @IBOutlet var containerView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
     }
 
     private func setupUI() {
-        backView.layer.cornerRadius = 12
+        containerView.layer.cornerRadius = 12
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -31,5 +32,9 @@ class ShopByCategoriesTVCell: UITableViewCell {
     func config(_ item: Category) {
         itemTitle.text = item.details.title.rawValue
         itemImg.image = UIImage(named: item.details.icon.rawValue)
+    }
+    func config(_ item: SmartCollection) {
+        itemTitle.text = item.title
+        itemImg.kf.setImage(with: URL(string: item.image.src), placeholder: UIImage(systemName: Assets.circleDotted.rawValue))
     }
 }
