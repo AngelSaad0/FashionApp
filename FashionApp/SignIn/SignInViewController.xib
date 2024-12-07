@@ -9,22 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInVC" customModule="FashionApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="FashionApp" customModuleProvider="target">
             <connections>
-                <outlet property="continueBtn" destination="JcT-2e-bCb" id="aEf-ta-qYm"/>
-                <outlet property="createOneBtn" destination="b2L-Lu-wtP" id="PCF-Zp-4D2"/>
-                <outlet property="emailTxt" destination="WTO-Ip-7PF" id="IDN-2s-bqq"/>
-                <outlet property="emailView" destination="vke-YW-FII" id="D6A-0E-ZvT"/>
-                <outlet property="haveAccountLbl" destination="9po-l3-Zb6" id="eug-Sc-736"/>
-                <outlet property="titleLbl" destination="eDP-lx-MKL" id="6hm-JS-PlO"/>
+                <outlet property="continueButton" destination="JcT-2e-bCb" id="aEf-ta-qYm"/>
+                <outlet property="createAccountButton" destination="b2L-Lu-wtP" id="PCF-Zp-4D2"/>
+                <outlet property="emailContainerView" destination="vke-YW-FII" id="D6A-0E-ZvT"/>
+                <outlet property="emailTextField" destination="WTO-Ip-7PF" id="IDN-2s-bqq"/>
+                <outlet property="haveAccountLabel" destination="9po-l3-Zb6" id="eug-Sc-736"/>
+                <outlet property="titleLabel" destination="eDP-lx-MKL" id="6hm-JS-PlO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outletCollection property="roundedView" destination="dcJ-OK-GXM" collectionClass="NSMutableArray" id="E5W-JU-QVR"/>
-                <outletCollection property="roundedView" destination="Daw-Mg-vqv" collectionClass="NSMutableArray" id="hFK-JX-eUd"/>
-                <outletCollection property="roundedView" destination="zfg-FP-NRr" collectionClass="NSMutableArray" id="UdK-WB-1kt"/>
-                <outletCollection property="continueWithLbl" destination="PfP-sF-aOO" collectionClass="NSMutableArray" id="ep8-5b-AMP"/>
-                <outletCollection property="continueWithLbl" destination="CAR-3m-hbP" collectionClass="NSMutableArray" id="7gy-hm-DjX"/>
-                <outletCollection property="continueWithLbl" destination="Bh8-oU-SMB" collectionClass="NSMutableArray" id="cUE-j9-YAn"/>
-                <outletCollection property="roundedView" destination="JcT-2e-bCb" collectionClass="NSMutableArray" id="oE4-Xq-CO4"/>
+                <outletCollection property="roundedViews" destination="dcJ-OK-GXM" collectionClass="NSMutableArray" id="E5W-JU-QVR"/>
+                <outletCollection property="roundedViews" destination="Daw-Mg-vqv" collectionClass="NSMutableArray" id="hFK-JX-eUd"/>
+                <outletCollection property="roundedViews" destination="zfg-FP-NRr" collectionClass="NSMutableArray" id="UdK-WB-1kt"/>
+                <outletCollection property="continueWithLabels" destination="PfP-sF-aOO" collectionClass="NSMutableArray" id="ep8-5b-AMP"/>
+                <outletCollection property="continueWithLabels" destination="CAR-3m-hbP" collectionClass="NSMutableArray" id="7gy-hm-DjX"/>
+                <outletCollection property="continueWithLabels" destination="Bh8-oU-SMB" collectionClass="NSMutableArray" id="cUE-j9-YAn"/>
+                <outletCollection property="roundedViews" destination="JcT-2e-bCb" collectionClass="NSMutableArray" id="oE4-Xq-CO4"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

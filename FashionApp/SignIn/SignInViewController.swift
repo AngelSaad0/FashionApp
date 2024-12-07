@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignInVC: UIViewController {
+class SignInViewController: UIViewController {
 
     @IBOutlet var emailView: UIView!
     @IBOutlet var roundedView: [UIView]!
