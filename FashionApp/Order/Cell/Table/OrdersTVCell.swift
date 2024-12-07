@@ -18,8 +18,8 @@ class OrdersTVCell: UITableViewCell {
     }
 
     func setupUI() {
-        orderNumberLbl.setCustomFont(font: .CircularStdBook, size: 16)
-        orderNumberLbl.setCustomFont(font: .CircularStdBook, size: 12)
+        orderNumberLbl.setCustomFont(size: .medium)
+        orderNumberLbl.setCustomFont(size: .extraSmall)
         containerView.addCornerRadius(8)
     }
 

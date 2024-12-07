@@ -21,11 +21,11 @@ class LoginPasswordVC: UIViewController {
     private func updateUI() {
         passwordView.addCornerRadius(8)
         continueBtn.addCornerRadius(20)
-        titleLbl.setCustomFont(font: .CircularStdBold, size: 32)
-        continueBtn.setCustomFont(font: .CircularStdBook, size: 16)
-        resetBtn.setCustomFont(font: .CircularStdBold, size: 14)
-        forgetLbl.setCustomFont(font: .CircularStdBook, size: 12)
-        forgetPasswordTxt.setCustomFont(font: .CircularStdBook, size: 16)
+        titleLbl.setCustomFont(font: .CircularStdBold, size: .extraExtraLarge)
+        continueBtn.setCustomFont(size: .medium)
+        resetBtn.setCustomFont(font: .CircularStdBold, size: .small)
+        forgetLbl.setCustomFont(size: .extraSmall)
+        forgetPasswordTxt.setCustomFont(size: .medium)
         }
 
     @IBAction func resetBtnClicked(_ sender: Any) {

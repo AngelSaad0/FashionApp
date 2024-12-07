@@ -23,11 +23,11 @@ class CreateAccountVC: UIViewController {
     private func updateUI() {
         continueBtn.addCornerRadius(20)
         roundedView.forEach{$0.layer.cornerRadius = 12}
-        titleLbl.setCustomFont(font: .CircularStdBold, size: 32)
-        continueBtn.setCustomFont(font: .CircularStdBold, size: 16)
-        allTxt.forEach{$0.setCustomFont(font: .CircularStdBook, size: 16)}
-        resetBtn.setCustomFont(font: .CircularStdBook, size: 15)
-        forgetLbl.setCustomFont(font: .CircularStdBook, size: 12)
+        titleLbl.setCustomFont(font: .CircularStdBold, size: .extraExtraLarge)
+        continueBtn.setCustomFont(font: .CircularStdBold, size: .medium)
+        allTxt.forEach{$0.setCustomFont(size: .medium)}
+        resetBtn.setCustomFont(size: .small)
+        forgetLbl.setCustomFont(size: .extraSmall)
 
         }
 

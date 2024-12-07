@@ -1,0 +1,77 @@
+/* 
+  Localizable.strings
+  SukkarApp
+
+  Created by Engy on 2/13/2567 BE.
+  
+*/
+
+"BlackFont"="Poppins-Black";
+"BoldFont"="Poppins-Bold";
+"ExtraBoldFont"="Poppins-ExtraBold";
+"LightFont"="Poppins-Light";
+"MediumFont"="Poppins-Medium";
+"RegularFont"="Poppins-Regular";
+"SemiBold"="Poppins-SemiBold";
+
+
+//Lbls
+"welcomeLbl"="Weclome";
+"continueAsLbl"="Continue as a ";
+"agreeForLbl"="I agree for ";
+"editProfileLbl"= "Edit your profile now.";
+
+//TxtField
+
+"emailTF"="Email Address";
+"emailMobileTF"="Email or Mobile";
+"nameTF"="Name";
+"mobileTF"="phone";
+"passwordTF"="password";
+"rePasswordTF"="retype password";
+"oldPasswordTF"="old password";
+"newPasswordTF"="new password";
+"retypeNewPasswordTF"="retype new password";
+"massageTF"="massage";
+
+//Btns
+"guestBtn"="Guest";
+"termsCondtionsBtn"="Terms & Conditions";
+"forgetPasswordBtn"="Forget Password?";
+"loginBtn"="Login";
+"newUserBtn"="Save";
+"RegisterBtn"="Register";
+"SaveBtn"="Send";
+"SendBtn"="Logout";
+"Logout"="Logout";
+
+
+//alert texts
+ "nameEmpty"="name is empty";
+ "nameVaild"="name not vaild";
+ "emailEmpty"="email empty";
+ "emailValid"="email not vaild";
+ "passwordEmpty"="password is empty";
+ "passwordVaild"="password not vaild";
+ "reTypeEmpty"="reType password is empty";
+ "reTypeVaild"="reType password not vaild";
+ "passwordRetypeEqual"="passwoed not equal";
+ "mobileVaild"="mobile not vaild";
+ "mobileEmpty"="mobile is empty";
+ "termsConditions"="agree for term and conditions";
+ "Succeses"="Succeses login";
+
+// vc title
+"Home"="Home";
+"Categories"="Categories";
+"Diabetic Supplies"="Diabetic Supplies";
+"Account"="Account";
+"Edit Profile"="Edit Profile";
+"Change password"="Change password";
+"Orders"="Orders";
+"Addresses"="Addresses";
+"Favorites"="Favorites";
+"About us"="About us";
+"Contact US"="Contact US";
+"Change \npassword"="Change \npassword";
+

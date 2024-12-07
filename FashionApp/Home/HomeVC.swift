@@ -45,7 +45,7 @@ class HomeVC: UIViewController {
 extension HomeVC {
 
     private func setupUI() {
-        genderLbl.setCustomFont(font: .GabaritoBold, size: 15)
+        genderLbl.setCustomFont(font: .GabaritoBold, size: .small)
     }
 
     private func setupTapGesture() {
@@ -228,7 +228,7 @@ extension HomeVC: UITableViewDelegate,UITableViewDataSource {
         cell.contentView.backgroundColor = ._1_D_182_A
         cell.textLabel?.textColor = .label
         cell.textLabel?.text = options[indexPath.row].rawValue
-        cell.textLabel?.setCustomFont(font: .GabaritoBold, size: 15)
+        cell.textLabel?.setCustomFont(font: .GabaritoBold, size: .small)
         cell.textLabel?.textAlignment = .center
         return cell
     }

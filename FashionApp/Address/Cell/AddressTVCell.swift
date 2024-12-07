@@ -22,12 +22,12 @@ class AddressTVCell: UITableViewCell {
 
     func updateUI() {
         backImg.addCornerRadius(8)
-        editLbl.setCustomFont(font: .GabaritoBold, size: 12)
-        addressLbl.setCustomFont(font: .CircularStdBook, size: 16)
+        editLbl.setCustomFont(font: .GabaritoBold, size: .extraSmall)
+        addressLbl.setCustomFont(size: .medium)
     }
 
-    func config(_ item: String) {
-        addressLbl.text = item
+    func config(_ cell: DummyAddress) {
+        addressLbl.text = cell.address
     }
 
 }

@@ -48,10 +48,10 @@ class ProductDetailsVC: UIViewController {
     }
 
     func setupUI() {
-        sizeLbl.setCustomFont(font: .GabaritoBold, size: 15)
-        allLabelFontGabarito.forEach{$0.setCustomFont(font: .GabaritoBold, size: 16)}
-        allLabelFontCircular.forEach{$0.setCustomFont(font: .CircularStdBook, size: 16)}
-        allLabelCircularSize12.forEach{$0.setCustomFont(font: .CircularStdBold, size: 16)}
+        sizeLbl.setCustomFont(font: .GabaritoBold, size: .small)
+        allLabelFontGabarito.forEach{$0.setCustomFont(font: .GabaritoBold, size: .medium)}
+        allLabelFontCircular.forEach{$0.setCustomFont(size: .medium)}
+        allLabelCircularSize12.forEach{$0.setCustomFont(font: .CircularStdBold, size: .medium)}
         roundedView.forEach{$0.layer.cornerRadius = $0.frame.height/2}
     }
 
@@ -90,7 +90,7 @@ class ProductDetailsVC: UIViewController {
             presentationController.detents = [.medium()]
         }
         vc.userSelection = { index in
-            self.colorView.backgroundColor = UIColor(colorName: self.detatails!.colors[index])
+            self.colorView.backgroundColor = UIColor(named: self.detatails!.colors[index])
         }
         present(vc, animated: true)
     }

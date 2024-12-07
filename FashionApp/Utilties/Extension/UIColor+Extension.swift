@@ -9,65 +9,87 @@ import UIKit
 
 extension UIColor {
 
-    convenience init?(colorName: String) {
-        let lowercasedColor = colorName.lowercased()
+    convenience init(hex: String) {
+        var hexString = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
 
-        switch lowercasedColor {
-        case "red":
-            self.init(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
-        case "blue":
-            self.init(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0)
-        case "green":
-            self.init(red: 0.0, green: 1.0, blue: 0.0, alpha: 1.0)
-        case "black":
-            self.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
-        case "white":
-            self.init(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        case "yellow":
-            self.init(red: 1.0, green: 1.0, blue: 0.0, alpha: 1.0)
-        case "lemon":
-            self.init(red: 1.0, green: 0.98, blue: 0.8, alpha: 1.0)
-        case "gray", "grey":
-            self.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)
-        case "orange":
-            self.init(red: 1.0, green: 0.647, blue: 0.0, alpha: 1.0)
-        case "purple":
-            self.init(red: 0.5, green: 0.0, blue: 0.5, alpha: 1.0)
-        case "pink":
-            self.init(red: 1.0, green: 0.41, blue: 0.71, alpha: 1.0)
-        case "brown":
-            self.init(red: 0.59, green: 0.29, blue: 0.0, alpha: 1.0)
-        case "beige":
-            self.init(red: 0.96, green: 0.96, blue: 0.86, alpha: 1.0)
-        case "navy":
-            self.init(red: 0.0, green: 0.0, blue: 0.5, alpha: 1.0)
-        case "lime":
-            self.init(red: 0.75, green: 1.0, blue: 0.0, alpha: 1.0)
-        case "gold":
-            self.init(red: 1.0, green: 0.843, blue: 0.0, alpha: 1.0)
-        case "cyan":
-            self.init(red: 0.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        case "magenta":
-            self.init(red: 1.0, green: 0.0, blue: 1.0, alpha: 1.0)
-        case "teal":
-            self.init(red: 0.0, green: 0.5, blue: 0.5, alpha: 1.0)
-        case "silver":
-            self.init(red: 0.75, green: 0.75, blue: 0.75, alpha: 1.0)
-        case "maroon":
-            self.init(red: 0.5, green: 0.0, blue: 0.0, alpha: 1.0)
-        case "olive":
-            self.init(red: 0.5, green: 0.5, blue: 0.0, alpha: 1.0)
-        case "coral":
-            self.init(red: 1.0, green: 0.498, blue: 0.313, alpha: 1.0)
-        case "salmon":
-            self.init(red: 0.98, green: 0.5, blue: 0.45, alpha: 1.0)
-        case "lavender":
-            self.init(red: 0.9, green: 0.9, blue: 0.98, alpha: 1.0)
-        case "indigo":
-            self.init(red: 0.29, green: 0.0, blue: 0.51, alpha: 1.0)
-        case "peach":
-            self.init(red: 1.0, green: 0.87, blue: 0.68, alpha: 1.0)
-        default:
-            self.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)        }
+        if hexString.hasPrefix("#") {
+            hexString.removeFirst()
+        }
+
+        guard hexString.count == 6 else {
+            self.init(white: 0.0, alpha: 0.0)
+            return
+        }
+
+        var rgbValue: UInt64 = 0
+        Scanner(string: hexString).scanHexInt64(&rgbValue)
+
+        let red = CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0
+        let green = CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0
+        let blue = CGFloat(rgbValue & 0x0000FF) / 255.0
+
+        self.init(red: red, green: green, blue: blue, alpha: 1.0)
     }
+
+    func moreVivid(factor: CGFloat) -> UIColor {
+        var hue: CGFloat = 0
+        var saturation: CGFloat = 0
+        var brightness: CGFloat = 0
+        var alpha: CGFloat = 0
+        self.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
+
+        saturation = min(saturation * factor, 1.0)
+
+        return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
+    }
+
+    convenience init(hexString: String, alpha: CGFloat = 1.0) {
+        let hexString: String = hexString.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        let scanner = Scanner(string: hexString)
+
+        if (hexString.hasPrefix("#")) {
+            scanner.scanLocation = 1
+        }
+
+        var color: UInt32 = 0
+        scanner.scanHexInt32(&color)
+
+        let mask = 0x000000FF
+        let r = Int(color >> 16) & mask
+        let g = Int(color >> 8) & mask
+        let b = Int(color) & mask
+
+        let red   = CGFloat(r) / 255.0
+        let green = CGFloat(g) / 255.0
+        let blue  = CGFloat(b) / 255.0
+
+        self.init(red:red, green:green, blue:blue, alpha:alpha)
+    }
+
+    func toHexString() -> String {
+        var r:CGFloat = 0
+        var g:CGFloat = 0
+        var b:CGFloat = 0
+        var a:CGFloat = 0
+
+        getRed(&r, green: &g, blue: &b, alpha: &a)
+
+        let rgb:Int = (Int)(r*255)<<16 | (Int)(g*255)<<8 | (Int)(b*255)<<0
+
+        return String(format:"#%06x", rgb)
+    }
+    static func random() -> UIColor {
+        return UIColor(red:   .random(),
+                       green: .random(),
+                       blue:  .random(),
+                       alpha: 1.0)
+    }
+}
+extension CGFloat {
+    static func random() -> CGFloat {
+        return CGFloat(arc4random()) / CGFloat(UInt32.max)
+    }
+
+
+
 }

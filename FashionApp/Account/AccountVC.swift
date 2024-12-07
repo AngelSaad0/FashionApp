@@ -27,9 +27,9 @@ class AccountVC: UIViewController {
 
     private func setupUI() {
         cornerRaduisView.addCornerRadius(8)
-        accountNameLbl.setCustomFont(font: .GabaritoBold, size: 16)
-        phoneLbl.setCustomFont(font: .GabaritoBold, size: 16)
-        editBtn.setCustomFont(font: .GabaritoBold, size: 12)
+        accountNameLbl.setCustomFont(font: .GabaritoBold, size: .medium)
+        phoneLbl.setCustomFont(font: .GabaritoBold, size: .medium)
+        editBtn.setCustomFont(font: .GabaritoBold, size: .extraSmall)
     }
 
     private func setupTableView() {
@@ -43,7 +43,7 @@ class AccountVC: UIViewController {
     }
 
     @IBAction func signoutBtnClicked(_ sender: Any) {
-        UIWindow.setRootViewController(viewController: SignInVC())
+        UIWindow.setRootViewController(viewController: SignInViewController())
     }
 }
 

@@ -11,5 +11,10 @@ case CircularStdBold = "CircularStd-Bold"
 case CircularStdMedium = "circular-std-medium-500.ttf"
 case CircularStdBook = "CircularStd-Book"
 case GabaritoBold = "Gabarito-Bold"
+case regular = ""
+    var font: String {
+        return self.rawValue.localized
+    }
+
 
 }

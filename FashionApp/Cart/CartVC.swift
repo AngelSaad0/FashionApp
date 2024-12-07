@@ -80,12 +80,12 @@ class CartVC: UIViewController {
         couponBtn.layer.cornerRadius = couponBtn.frame.height/2
         checkoutBtn.layer.cornerRadius = 20
         cornerRaduisView.forEach{$0.layer.cornerRadius = 8}
-        tileLbl.setCustomFont(font: .CircularStdBold, size: 24)
-        checkoutBtn.setCustomFont(font: .CircularStdBook, size: 16)
-        removeAllBtn.setCustomFont(font: .CircularStdBook,size: 16)
-        allLbLFonts.forEach{$0.setCustomFont(font: .CircularStdBook,size: 16)}
-        totalLbl.setCustomFont(font: .GabaritoBold, size: 16)
-        couponTxtField.setCustomFont(font: .CircularStdBook,size: 12)
+        tileLbl.setCustomFont(font: .CircularStdBold, size: .extraLarge)
+        checkoutBtn.setCustomFont(size: .medium)
+        removeAllBtn.setCustomFont(font: .CircularStdBook,size: .medium)
+        allLbLFonts.forEach{$0.setCustomFont(font: .CircularStdBook,size: .medium)}
+        totalLbl.setCustomFont(font: .GabaritoBold, size: .medium)
+        couponTxtField.setCustomFont(font: .CircularStdBook,size: .extraSmall)
 
     }
     func setupTableView() {

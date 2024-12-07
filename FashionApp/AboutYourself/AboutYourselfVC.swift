@@ -30,10 +30,10 @@ class AboutYourselfVC: UIViewController{
 
     private  func setupUI() {
         roundedView.forEach{$0.addCornerRadius(20)}
-        lbls.forEach{$0.setCustomFont(font: .CircularStdBook, size: 16) }
-        btns.forEach{$0.setCustomFont(font: .CircularStdBook, size: 16)}
+        lbls.forEach{$0.setCustomFont(size: .medium) }
+        btns.forEach{$0.setCustomFont(size: .medium)}
         btns.forEach{$0.addCornerRadius(20)}
-        titleLbl.setCustomFont(font: .CircularStdBold, size: 24)
+        titleLbl.setCustomFont(font: .CircularStdBold, size: .extraLarge)
     }
     private func addTapGestureToDismissDropdown() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissDropdown))

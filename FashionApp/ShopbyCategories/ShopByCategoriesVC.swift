@@ -14,7 +14,7 @@ class ShopByCategoriesVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLbl.setCustomFont(font: .GabaritoBold, size: 32)
+        titleLbl.setCustomFont(font: .GabaritoBold, size: .extraExtraLarge)
         setupTableView()
     }
 

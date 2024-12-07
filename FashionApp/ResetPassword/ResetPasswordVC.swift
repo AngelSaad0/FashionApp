@@ -16,12 +16,12 @@ class ResetPasswordVC: UIViewController {
     }
 
     func setupUI() {
-        returnToLogin.setCustomFont(font: .CircularStdBook, size: 16)
-        messageLbl.setCustomFont(font: .CircularStdBook, size: 24)
+        returnToLogin.setCustomFont(size: .medium)
+        messageLbl.setCustomFont(size: .extraLarge)
         returnToLogin.addCornerRadius(20)
     }
     
     @IBAction func returnToLoginBtn(_ sender: Any) {
-        UIWindow.setRootViewController(viewController: SignInVC())
+        UIWindow.setRootViewController(viewController: SignInViewController())
     }
 }

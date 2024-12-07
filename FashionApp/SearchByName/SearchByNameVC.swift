@@ -167,7 +167,7 @@ extension SearchByNameVC: UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let header = view as? UITableViewHeaderFooterView else { return }
         header.textLabel?.textColor = .label
-        header.textLabel?.setCustomFont(font: .GabaritoBold, size: 24)
+        header.textLabel?.setCustomFont(font: .GabaritoBold, size: .extraLarge)
         header.textLabel?.frame = header.bounds.offsetBy(dx: 24, dy: 0)
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

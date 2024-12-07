@@ -1,0 +1,78 @@
+/* 
+  Localizable.strings
+  SukkarApp
+
+  Created by Engy on 2/13/2567 BE.
+  
+*/
+
+"BlackFont"="Cairo-Black";
+"BoldFont"="Cairo-Bold";
+"ExtraBoldFont"="Cairo-ExtraBold";
+"LightFont"="Cairo-Light";
+"MediumFont"="Cairo-Medium";
+"RegularFont"="Cairo-Regular";
+"SemiBold"="Cairo-SemiBold";
+
+
+//Lbls
+"welcomeLbl"="مرحبا";
+"continueAsLbl"="الانضمام";
+"agreeForLbl"="قبول";
+"editProfileLbl"= "يمكنك تعديل ملفك الشخصي الان";
+
+
+//TxtField
+
+"emailTF"="البريد الإلكتروني";
+"emailMobileTF"="الايميل او الهاتف";
+"nameTF"="اسم المستخدم";
+"mobileTF"="الهاتف";
+"passwordTF"="كلمه السر";
+"rePasswordTF"="اعد كتابه كلمه السر";
+"oldPasswordTF"="كلمه المرور القديمه";
+"newPasswordTF"="كلمه المرور الجديده";
+"retypeNewPasswordTF"="اعد كتابه كلمه المرور الجديده";
+"massageTF"="";
+
+//Btns
+"guestBtn"="كضيف ";
+"termsCondtionsBtn"="الشروط والاحكام ";
+"RegisterBtn"="تسجيل";
+"SaveBtn"="حفظ";
+"SendBtn"="ارسال";
+"loginBtn"="تسجيل الدخول";
+"LogoutBtn"="تسجيل خروج";
+"forgetPasswordBtn"="نسيت كلمه السر؟";
+"Logout"="تسجيل خروج";
+
+
+
+//Alert Txt
+ "nameEmpty"="الاسم فارغ";
+ "nameVaild"="الاسم غير صالح";
+ "emailEmpty"="الايميل فارغ";
+ "emailValid"="الايميل غير صالح";
+ "passwordEmpty"="كلمه السر فارغه";
+ "passwordVaild"="كلمه السر غير صالحه";
+ "reTypeEmpty"="اعد كتابه كلمه السر فارغه";
+ "reTypeVaild"="اعد كتابه كلمه السر غير صالحه";
+ "passwordRetypeEqual"="كلمه السر غير متساويه";
+ "mobileVaild"="رقم الهاتف غير صالح";
+ "mobileEmpty"="رقم الهاتف فارغ";
+ "termsConditions"="الموافقه علي الشروط والاحكام";
+ "Succeses"="تم التسجيل بنجاح";
+
+// navbar title
+"Home"="الرئيسية";
+"Categories"="الفئات";
+"Diabetic Supplies"="مستلزمات مرضى السكري";
+"Account"="المعلومات الشخصية";
+"Edit Profile"="تعديل الملف الشخصي";
+"Change password"="تغيير الرقم السري";
+"Orders"="طلبات";
+"Addresses"="عناوين";
+"Favorites"="المفضلة";
+"About us"="معلومات عنا";
+"Contact US"="اتصل بنا";
+"Change \npassword"="تغيير \nكلمه السر ";

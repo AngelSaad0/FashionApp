@@ -41,4 +41,10 @@ enum Colors: String {
     case CE7F0E1 = "#E7F0E1"
     case CF0E1EF = "#F0E1EF"
     case CC328B9 = "#C328B9"
+    var hex: UIColor {
+           return UIColor(hexString: self.rawValue)
+       }
+       var cgColor: CGColor{
+           return UIColor(hexString: self.rawValue).cgColor
+       }
 }

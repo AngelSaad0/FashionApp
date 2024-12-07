@@ -9,28 +9,28 @@ import UIKit
 
 class SignInViewController: UIViewController {
 
-    @IBOutlet var emailView: UIView!
-    @IBOutlet var roundedView: [UIView]!
-    @IBOutlet var titleLbl: UILabel!
-    @IBOutlet var haveAccountLbl: UILabel!
-    @IBOutlet var continueWithLbl: [UILabel]!
-    @IBOutlet var emailTxt: UITextField!
-    @IBOutlet var continueBtn: UIButton!
-    @IBOutlet var createOneBtn: UIButton!
+    @IBOutlet var emailContainerView: UIView!
+    @IBOutlet var roundedViews: [UIView]!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var haveAccountLabel: UILabel!
+    @IBOutlet var continueWithLabels: [UILabel]!
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var continueButton: UIButton!
+    @IBOutlet var createAccountButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
     }
 
     private func updateUI() {
-        titleLbl.setCustomFont(font: .CircularStdBold, size: 32)
-        emailTxt.setCustomFont(font: .CircularStdBook, size: 16)
-        continueBtn.setCustomFont(font: .CircularStdBook, size: 16)
-        createOneBtn.setCustomFont(font: .CircularStdBold, size: 13)
-        continueWithLbl.forEach{$0.setCustomFont(font: .CircularStdBold, size: 16)}
-        haveAccountLbl.setCustomFont(font: .CircularStdBook,size: 12)
-        emailView.addCornerRadius(8)
-        roundedView.forEach{$0.addCornerRadius(20)}
+        titleLabel.setCustomFont(size: .extraExtraLarge)
+        emailTextField.setCustomFont(size: .medium)
+        continueButton.setCustomFont(size: .medium)
+        createAccountButton.setCustomFont(font: .CircularStdBold, size: .small)
+        continueWithLabels.forEach{$0.setCustomFont(font: .CircularStdBold, size: .medium)}
+        haveAccountLabel.setCustomFont(size: .extraSmall)
+        emailContainerView.addCornerRadius(8)
+        roundedViews.forEach{$0.addCornerRadius(20)}
     }
 
     @IBAction func createAccountBtnClicked(_ sender: Any) {

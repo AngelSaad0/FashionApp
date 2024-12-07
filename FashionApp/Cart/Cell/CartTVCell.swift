@@ -45,8 +45,8 @@ class CartTVCell: UITableViewCell {
     }
     func setupUI() {
         containerView.addCornerRadius(8)
-        allLblForSamllFont.forEach{$0.setCustomFont(font: .CircularStdBook, size: 13)}
-        allLblForBoldFont.forEach{$0.setCustomFont(font: .CircularStdBold, size: 15)}
+        allLblForSamllFont.forEach{$0.setCustomFont(size: .extraSmall)}
+        allLblForBoldFont.forEach{$0.setCustomFont(font: .CircularStdBold, size: .small)}
         btns.forEach{$0.layer.cornerRadius = $0.frame.height/2}
     }
 

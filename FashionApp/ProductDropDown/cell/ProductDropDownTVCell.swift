@@ -25,7 +25,7 @@ class ProductDropDownTVCell: UITableViewCell {
         colorView.layer.borderColor =  UIColor.white.cgColor
         colorView.layer.cornerRadius = colorView.frame.height/2
         containerView.layer.cornerRadius = 20
-        titleLbl.setCustomFont(font: .CircularStdBook, size: 16)
+        titleLbl.setCustomFont(size: .medium)
     }
 
     func configCellForSize(_ item: String) {
@@ -35,7 +35,7 @@ class ProductDropDownTVCell: UITableViewCell {
     func configCellForColor(_ item: String) {
         titleLbl.text = item
         colorView.isHidden = false
-        colorView.backgroundColor = UIColor(colorName: item)
+        colorView.backgroundColor = UIColor(named: item)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

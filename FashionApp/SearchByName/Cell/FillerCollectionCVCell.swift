@@ -19,8 +19,8 @@ class FillerCollectionCVCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        titleLbl.setCustomFont(font: .CircularStdBook, size: 12)
-        subTitleLbl.setCustomFont(font: .CircularStdBook, size: 12)
+        titleLbl.setCustomFont(size: .extraSmall)
+        subTitleLbl.setCustomFont(size: .extraSmall)
         DispatchQueue.main.async {
             self.containerView.layer.cornerRadius = self.containerView.frame.height/2
         }

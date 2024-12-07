@@ -29,7 +29,7 @@ class OrdersVC: UIViewController {
         setupUI()
     }
     private func setupUI() {
-        filltersOrders = orders
+        filltersOrders = dummyOrders
         handelEmptyTable()
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -65,9 +65,9 @@ class OrdersVC: UIViewController {
     func fillterReuslts(index:Int) {
         let status = statuses[index].stateTitle
         if status == .Processing {
-            filltersOrders = orders
+            filltersOrders = dummyOrders
         } else {
-            filltersOrders = orders.filter{$0.status == status}
+            filltersOrders = dummyOrders.filter{$0.status == status}
         }
 
         tableView.reloadData()
@@ -124,7 +124,7 @@ extension OrdersVC: UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let vc  = OrderDetailsVC()
-        vc.orderDetails = orders[indexPath.row]
+        vc.orderDetails = dummyOrders[indexPath.row]
         presentDetail(vc)
     }
 }

@@ -24,8 +24,8 @@ class WishlistTVCell: UITableViewCell {
 
     func updateUI() {
         containerView.addCornerRadius(8)
-        titleLbl.setCustomFont(font: .GabaritoBold, size: 16)
-        quantityLbl.setCustomFont(font: .CircularStdBook, size: 12)
+        titleLbl.setCustomFont(font: .GabaritoBold, size: .medium)
+        quantityLbl.setCustomFont(size: .extraSmall)
     }
     
     func config(_ product: WishlistModel) {

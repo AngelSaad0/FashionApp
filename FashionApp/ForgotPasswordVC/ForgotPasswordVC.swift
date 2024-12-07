@@ -19,9 +19,9 @@ class ForgotPasswordVC: UIViewController {
     }
 
     private func setupUI() {
-        titleLbl.setCustomFont(font: .CircularStdBold, size: 32)
-        emailTxt.setCustomFont(font: .CircularStdBook, size: 16)
-        contineBtn.setCustomFont(font: .CircularStdBook, size: 16)
+        titleLbl.setCustomFont(font: .CircularStdBold, size: .extraExtraLarge)
+        emailTxt.setCustomFont(size: .medium)
+        contineBtn.setCustomFont(size: .medium)
         emailView.addCornerRadius(8)
         contineBtn.addCornerRadius(20)
     }
