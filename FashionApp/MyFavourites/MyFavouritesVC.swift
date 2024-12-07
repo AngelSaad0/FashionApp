@@ -26,7 +26,7 @@ class MyFavouritesVC: UIViewController {
         collectionView.registerCVNib(cell: TopSellingCVCell.self)
     }
 
-    @IBAction func backBtnClicked(_ sender: Any) {
+    @IBAction func dismissButtonClicked(_ sender: Any) {
         dismissDetail()
     }
 

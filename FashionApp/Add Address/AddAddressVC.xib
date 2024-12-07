@@ -50,7 +50,7 @@
                         <color key="baseBackgroundColor" name="backButtonColor"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="backBtnClicked:" destination="-1" eventType="touchUpInside" id="uEa-hH-okp"/>
+                        <action selector="dismissButtonClicked:" destination="-1" eventType="touchUpInside" id="uEa-hH-okp"/>
                     </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="4Hz-WD-BDd">

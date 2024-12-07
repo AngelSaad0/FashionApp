@@ -42,7 +42,7 @@
                         <color key="baseBackgroundColor" name="backButtonColor"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="backBtnClicked:" destination="-1" eventType="touchUpInside" id="Mbm-YS-Sjj"/>
+                        <action selector="dismissButtonClicked:" destination="-1" eventType="touchUpInside" id="Mbm-YS-Sjj"/>
                     </connections>
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0Tz-op-9qe">

@@ -29,7 +29,7 @@ class WishlistVC: UIViewController {
         tableview.registerTVNib(cell: WishlistTVCell.self)
     }
 
-    @IBAction func backBtnClicked(_ sender: Any) {
+    @IBAction func dismissButtonClicked(_ sender: Any) {
         dismissDetail()
     }
 }

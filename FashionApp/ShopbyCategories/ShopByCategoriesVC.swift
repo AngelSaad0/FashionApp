@@ -24,7 +24,7 @@ class ShopByCategoriesVC: UIViewController {
         tableView.registerTVNib(cell: ShopByCategoriesTVCell.self)
     }
 
-    @IBAction func backBtnClicked(_ sender: Any) {
+    @IBAction func dismissButtonClicked(_ sender: Any) {
         dismissDetail()
     }
 }

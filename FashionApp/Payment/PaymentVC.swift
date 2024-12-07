@@ -28,7 +28,7 @@ class PaymentVC: UIViewController {
         tableView.registerTVNib(cell: PaymentTVCell.self)
     }
 
-    @IBAction func backBtnClicked(_ sender: Any) {
+    @IBAction func dismissButtonClicked(_ sender: Any) {
         dismissDetail()
     }
 

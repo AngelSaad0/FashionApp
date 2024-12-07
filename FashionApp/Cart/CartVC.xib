@@ -254,7 +254,7 @@
                         <color key="baseBackgroundColor" name="backButtonColor"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="BackBtnClicked:" destination="-1" eventType="touchUpInside" id="b6e-LB-d8O"/>
+                        <action selector="dismissButtonClicked:" destination="-1" eventType="touchUpInside" id="b6e-LB-d8O"/>
                     </connections>
                 </button>
             </subviews>

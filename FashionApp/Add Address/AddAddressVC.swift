@@ -25,7 +25,7 @@ class AddAddressVC: UIViewController {
         allCornerView.forEach{$0.addCornerRadius(8)}
     }
 
-    @IBAction func backBtnClicked(_ sender: Any) {
+    @IBAction func dismissButtonClicked(_ sender: Any) {
         dismissDetail()
     }
 

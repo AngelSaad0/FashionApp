@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else {return}
         window = UIWindow(windowScene: windowScene)
 //        let vc = UIStoryboard(name: "MainTabBarVC", bundle: nil).instantiateViewController(withIdentifier: "MainTabBar")
-        window?.rootViewController = MainTabBarVC()
+        window?.rootViewController = SignInViewController()
         window?.makeKeyAndVisible()
 
         guard let _ = (scene as? UIWindowScene) else { return }

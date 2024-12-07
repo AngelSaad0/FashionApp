@@ -1,77 +1,74 @@
-/* 
+/*
   Localizable.strings
   SukkarApp
 
   Created by Engy on 2/13/2567 BE.
-  
 */
 
+/* Fonts */
 "BlackFont"="Poppins-Black";
 "BoldFont"="Poppins-Bold";
 "ExtraBoldFont"="Poppins-ExtraBold";
 "LightFont"="Poppins-Light";
 "MediumFont"="Poppins-Medium";
 "RegularFont"="Poppins-Regular";
-"SemiBold"="Poppins-SemiBold";
-
-
-//Lbls
-"welcomeLbl"="Weclome";
-"continueAsLbl"="Continue as a ";
-"agreeForLbl"="I agree for ";
-"editProfileLbl"= "Edit your profile now.";
-
-//TxtField
-
-"emailTF"="Email Address";
-"emailMobileTF"="Email or Mobile";
-"nameTF"="Name";
-"mobileTF"="phone";
-"passwordTF"="password";
-"rePasswordTF"="retype password";
-"oldPasswordTF"="old password";
-"newPasswordTF"="new password";
-"retypeNewPasswordTF"="retype new password";
-"massageTF"="massage";
-
-//Btns
-"guestBtn"="Guest";
-"termsCondtionsBtn"="Terms & Conditions";
-"forgetPasswordBtn"="Forget Password?";
-"loginBtn"="Login";
-"newUserBtn"="Save";
-"RegisterBtn"="Register";
-"SaveBtn"="Send";
-"SendBtn"="Logout";
-"Logout"="Logout";
-
-
-//alert texts
- "nameEmpty"="name is empty";
- "nameVaild"="name not vaild";
- "emailEmpty"="email empty";
- "emailValid"="email not vaild";
- "passwordEmpty"="password is empty";
- "passwordVaild"="password not vaild";
- "reTypeEmpty"="reType password is empty";
- "reTypeVaild"="reType password not vaild";
- "passwordRetypeEqual"="passwoed not equal";
- "mobileVaild"="mobile not vaild";
- "mobileEmpty"="mobile is empty";
- "termsConditions"="agree for term and conditions";
- "Succeses"="Succeses login";
-
-// vc title
-"Home"="Home";
-"Categories"="Categories";
-"Diabetic Supplies"="Diabetic Supplies";
-"Account"="Account";
-"Edit Profile"="Edit Profile";
-"Change password"="Change password";
-"Orders"="Orders";
-"Addresses"="Addresses";
-"Favorites"="Favorites";
-"About us"="About us";
-"Contact US"="Contact US";
-"Change \npassword"="Change \npassword";
-
+"SemiBoldFont"="Poppins-SemiBold"; 
+/* Messages */
+"none" = "";
+"firstNameEmpty" = "First name is empty";
+"lastNameEmpty" = "Last name is empty";
+"firstNameInvalid" = "First name is not valid";
+"lastNameInvalid" = "Last name is not valid";
+"emailEmpty" = "Email is empty";
+"emailInvalid" = "Email is not valid";
+"passwordEmpty" = "Password is empty";
+"passwordInvalid" = "Password is not valid";
+"confirmPasswordEmpty" = "Confirm password is empty";
+"confirmPasswordInvalid" = "Confirm password is not valid";
+"passwordsMismatch" = "Passwords do not match";
+"mobileInvalid" = "Mobile is not valid";
+"mobileEmpty" = "Mobile is empty";
+"termsConditionsNotAccepted" = "Terms and conditions not accepted";
+"success" = "Success";
+"notAvailable" = "Not Available";
+"nameEmpty" = "Name is empty";
+"nameValid" = "Name is not valid";
+"emailValid" = "Email is not valid";
+"passwordValid" = "Password is not valid";
+"reTypeEmpty" = "Re-type password is empty";
+"reTypeValid" = "Re-type password is not valid";
+"passwordRetypeEqual" = "Passwords do not match";
+"mobileValid" = "Mobile is not valid";
+"addressEmpty" = "Address is empty";
+"addressValid" = "Address is not valid";
+"cityEmpty" = "City is empty";
+"cityValid" = "City is not valid";
+"countryEmpty" = "Country is empty";
+"countryValid" = "Country is not valid";
+"termsConditions" = "Agree to terms and conditions";
+"successLogin" = "Logged in successfully";
+"successRegister" = "Registered successfully";
+"checkingEmailFail" = "Error checking if email not already registered";
+"emailExist" = "Entered email already exists";
+"encodingFail" = "Error encoding customer info";
+"customerCreationFail" = "Failed to create new customer";
+"draftsCreationFail" = "Failed to create ShoppingCart or Wishlist";
+"emailDoesNotExist" = "Entered email does not exist";
+"passwordDoesNotMatch" = "Entered password does not match";
+"addedToWishlist" = "Item successfully added to wishlist";
+"removedFromWishlist" = "Item successfully removed from wishlist";
+"addedToShoppingCart" = "Item successfully added to shopping cart";
+"foundInShoppingCart" = "Item found in shopping cart";
+"removedFromShoppingCart" = "Item successfully removed from shopping cart";
+"ordersFetchingFailed" = "Error happened while loading your orders";
+"addressesFetchingFailed" = "Error happened while loading your addresses";
+"newSelectedAddressFailed" = "Error happened while updating your default address";
+"defaultAddressUpdated" = "Default address updated successfully";
+"newAddressAdded" = "New address added successfully";
+"addressEdited" = "Address has been edited successfully";
+"discountCodeEmpty" = "You have not entered a discount code";
+"discountCodeFailed" = "Entered discount code is not valid";
+"discountCodeApplied" = "Congratulations, discount code applied";
+"placingOrderFailed" = "Error happened while sending your order";
+"emptyOrderArray" = "No order found";
+"exchangeRateFailed" = "Failed to update currency setting";

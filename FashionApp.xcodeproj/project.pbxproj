@@ -23,10 +23,12 @@
 		A9050A3B2D049B8200082847 /* TxtField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050A2E2D049B8200082847 /* TxtField.swift */; };
 		A9050A3D2D049B8200082847 /* NavBarImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050A272D049B8200082847 /* NavBarImg.swift */; };
 		A9050A3E2D049B8200082847 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050A2A2D049B8200082847 /* Color.swift */; };
-		A9050A3F2D049B8200082847 /* ValidMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050A322D049B8200082847 /* ValidMsg.swift */; };
+		A9050A3F2D049B8200082847 /* ValidMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050A322D049B8200082847 /* ValidMessage.swift */; };
 		A9050A422D049BB100082847 /* KHTxtField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050A412D049BB100082847 /* KHTxtField.swift */; };
 		A9050A472D049BBF00082847 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9050A452D049BBF00082847 /* Localizable.strings */; };
 		A9050A492D049C4000082847 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050A482D049C4000082847 /* String+Extensions.swift */; };
+		A9050BF32D04D86F00082847 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050BF22D04D86F00082847 /* UserDefaultsManager.swift */; };
+		A9050BF62D04E2A400082847 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A9050BF52D04E2A400082847 /* IQKeyboardManagerSwift */; };
 		A951C7DE2CEC0376006828F8 /* ProductDetailsCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951C7D82CEC0376006828F8 /* ProductDetailsCVCell.swift */; };
 		A951C7DF2CEC0376006828F8 /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951C7DB2CEC0376006828F8 /* ProductDetailsVC.swift */; };
 		A951C7E02CEC0376006828F8 /* ProductDetailsCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A951C7D92CEC0376006828F8 /* ProductDetailsCVCell.xib */; };
@@ -165,12 +167,13 @@
 		A9050A2C2D049B8200082847 /* BACK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BACK.swift; sourceTree = "<group>"; };
 		A9050A2E2D049B8200082847 /* TxtField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxtField.swift; sourceTree = "<group>"; };
 		A9050A312D049B8200082847 /* lbls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lbls.swift; sourceTree = "<group>"; };
-		A9050A322D049B8200082847 /* ValidMsg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidMsg.swift; sourceTree = "<group>"; };
+		A9050A322D049B8200082847 /* ValidMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidMessage.swift; sourceTree = "<group>"; };
 		A9050A332D049B8200082847 /* BTNs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTNs.swift; sourceTree = "<group>"; };
 		A9050A412D049BB100082847 /* KHTxtField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KHTxtField.swift; sourceTree = "<group>"; };
 		A9050A432D049BBF00082847 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A9050A442D049BBF00082847 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A9050A482D049C4000082847 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		A9050BF22D04D86F00082847 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		A951C7D82CEC0376006828F8 /* ProductDetailsCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsCVCell.swift; sourceTree = "<group>"; };
 		A951C7D92CEC0376006828F8 /* ProductDetailsCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailsCVCell.xib; sourceTree = "<group>"; };
 		A951C7DB2CEC0376006828F8 /* ProductDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
@@ -322,6 +325,7 @@
 			files = (
 				A9050A1B2D0497CD00082847 /* SwiftMessages in Frameworks */,
 				A9050A222D04984F00082847 /* MOLH in Frameworks */,
+				A9050BF62D04E2A400082847 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,13 +358,6 @@
 				A951C8822CECD092006828F8 /* ReviewCell */,
 			);
 			path = ProductDetails;
-			sourceTree = "<group>";
-		};
-		A951C8332CECBF08006828F8 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		A951C8362CECBF1A006828F8 /* MyFavourites */ = {
@@ -460,7 +457,7 @@
 				A9050A2C2D049B8200082847 /* BACK.swift */,
 				A9050A2E2D049B8200082847 /* TxtField.swift */,
 				A9050A312D049B8200082847 /* lbls.swift */,
-				A9050A322D049B8200082847 /* ValidMsg.swift */,
+				A9050A322D049B8200082847 /* ValidMessage.swift */,
 				A9050A332D049B8200082847 /* BTNs.swift */,
 				A9AC2C472CEA7BF5008C3D6D /* Message.swift */,
 				A96F64372CEA9F6800B5939B /* Images.swift */,
@@ -826,6 +823,9 @@
 		A9AC2C7F2CEA7BF5008C3D6D /* FashionApp */ = {
 			isa = PBXGroup;
 			children = (
+				A9050BF22D04D86F00082847 /* UserDefaultsManager.swift */,
+				A9AC2C702CEA7BF5008C3D6D /* SignIn */,
+				A9AC2C1A2CEA7BF5008C3D6D /* CreateAccount */,
 				A9050A462D049BBF00082847 /* Localization  */,
 				A951C8AF2CECF0E9006828F8 /* SearchByName */,
 				A9AC2C3E2CEA7BF5008C3D6D /* Home */,
@@ -834,7 +834,6 @@
 				A951C87D2CECD07B006828F8 /* OrderSuccess */,
 				A951C8762CECD00C006828F8 /* Checkout */,
 				A951C86C2CECD003006828F8 /* Cart */,
-				A9AC2C1A2CEA7BF5008C3D6D /* CreateAccount */,
 				A9AC2C0D2CEA7BF5008C3D6D /* AboutYourself */,
 				A9AC2C412CEA7BF5008C3D6D /* LoginPassword */,
 				A9AC2C432CEA7BF5008C3D6D /* MainTabBar */,
@@ -846,7 +845,6 @@
 				A9AC2C312CEA7BF5008C3D6D /* Help */,
 				A9AC2C132CEA7BF5008C3D6D /* Account */,
 				A951C8362CECBF1A006828F8 /* MyFavourites */,
-				A9AC2C702CEA7BF5008C3D6D /* SignIn */,
 				A9AC2C6D2CEA7BF5008C3D6D /* ShopByCategoriesName */,
 				A9AC2C642CEA7BF5008C3D6D /* ResetPassword */,
 				A9AC2C5E2CEA7BF5008C3D6D /* OrderDetails */,
@@ -857,7 +855,6 @@
 				A9AC2CF82CEA9654008C3D6D /* Add Address */,
 				A9AC2C4D2CEA7BF5008C3D6D /* Model */,
 				A96F64452CEA9F6800B5939B /* Utilties */,
-				A951C8332CECBF08006828F8 /* New Group */,
 				A9AC2C772CEA7BF5008C3D6D /* AppDelegate.swift */,
 				A9AC2C782CEA7BF5008C3D6D /* Assets.xcassets */,
 				A9AC2C792CEA7BF5008C3D6D /* Colors.xcassets */,
@@ -927,6 +924,7 @@
 			packageProductDependencies = (
 				A9050A1A2D0497CD00082847 /* SwiftMessages */,
 				A9050A212D04984F00082847 /* MOLH */,
+				A9050BF52D04E2A400082847 /* IQKeyboardManagerSwift */,
 			);
 			productName = FashionApp;
 			productReference = A9E2A0F12CE649130081A76C /* FashionApp.app */;
@@ -960,6 +958,7 @@
 			packageReferences = (
 				A9050A192D0497CD00082847 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 				A9050A202D04984F00082847 /* XCRemoteSwiftPackageReference "MOLH" */,
+				A9050BF42D04E2A400082847 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A9E2A0F22CE649130081A76C /* Products */;
@@ -1053,6 +1052,7 @@
 				A951C8782CECD00C006828F8 /* CheckoutVC.swift in Sources */,
 				A9AC2C972CEA7BF5008C3D6D /* HandleMessageView.swift in Sources */,
 				A9AC2C982CEA7BF5008C3D6D /* HelpVC.swift in Sources */,
+				A9050BF32D04D86F00082847 /* UserDefaultsManager.swift in Sources */,
 				A9AC2C992CEA7BF5008C3D6D /* CategoriesCVCell.swift in Sources */,
 				A9AC2C9A2CEA7BF5008C3D6D /* HomeHeaderReusable.swift in Sources */,
 				A9AC2C9B2CEA7BF5008C3D6D /* TopSellingCVCell.swift in Sources */,
@@ -1081,7 +1081,7 @@
 				A9050A3B2D049B8200082847 /* TxtField.swift in Sources */,
 				A9050A3D2D049B8200082847 /* NavBarImg.swift in Sources */,
 				A9050A3E2D049B8200082847 /* Color.swift in Sources */,
-				A9050A3F2D049B8200082847 /* ValidMsg.swift in Sources */,
+				A9050A3F2D049B8200082847 /* ValidMessage.swift in Sources */,
 				A951C7DE2CEC0376006828F8 /* ProductDetailsCVCell.swift in Sources */,
 				A951C9002CEE23C3006828F8 /* Constant.swift in Sources */,
 				A951C7DF2CEC0376006828F8 /* ProductDetailsVC.swift in Sources */,
@@ -1365,6 +1365,14 @@
 				minimumVersion = 1.2.0;
 			};
 		};
+		A9050BF42D04E2A400082847 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1377,6 +1385,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A9050A202D04984F00082847 /* XCRemoteSwiftPackageReference "MOLH" */;
 			productName = MOLH;
+		};
+		A9050BF52D04E2A400082847 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9050BF42D04E2A400082847 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

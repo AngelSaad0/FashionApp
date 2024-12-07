@@ -31,7 +31,7 @@
                         <color key="baseBackgroundColor" name="backButtonColor"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="backBtnClicked:" destination="-1" eventType="touchUpInside" id="bxM-cw-Wyl"/>
+                        <action selector="dismissButtonClicked:" destination="-1" eventType="touchUpInside" id="bxM-cw-Wyl"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoodies (240)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBc-La-BZG">

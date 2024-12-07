@@ -102,7 +102,7 @@ class CartVC: UIViewController {
         recalculateOrderSummary()
     }
 
-    @IBAction func BackBtnClicked(_ sender: Any) {
+    @IBAction func dismissButtonClicked(_ sender: Any) {
         dismissDetail()
     }
 

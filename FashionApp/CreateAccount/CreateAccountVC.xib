@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -11,21 +11,25 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateAccountVC" customModule="FashionApp" customModuleProvider="target">
             <connections>
-                <outlet property="continueBtn" destination="JcT-2e-bCb" id="H2j-HA-55X"/>
-                <outlet property="forgetLbl" destination="9po-l3-Zb6" id="uYm-oR-3Bh"/>
-                <outlet property="resetBtn" destination="b2L-Lu-wtP" id="G8y-Fd-jg3"/>
-                <outlet property="titleLbl" destination="eDP-lx-MKL" id="UN4-kx-ihZ"/>
+                <outlet property="continueButton" destination="JcT-2e-bCb" id="H2j-HA-55X"/>
+                <outlet property="emailTextField" destination="bay-MU-b98" id="yy9-p3-fJK"/>
+                <outlet property="firstNameTextField" destination="imy-x1-gR1" id="ogF-aY-DIe"/>
+                <outlet property="forgetLabel" destination="9po-l3-Zb6" id="uYm-oR-3Bh"/>
+                <outlet property="lastNameTextField" destination="ZZv-JQ-FkN" id="tqQ-i2-YbT"/>
+                <outlet property="passwordTextField" destination="zGF-Ai-HkU" id="VeO-D5-Lyl"/>
+                <outlet property="resetButton" destination="b2L-Lu-wtP" id="G8y-Fd-jg3"/>
+                <outlet property="titleLabel" destination="eDP-lx-MKL" id="UN4-kx-ihZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="R5j-Xz-DZC"/>
-                <outletCollection property="roundedView" destination="TmL-AS-Thi" collectionClass="NSMutableArray" id="cxF-j4-eYI"/>
-                <outletCollection property="roundedView" destination="DNa-Pe-HbW" collectionClass="NSMutableArray" id="0ti-RH-oq7"/>
-                <outletCollection property="roundedView" destination="I09-z7-KCH" collectionClass="NSMutableArray" id="Zsy-zv-PMp"/>
-                <outletCollection property="roundedView" destination="8x3-R6-3q4" collectionClass="NSMutableArray" id="GdO-Ez-tHP"/>
-                <outletCollection property="roundedView" destination="VrI-Nx-wmL" collectionClass="NSMutableArray" id="0DC-Is-wXJ"/>
-                <outletCollection property="roundedView" destination="6Z5-g4-iF9" collectionClass="NSMutableArray" id="bhw-th-vvi"/>
-                <outletCollection property="allTxt" destination="imy-x1-gR1" collectionClass="NSMutableArray" id="EDE-Nw-1NN"/>
-                <outletCollection property="allTxt" destination="ZZv-JQ-FkN" collectionClass="NSMutableArray" id="fVL-YR-i1q"/>
-                <outletCollection property="allTxt" destination="bay-MU-b98" collectionClass="NSMutableArray" id="5eC-td-ETM"/>
-                <outletCollection property="allTxt" destination="zGF-Ai-HkU" collectionClass="NSMutableArray" id="hg2-qs-SDb"/>
+                <outletCollection property="roundedContainerView" destination="TmL-AS-Thi" collectionClass="NSMutableArray" id="cxF-j4-eYI"/>
+                <outletCollection property="roundedContainerView" destination="DNa-Pe-HbW" collectionClass="NSMutableArray" id="0ti-RH-oq7"/>
+                <outletCollection property="roundedContainerView" destination="I09-z7-KCH" collectionClass="NSMutableArray" id="Zsy-zv-PMp"/>
+                <outletCollection property="roundedContainerView" destination="8x3-R6-3q4" collectionClass="NSMutableArray" id="GdO-Ez-tHP"/>
+                <outletCollection property="roundedContainerView" destination="VrI-Nx-wmL" collectionClass="NSMutableArray" id="0DC-Is-wXJ"/>
+                <outletCollection property="roundedContainerView" destination="6Z5-g4-iF9" collectionClass="NSMutableArray" id="bhw-th-vvi"/>
+                <outletCollection property="textFields" destination="imy-x1-gR1" collectionClass="NSMutableArray" id="EDE-Nw-1NN"/>
+                <outletCollection property="textFields" destination="ZZv-JQ-FkN" collectionClass="NSMutableArray" id="fVL-YR-i1q"/>
+                <outletCollection property="textFields" destination="bay-MU-b98" collectionClass="NSMutableArray" id="5eC-td-ETM"/>
+                <outletCollection property="textFields" destination="zGF-Ai-HkU" collectionClass="NSMutableArray" id="hg2-qs-SDb"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -45,7 +49,7 @@
                         <color key="baseBackgroundColor" name="backButtonColor"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="backBtnClicked:" destination="-1" eventType="touchUpInside" id="O6u-6x-sZO"/>
+                        <action selector="dismissButtonClicked:" destination="-1" eventType="touchUpInside" id="O6u-6x-sZO"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDP-lx-MKL">
@@ -114,19 +118,36 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8x3-R6-3q4">
                             <rect key="frame" x="0.0" y="215.99999999999997" width="347" height="56.000000000000028"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zGF-Ai-HkU">
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KIj-qj-0Dd">
                                     <rect key="frame" x="12" y="2.6666666666666856" width="323" height="50.666666666666664"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </textField>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zGF-Ai-HkU">
+                                            <rect key="frame" x="0.0" y="0.0" width="289" height="50.666666666666664"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlQ-Za-WkF">
+                                            <rect key="frame" x="299" y="0.0" width="24" height="50.666666666666664"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="24" id="7jy-WI-0JR"/>
+                                            </constraints>
+                                            <color key="tintColor" systemColor="labelColor"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="eye" catalog="system"/>
+                                            <connections>
+                                                <action selector="showOrHidePasswordButtonCliked:" destination="-1" eventType="touchUpInside" id="OMs-Vj-01S"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
                             </subviews>
                             <color key="backgroundColor" name="#F4F4F4"/>
                             <constraints>
-                                <constraint firstItem="zGF-Ai-HkU" firstAttribute="centerY" secondItem="8x3-R6-3q4" secondAttribute="centerY" id="0ZE-Qj-8ho"/>
-                                <constraint firstAttribute="trailing" secondItem="zGF-Ai-HkU" secondAttribute="trailing" constant="12" id="4d5-2B-Vhf"/>
                                 <constraint firstAttribute="height" constant="56" id="9Hq-8a-FS9"/>
-                                <constraint firstItem="zGF-Ai-HkU" firstAttribute="height" secondItem="8x3-R6-3q4" secondAttribute="height" multiplier="0.9" id="Nuf-ZM-SpC"/>
-                                <constraint firstItem="zGF-Ai-HkU" firstAttribute="leading" secondItem="8x3-R6-3q4" secondAttribute="leading" constant="12" id="Vzd-jO-PlK"/>
+                                <constraint firstItem="KIj-qj-0Dd" firstAttribute="centerY" secondItem="8x3-R6-3q4" secondAttribute="centerY" id="MzF-cm-orm"/>
+                                <constraint firstItem="KIj-qj-0Dd" firstAttribute="leading" secondItem="8x3-R6-3q4" secondAttribute="leading" constant="12" id="Nxs-id-Kfn"/>
+                                <constraint firstAttribute="trailing" secondItem="KIj-qj-0Dd" secondAttribute="trailing" constant="12" id="PBI-v2-nEA"/>
+                                <constraint firstItem="KIj-qj-0Dd" firstAttribute="height" secondItem="8x3-R6-3q4" secondAttribute="height" multiplier="0.9" id="aiR-VB-TO7"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VrI-Nx-wmL">
@@ -170,11 +191,10 @@
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="resetBtnClicked:" destination="-1" eventType="touchUpInside" id="JhQ-fC-meQ"/>
+                                        <action selector="resetButtonClicked:" destination="-1" eventType="touchUpInside" id="JhQ-fC-meQ"/>
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="9po-l3-Zb6" firstAttribute="leading" secondItem="6Z5-g4-iF9" secondAttribute="leading" id="2po-GU-Sny"/>
                                 <constraint firstItem="b2L-Lu-wtP" firstAttribute="centerY" secondItem="6Z5-g4-iF9" secondAttribute="centerY" id="Gne-s5-ty0"/>
@@ -187,7 +207,7 @@
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="#1D182A"/>
             <constraints>
                 <constraint firstItem="eDP-lx-MKL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="27" id="2lB-tW-M6K"/>
                 <constraint firstItem="7Eq-la-cAE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="23" id="KfD-iC-AaA"/>
@@ -202,6 +222,10 @@
     </objects>
     <resources>
         <image name="backButton" width="16" height="16"/>
+        <image name="eye" catalog="system" width="128" height="79"/>
+        <namedColor name="#1D182A">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="#8E6CEF">
             <color red="0.55699998140335083" green="0.42399999499320984" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
@@ -213,9 +237,6 @@
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

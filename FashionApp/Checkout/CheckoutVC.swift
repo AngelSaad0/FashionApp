@@ -49,7 +49,7 @@ class CheckoutVC: UIViewController {
 
 
 
-    @IBAction func BackBtnClicked(_ sender: Any) {
+    @IBAction func dismissButtonClicked(_ sender: Any) {
         dismissDetail()
     }
 

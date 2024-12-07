@@ -20,7 +20,7 @@ class ShopByCategoriesNameVC: UIViewController {
         collectionView.registerCVNib(cell: TopSellingCVCell.self)
     }
 
-    @IBAction func backBtnClicked(_ sender: UIButton) {
+    @IBAction func dismissButtonClicked(_ sender: UIButton) {
         dismissDetail()
     }
 }

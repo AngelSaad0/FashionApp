@@ -30,7 +30,7 @@ class ForgotPasswordVC: UIViewController {
         presentDetail(ResetPasswordVC())
     }
 
-    @IBAction func backBtnClicked(_ sender: Any) {
+    @IBAction func dismissButtonClicked(_ sender: Any) {
         dismissDetail()
     }
 
