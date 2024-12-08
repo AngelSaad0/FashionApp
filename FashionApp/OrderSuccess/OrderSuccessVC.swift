@@ -22,9 +22,9 @@ class OrderSuccessVC: UIViewController {
     func setupUI() {
         containerView.addCornerRadius(25)
         orderDetails.addCornerRadius(20)
-        titleLBL.setCustomFont(font: .GabaritoBold, size: .extraExtraLarge)
-        subTitleLbl.setCustomFont(size: .medium)
-        orderDetails.setCustomFont(size: .medium)
+        titleLBL.setCustomFont(font: .GabaritoBold, size: .size32)
+        subTitleLbl.setCustomFont(size: .size16)
+        orderDetails.setCustomFont(size: .size16)
     }
     
     @IBAction func orderDetailsCliked(_ sender: Any) {

@@ -6,26 +6,23 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 class ForgotPasswordVC: UIViewController {
+    // MARK: - Outlets
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var emailContainerView: UIView!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var continueButton: UIButton!
 
-    @IBOutlet var emailTxt: UITextField!
-    @IBOutlet var emailView: UIView!
-    @IBOutlet var titleLbl: UILabel!
-    @IBOutlet var contineBtn: UIButton!
+    // MARK: - Properties
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
 
-    private func setupUI() {
-        titleLbl.setCustomFont(font: .CircularStdBold, size: .extraExtraLarge)
-        emailTxt.setCustomFont(size: .medium)
-        contineBtn.setCustomFont(size: .medium)
-        emailView.addCornerRadius(8)
-        contineBtn.addCornerRadius(20)
-    }
-
+    // MARK: - Actions Methods
     @IBAction func contineBtnclicked(_ sender: Any) {
         presentDetail(ResetPasswordVC())
     }
@@ -33,5 +30,39 @@ class ForgotPasswordVC: UIViewController {
     @IBAction func dismissButtonClicked(_ sender: Any) {
         dismissDetail()
     }
+
+}
+// MARK: - Setup Methods
+extension ForgotPasswordVC {
+    private func setupUI() {
+        setupLabels()
+        setupTextFields()
+        setupButtons()
+        setupContainerView()
+        configureKeyboardManager()
+    }
+    private func setupLabels() {
+        titleLabel.customLabel(size: .size32, font: .GabaritoBold, text: .forgotPasswordLabel)
+    }
+    private func setupTextFields() {
+        emailTextField.customTextField(placeholder: .password)
+    }
+    private func setupButtons() {
+        continueButton.addCornerRadius(20)
+        continueButton.customButton(title: .continue)
+    }
+
+    private func setupContainerView() {
+        emailContainerView.addCornerRadius(8)
+    }
+    private func configureKeyboardManager() {
+        IQKeyboardManager.shared.resignOnTouchOutside = true
+        IQKeyboardManager.shared.keyboardDistance = 10
+        IQKeyboardManager.shared.layoutIfNeededOnUpdate = true
+    }
+
+}
+// MARK: - Helper Method
+extension ForgotPasswordVC {
 
 }

@@ -18,7 +18,7 @@ class AddressVC: UIViewController {
     }
 
     func setupUI() {
-        titleLbl.setCustomFont(font: .CircularStdBold, size: .extraLarge)
+        titleLbl.setCustomFont(font: .CircularStdBold, size: .size14)
     }
 
     func setupTableView() {

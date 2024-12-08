@@ -20,7 +20,7 @@ class WishlistVC: UIViewController {
     }
 
     func setupUI() {
-        titleLbl.setCustomFont(font: .CircularStdBold, size: .extraLarge)
+        titleLbl.setCustomFont(font: .CircularStdBold, size: .size24)
     }
 
     func setupTableView() {

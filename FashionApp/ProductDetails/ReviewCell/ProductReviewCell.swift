@@ -17,9 +17,9 @@ class ProductReviewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         userImg.layer.cornerRadius = userImg.frame.height/2
-        userName.setCustomFont(font: .GabaritoBold, size: .extraSmall)
-        ratingLbl.setCustomFont(size: .extraSmall)
-        descriptionLbl.setCustomFont(size: .extraSmall)
+        userName.setCustomFont(font: .GabaritoBold, size: .size14)
+        ratingLbl.setCustomFont(size: .size14)
+        descriptionLbl.setCustomFont(size: .size14)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

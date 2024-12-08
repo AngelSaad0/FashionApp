@@ -29,10 +29,10 @@ class CheckoutVC: UIViewController {
     func setupUI() {
         btnView.addCornerRadius(20)
         cornerRaduisView.forEach{$0.addCornerRadius(8)}
-        tileLbl.setCustomFont(font: .CircularStdBold, size: .extraLarge)
-        checkoutBtn.setCustomFont(size: .medium)
-        allLbLFonts.forEach{$0.setCustomFont(font: .CircularStdBook,size: .medium)}
-        totalLbl.setCustomFont(font: .GabaritoBold, size: .medium)
+        tileLbl.setCustomFont(font: .CircularStdBold, size: .size14)
+        checkoutBtn.setCustomFont(size: .size16)
+        allLbLFonts.forEach{$0.setCustomFont(font: .CircularStdBook,size: .size16)}
+        totalLbl.setCustomFont(font: .GabaritoBold, size: .size16)
     }
 
     func setupTableView() {

@@ -12,18 +12,18 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="FashionApp" customModuleProvider="target">
             <connections>
                 <outlet property="continueButton" destination="JcT-2e-bCb" id="aEf-ta-qYm"/>
+                <outlet property="continueWithAppleLabel" destination="Bh8-oU-SMB" id="7q0-19-IaA"/>
+                <outlet property="continueWithFacebookLabel" destination="PfP-sF-aOO" id="3R2-ir-UN1"/>
+                <outlet property="continueWithGoogleLabel" destination="CAR-3m-hbP" id="seI-HT-INO"/>
                 <outlet property="createAccountButton" destination="b2L-Lu-wtP" id="PCF-Zp-4D2"/>
                 <outlet property="emailContainerView" destination="vke-YW-FII" id="D6A-0E-ZvT"/>
                 <outlet property="emailTextField" destination="WTO-Ip-7PF" id="IDN-2s-bqq"/>
                 <outlet property="haveAccountLabel" destination="9po-l3-Zb6" id="eug-Sc-736"/>
-                <outlet property="titleLabel" destination="eDP-lx-MKL" id="6hm-JS-PlO"/>
+                <outlet property="signTitleLabel" destination="eDP-lx-MKL" id="6hm-JS-PlO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="roundedViews" destination="dcJ-OK-GXM" collectionClass="NSMutableArray" id="E5W-JU-QVR"/>
                 <outletCollection property="roundedViews" destination="Daw-Mg-vqv" collectionClass="NSMutableArray" id="hFK-JX-eUd"/>
                 <outletCollection property="roundedViews" destination="zfg-FP-NRr" collectionClass="NSMutableArray" id="UdK-WB-1kt"/>
-                <outletCollection property="continueWithLabels" destination="PfP-sF-aOO" collectionClass="NSMutableArray" id="ep8-5b-AMP"/>
-                <outletCollection property="continueWithLabels" destination="CAR-3m-hbP" collectionClass="NSMutableArray" id="7gy-hm-DjX"/>
-                <outletCollection property="continueWithLabels" destination="Bh8-oU-SMB" collectionClass="NSMutableArray" id="cUE-j9-YAn"/>
                 <outletCollection property="roundedViews" destination="JcT-2e-bCb" collectionClass="NSMutableArray" id="oE4-Xq-CO4"/>
             </connections>
         </placeholder>
@@ -33,7 +33,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDP-lx-MKL">
-                    <rect key="frame" x="27" y="122.99999999999999" width="98" height="37.333333333333329"/>
+                    <rect key="frame" x="27" y="122.99999999999999" width="339" height="37.333333333333329"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vke-YW-FII">
                             <rect key="frame" x="0.0" y="0.0" width="347" height="56"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test@gmail.com" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTO-Ip-7PF">
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTO-Ip-7PF">
                                     <rect key="frame" x="12" y="2.6666666666666572" width="323" height="50.666666666666664"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -76,29 +76,34 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Z5-g4-iF9">
                             <rect key="frame" x="0.0" y="136.99999999999997" width="347" height="15"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dont have an Account ? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9po-l3-Zb6">
-                                    <rect key="frame" x="0.0" y="0.33333333333337123" width="137.33333333333334" height="14.333333333333334"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2L-Lu-wtP">
-                                    <rect key="frame" x="139.33333333333334" y="-7.3333333333333144" width="78" height="30"/>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" title="Create One">
-                                        <color key="titleColor" systemColor="labelColor"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="createAccountBtnClicked:" destination="-1" eventType="touchUpInside" id="Zlv-rs-DId"/>
-                                    </connections>
-                                </button>
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Lyl-WE-ard">
+                                    <rect key="frame" x="0.0" y="0.0" width="347" height="15"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dont have an Account ? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9po-l3-Zb6">
+                                            <rect key="frame" x="0.0" y="0.33333333333337123" width="137.33333333333334" height="14.333333333333334"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2L-Lu-wtP">
+                                            <rect key="frame" x="143.33333333333337" y="0.0" width="203.66666666666663" height="15"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Create One">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="createAccountBtnClicked:" destination="-1" eventType="touchUpInside" id="Zlv-rs-DId"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="9po-l3-Zb6" firstAttribute="leading" secondItem="6Z5-g4-iF9" secondAttribute="leading" id="2po-GU-Sny"/>
-                                <constraint firstItem="b2L-Lu-wtP" firstAttribute="centerY" secondItem="6Z5-g4-iF9" secondAttribute="centerY" id="Gne-s5-ty0"/>
-                                <constraint firstItem="b2L-Lu-wtP" firstAttribute="leading" secondItem="9po-l3-Zb6" secondAttribute="trailing" constant="2" id="IYX-yw-USz"/>
+                                <constraint firstAttribute="bottom" secondItem="Lyl-WE-ard" secondAttribute="bottom" id="4If-8l-rqD"/>
+                                <constraint firstItem="Lyl-WE-ard" firstAttribute="leading" secondItem="6Z5-g4-iF9" secondAttribute="leading" id="LbJ-f1-Wg0"/>
+                                <constraint firstAttribute="trailing" secondItem="Lyl-WE-ard" secondAttribute="trailing" id="bGQ-SL-E4f"/>
                                 <constraint firstAttribute="height" constant="15" id="gBo-tn-AJH"/>
-                                <constraint firstItem="9po-l3-Zb6" firstAttribute="centerY" secondItem="6Z5-g4-iF9" secondAttribute="centerY" id="hWJ-gw-xmi"/>
+                                <constraint firstItem="Lyl-WE-ard" firstAttribute="top" secondItem="6Z5-g4-iF9" secondAttribute="top" id="zbj-NY-zYj"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -217,6 +222,7 @@
                 <constraint firstItem="2lq-8y-Bnx" firstAttribute="top" secondItem="zfg-FP-NRr" secondAttribute="top" id="IuB-s9-8Fb"/>
                 <constraint firstItem="7Eq-la-cAE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="23" id="KfD-iC-AaA"/>
                 <constraint firstItem="UgE-Jf-14U" firstAttribute="trailing" secondItem="dcJ-OK-GXM" secondAttribute="trailing" id="LY2-yI-e8m"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eDP-lx-MKL" secondAttribute="trailing" constant="27" id="Lo1-YT-Z7W"/>
                 <constraint firstItem="9yM-bg-n2S" firstAttribute="top" secondItem="Daw-Mg-vqv" secondAttribute="top" id="Phl-FK-PeF"/>
                 <constraint firstItem="FN9-1D-NNB" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.0555556" id="T7e-z6-1ij"/>
                 <constraint firstItem="UgE-Jf-14U" firstAttribute="bottom" secondItem="dcJ-OK-GXM" secondAttribute="bottom" id="Tvp-4r-kZN"/>

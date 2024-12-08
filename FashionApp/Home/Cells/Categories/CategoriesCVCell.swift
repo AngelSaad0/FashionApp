@@ -17,7 +17,7 @@ class CategoriesCVCell: UICollectionViewCell {
     }
 
     private func setupUI() {
-        itemTitle.setCustomFont(size: .extraSmall)
+        itemTitle.setCustomFont(size: .size14)
         DispatchQueue.main.async {
             self.itemImg.layer.cornerRadius = self.itemImg.frame.height/2
         }

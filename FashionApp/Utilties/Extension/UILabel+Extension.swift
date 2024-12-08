@@ -12,7 +12,7 @@ extension UILabel {
     func setCustomFont(font: Fonts = .CircularStdBook, size: Size) {
         self.font = UIFont(name: font.rawValue, size: size.rawValue)
     }
-    func customLbl(txtColor: Colors = .C707070, size: Size = .medium, font: Fonts = .regular, text:Lbls, direction: Direction = .normal, nOlines: Int = 1) {
+    func customLabel(txtColor: Colors = .C272727, size: Size = .size16, font: Fonts = .CircularStdBook, text: LocalizedLabels, direction: Direction = .normal, nOlines: Int = 1) {
 
         let size = iPhoneXFactor*(CGFloat(size.rawValue))
         self.font = UIFont(name: font.font, size: size)
@@ -25,8 +25,6 @@ extension UILabel {
 
         }
         self.textColor = UIColor(named: txtColor.rawValue)
-        //self.textColor = UIColor(hexString: txtColor.rawValue)
-       // self.textColor = txtColor.hex
         self.text = text.rawValue.localized
     }
 

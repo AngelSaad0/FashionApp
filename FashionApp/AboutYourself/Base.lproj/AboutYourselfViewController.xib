@@ -5,26 +5,22 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutYourselfVC" customModule="FashionApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutYourselfViewController" customModule="FashionApp" customModuleProvider="target">
             <connections>
-                <outlet property="ageRangLbl" destination="D7j-Oe-q6a" id="lvF-Yj-oNX"/>
+                <outlet property="aboutMeTitleLbl" destination="pOR-wL-hVF" id="2QE-ko-iwi"/>
+                <outlet property="ageRangLabel" destination="D7j-Oe-q6a" id="lvF-Yj-oNX"/>
                 <outlet property="arrowImg" destination="o9G-JH-oni" id="6pl-9f-BvN"/>
                 <outlet property="dropdownButton" destination="gPV-Yl-SDi" id="1cU-qx-TdR"/>
-                <outlet property="finshBtn" destination="3IA-F5-o0W" id="kwe-nZ-bD3"/>
-                <outlet property="titleLbl" destination="pOR-wL-hVF" id="BjI-Bi-EA3"/>
+                <outlet property="finshButton" destination="3IA-F5-o0W" id="kwe-nZ-bD3"/>
+                <outlet property="howOldLabel" destination="JbG-fM-xNn" id="ahb-52-ICP"/>
+                <outlet property="menButton" destination="HeT-OA-HdA" id="IXB-Nx-yBn"/>
+                <outlet property="shopLabel" destination="cm5-B3-iWy" id="ys7-B3-i1I"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outletCollection property="lbls" destination="cm5-B3-iWy" collectionClass="NSMutableArray" id="EXU-XO-mrI"/>
-                <outletCollection property="lbls" destination="JbG-fM-xNn" collectionClass="NSMutableArray" id="TNs-5i-fBB"/>
-                <outletCollection property="lbls" destination="D7j-Oe-q6a" collectionClass="NSMutableArray" id="CaK-q7-Wc0"/>
-                <outletCollection property="btns" destination="HeT-OA-HdA" collectionClass="NSMutableArray" id="j0e-iA-MdV"/>
-                <outletCollection property="btns" destination="pTN-mt-vIU" collectionClass="NSMutableArray" id="8hu-NY-Yki"/>
-                <outletCollection property="btns" destination="gPV-Yl-SDi" collectionClass="NSMutableArray" id="g0V-aS-Hm7"/>
-                <outletCollection property="btns" destination="3IA-F5-o0W" collectionClass="NSMutableArray" id="h2Q-h8-Ueh"/>
-                <outletCollection property="roundedView" destination="F57-WX-OYF" collectionClass="NSMutableArray" id="ZSd-ab-JZy"/>
+                <outlet property="womenButton" destination="pTN-mt-vIU" id="O7O-yd-X8Y"/>
+                <outletCollection property="roundedContainerView" destination="F57-WX-OYF" collectionClass="NSMutableArray" id="ZSd-ab-JZy"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -33,13 +29,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us About yourself" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOR-wL-hVF">
-                    <rect key="frame" x="24" y="161" width="229" height="28"/>
+                    <rect key="frame" x="24" y="161" width="345" height="28"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who do you shop for ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cm5-B3-iWy">
-                    <rect key="frame" x="24" y="238" width="171.33333333333334" height="20.333333333333314"/>
+                    <rect key="frame" x="24" y="238" width="345" height="20.333333333333314"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -47,28 +43,29 @@
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Inr-vn-vdT">
                     <rect key="frame" x="24" y="280.33333333333331" width="345" height="52"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HeT-OA-HdA">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeT-OA-HdA">
                             <rect key="frame" x="0.0" y="0.0" width="162.66666666666666" height="52"/>
                             <color key="backgroundColor" name="#8E6CEF"/>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal">
-                                <attributedString key="attributedTitle">
-                                    <fragment content="Men">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" metaFont="system" size="15"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <state key="normal" title="Men">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="menButtonCliked:" destination="-1" eventType="touchUpInside" id="1wo-HU-HKl"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTN-mt-vIU">
                             <rect key="frame" x="182.66666666666663" y="0.0" width="162.33333333333337" height="52"/>
                             <color key="backgroundColor" name="#F4F4F4"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Women">
-                                <color key="baseForegroundColor" systemColor="labelColor"/>
-                            </buttonConfiguration>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Women">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="womenButtonCliked:" destination="-1" eventType="touchUpInside" id="gne-gW-daN"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>
@@ -76,7 +73,7 @@
                     </constraints>
                 </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How Old are you ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbG-fM-xNn">
-                    <rect key="frame" x="24" y="397.33333333333331" width="138.33333333333334" height="20.333333333333314"/>
+                    <rect key="frame" x="24" y="397.33333333333331" width="345" height="20.333333333333314"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -84,10 +81,10 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F57-WX-OYF">
                     <rect key="frame" x="24" y="430.66666666666669" width="345" height="56"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age Range" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7j-Oe-q6a">
-                            <rect key="frame" x="16" y="18" width="82.666666666666671" height="20.333333333333329"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age Range" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7j-Oe-q6a">
+                            <rect key="frame" x="16" y="18" width="273" height="20.333333333333329"/>
                             <color key="tintColor" name="#272727"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -107,6 +104,7 @@
                         <constraint firstAttribute="height" constant="56" id="Fb9-Ht-HeX"/>
                         <constraint firstItem="D7j-Oe-q6a" firstAttribute="leading" secondItem="F57-WX-OYF" secondAttribute="leading" constant="16" id="U2A-b3-NvH"/>
                         <constraint firstAttribute="trailing" secondItem="o9G-JH-oni" secondAttribute="trailing" constant="16" id="ccz-0O-YGB"/>
+                        <constraint firstItem="o9G-JH-oni" firstAttribute="leading" secondItem="D7j-Oe-q6a" secondAttribute="trailing" constant="16" id="yhU-K2-nie"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPV-Yl-SDi" userLabel="dropdownButton">
@@ -156,6 +154,9 @@
                 <constraint firstItem="pOR-wL-hVF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="161" id="gAV-EI-Arw"/>
                 <constraint firstItem="gPV-Yl-SDi" firstAttribute="bottom" secondItem="F57-WX-OYF" secondAttribute="bottom" id="ht3-Sc-i39"/>
                 <constraint firstItem="cm5-B3-iWy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="ieU-q0-Xnk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cm5-B3-iWy" secondAttribute="trailing" constant="24" id="mbT-9T-bAd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pOR-wL-hVF" secondAttribute="trailing" constant="24" id="oSt-g3-UF1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JbG-fM-xNn" secondAttribute="trailing" constant="24" id="ogW-8L-yqS"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="F57-WX-OYF" secondAttribute="trailing" constant="24" id="pp3-Fu-7on"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3IA-F5-o0W" secondAttribute="bottom" constant="30" id="rcd-53-a9C"/>
                 <constraint firstItem="gPV-Yl-SDi" firstAttribute="top" secondItem="F57-WX-OYF" secondAttribute="top" id="vUY-40-978"/>
@@ -178,8 +179,5 @@
         <namedColor name="#F4F4F4">
             <color red="0.9570000171661377" green="0.9570000171661377" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

@@ -20,8 +20,8 @@ class TopSellingCVCell: UICollectionViewCell {
     }
 
     private func setupUI() {
-        itemTitle.setCustomFont(size: .medium)
-        itemPrice.setCustomFont(font: .GabaritoBold, size: .medium)
+        itemTitle.setCustomFont(size: .size16)
+        itemPrice.setCustomFont(font: .GabaritoBold, size: .size16)
         contentView.backgroundColor = UIColor(named: "#f6f6f6")
         contentView.addCornerRadius(16)
         contentView.clipsToBounds = true

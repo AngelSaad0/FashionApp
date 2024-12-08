@@ -1,0 +1,102 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "9po-l3-Zb6.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Dont have an Account ? \"; ObjectID = \"9po-l3-Zb6\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Dont have an Account ? "
+          }
+        }
+      }
+    },
+    "b2L-Lu-wtP.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Create One\"; ObjectID = \"b2L-Lu-wtP\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Create One"
+          }
+        }
+      }
+    },
+    "Bh8-oU-SMB.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Continue With Apple\"; ObjectID = \"Bh8-oU-SMB\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Continue With Apple"
+          }
+        }
+      }
+    },
+    "CAR-3m-hbP.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Continue With Google\"; ObjectID = \"CAR-3m-hbP\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Continue With Google"
+          }
+        }
+      }
+    },
+    "eDP-lx-MKL.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Sign in\"; ObjectID = \"eDP-lx-MKL\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Sign in"
+          }
+        }
+      }
+    },
+    "JcT-2e-bCb.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Continue\"; ObjectID = \"JcT-2e-bCb\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Continue"
+          }
+        }
+      }
+    },
+    "PfP-sF-aOO.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Continue With Facebook\"; ObjectID = \"PfP-sF-aOO\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Continue With Facebook"
+          }
+        }
+      }
+    },
+    "WTO-Ip-7PF.placeholder" : {
+      "comment" : "Class = \"UITextField\"; placeholder = \"Email Address\"; ObjectID = \"WTO-Ip-7PF\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Email Address"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

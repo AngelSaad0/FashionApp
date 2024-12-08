@@ -25,7 +25,7 @@ class ProductDropDownVC: UIViewController {
 
     func setupUI() {
         containerView.addCornerRadius(20)
-        titleLbl.setCustomFont(font: .CircularStdBold, size: .extraLarge)
+        titleLbl.setCustomFont(font: .CircularStdBold, size: .size14)
         titleLbl.text = vcTitle
         tableView.delegate = self
         tableView.dataSource = self

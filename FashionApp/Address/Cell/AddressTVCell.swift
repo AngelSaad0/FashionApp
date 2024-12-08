@@ -22,8 +22,8 @@ class AddressTVCell: UITableViewCell {
 
     func updateUI() {
         backImg.addCornerRadius(8)
-        editLbl.setCustomFont(font: .GabaritoBold, size: .extraSmall)
-        addressLbl.setCustomFont(size: .medium)
+        editLbl.setCustomFont(font: .GabaritoBold, size: .size14)
+        addressLbl.setCustomFont(size: .size16)
     }
 
     func config(_ cell: DummyAddress) {

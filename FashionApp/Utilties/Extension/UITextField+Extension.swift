@@ -15,17 +15,14 @@ extension UITextField {
         self.font = UIFont(name: font.rawValue, size: size.rawValue)
     }
     // customTxtFmield
-    func customTxtField(txtColor: Color = .C9E9E9E ,placeholderColor: Color = .C9E9E9E , size: Size = .small, font: Fonts = .regular, placeholder: TxtField, text: String? = "", isPassword: Bool = false, isCenter: Bool = false) {
+    func customTextField(txtColor: Colors = .C272727 /*,placeholderColor: Colors = .C272727*/ , size: Size = .size16, font: Fonts = .CircularStdBook, placeholder: LocalizedTextField, text: String? = "", isPassword: Bool = false, isCenter: Bool = false) {
         let size = iPhoneXFactor*(CGFloat(size.rawValue))
         self.tintColor = UIColor(named: txtColor.rawValue)
         self.textColor = UIColor(named: txtColor.rawValue)
         self.font = UIFont(name: font.rawValue.localized, size: size)
         self.borderStyle = .none
-        if(text == ""){
-            self.attributedPlaceholder = NSAttributedString(string: placeholder.rawValue.localized, attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: placeholderColor.rawValue) ?? .blue])
-            self.placeholder = placeholder.rawValue.localized
+//        self.attributedPlaceholder = NSAttributedString(string: placeholder.rawValue.localized, attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: placeholderColor.rawValue) ?? .blue])
 
-        }
         self.placeholder = placeholder.rawValue.localized
         if (!((text?.isEmpty) == nil)) {
             self.text = text
@@ -39,7 +36,7 @@ extension UITextField {
         self.returnKeyType = .default
     }
     //MARK: - change text color in case arabic
-    func txtFieldTxtColorInArbaic(txtColorAR: Color, txtColorEn: Color){
+    func txtFieldTxtColorInArbaic(txtColorAR: Colors, txtColorEn: Colors){
         self.textColor = UIColor(named: (isEnglish()) ?  (txtColorEn.rawValue):(txtColorAR.rawValue))
 
     }

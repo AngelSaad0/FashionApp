@@ -18,17 +18,22 @@
 		A9050A352D049B8200082847 /* lbls.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050A312D049B8200082847 /* lbls.swift */; };
 		A9050A372D049B8200082847 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050A292D049B8200082847 /* NavBar.swift */; };
 		A9050A382D049B8200082847 /* AlertTit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050A2B2D049B8200082847 /* AlertTit.swift */; };
-		A9050A392D049B8200082847 /* BTNs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050A332D049B8200082847 /* BTNs.swift */; };
+		A9050A392D049B8200082847 /* LocalizedButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050A332D049B8200082847 /* LocalizedButtons.swift */; };
 		A9050A3A2D049B8200082847 /* VcTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050A282D049B8200082847 /* VcTitle.swift */; };
-		A9050A3B2D049B8200082847 /* TxtField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050A2E2D049B8200082847 /* TxtField.swift */; };
+		A9050A3B2D049B8200082847 /* LocalizedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050A2E2D049B8200082847 /* LocalizedTextField.swift */; };
 		A9050A3D2D049B8200082847 /* NavBarImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050A272D049B8200082847 /* NavBarImg.swift */; };
-		A9050A3E2D049B8200082847 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050A2A2D049B8200082847 /* Color.swift */; };
 		A9050A3F2D049B8200082847 /* ValidMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050A322D049B8200082847 /* ValidMessage.swift */; };
 		A9050A422D049BB100082847 /* KHTxtField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050A412D049BB100082847 /* KHTxtField.swift */; };
 		A9050A472D049BBF00082847 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9050A452D049BBF00082847 /* Localizable.strings */; };
 		A9050A492D049C4000082847 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050A482D049C4000082847 /* String+Extensions.swift */; };
 		A9050BF32D04D86F00082847 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050BF22D04D86F00082847 /* UserDefaultsManager.swift */; };
 		A9050BF62D04E2A400082847 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A9050BF52D04E2A400082847 /* IQKeyboardManagerSwift */; };
+		A9050C4F2D05188300082847 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9050C4E2D05188300082847 /* SignInViewController.xib */; };
+		A9050C552D05308A00082847 /* LoginPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9050C542D05308A00082847 /* LoginPasswordVC.xib */; };
+		A9050C592D05311700082847 /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9050C582D05311700082847 /* ForgotPasswordVC.xib */; };
+		A9050C5D2D053DC200082847 /* AboutYourselfViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9050C5C2D053DC200082847 /* AboutYourselfViewController.xib */; };
+		A9050C602D054B1100082847 /* AgeRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9050C5F2D054B1100082847 /* AgeRange.swift */; };
+		A9050C632D05511D00082847 /* CreateAccountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9050C622D05511D00082847 /* CreateAccountVC.xib */; };
 		A951C7DE2CEC0376006828F8 /* ProductDetailsCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951C7D82CEC0376006828F8 /* ProductDetailsCVCell.swift */; };
 		A951C7DF2CEC0376006828F8 /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951C7DB2CEC0376006828F8 /* ProductDetailsVC.swift */; };
 		A951C7E02CEC0376006828F8 /* ProductDetailsCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A951C7D92CEC0376006828F8 /* ProductDetailsCVCell.xib */; };
@@ -82,7 +87,7 @@
 		A96F647B2CEAC64300B5939B /* OrderSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96F647A2CEAC64300B5939B /* OrderSummary.swift */; };
 		A96F64D42CEBA4DE00B5939B /* PaymentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96F64D32CEBA4DE00B5939B /* PaymentSection.swift */; };
 		A96F64DF2CEBB9CD00B5939B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96F64DE2CEBB9CC00B5939B /* UIView+Extension.swift */; };
-		A9AC2C8A2CEA7BF5008C3D6D /* AboutYourselfVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AC2C0B2CEA7BF5008C3D6D /* AboutYourselfVC.swift */; };
+		A9AC2C8A2CEA7BF5008C3D6D /* AboutYourselfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AC2C0B2CEA7BF5008C3D6D /* AboutYourselfViewController.swift */; };
 		A9AC2C8B2CEA7BF5008C3D6D /* AccountTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AC2C0E2CEA7BF5008C3D6D /* AccountTVCell.swift */; };
 		A9AC2C8C2CEA7BF5008C3D6D /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AC2C112CEA7BF5008C3D6D /* AccountVC.swift */; };
 		A9AC2C8D2CEA7BF5008C3D6D /* AddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AC2C152CEA7BF5008C3D6D /* AddressVC.swift */; };
@@ -118,18 +123,14 @@
 		A9AC2CB52CEA7BF5008C3D6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AC2C772CEA7BF5008C3D6D /* AppDelegate.swift */; };
 		A9AC2CB62CEA7BF5008C3D6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AC2C7D2CEA7BF5008C3D6D /* SceneDelegate.swift */; };
 		A9AC2CB72CEA7BF5008C3D6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AC2C7E2CEA7BF5008C3D6D /* ViewController.swift */; };
-		A9AC2CB82CEA7BF5008C3D6D /* AboutYourselfVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AC2C0C2CEA7BF5008C3D6D /* AboutYourselfVC.xib */; };
 		A9AC2CB92CEA7BF5008C3D6D /* AccountTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AC2C0F2CEA7BF5008C3D6D /* AccountTVCell.xib */; };
 		A9AC2CBA2CEA7BF5008C3D6D /* AccountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AC2C122CEA7BF5008C3D6D /* AccountVC.xib */; };
-		A9AC2CBC2CEA7BF5008C3D6D /* CreateAccountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AC2C192CEA7BF5008C3D6D /* CreateAccountVC.xib */; };
-		A9AC2CC12CEA7BF5008C3D6D /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AC2C2A2CEA7BF5008C3D6D /* ForgotPasswordVC.xib */; };
 		A9AC2CC22CEA7BF5008C3D6D /* HandleMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AC2C2D2CEA7BF5008C3D6D /* HandleMessageView.xib */; };
 		A9AC2CC32CEA7BF5008C3D6D /* HelpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AC2C302CEA7BF5008C3D6D /* HelpVC.xib */; };
 		A9AC2CC42CEA7BF5008C3D6D /* CategoriesCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AC2C332CEA7BF5008C3D6D /* CategoriesCVCell.xib */; };
 		A9AC2CC52CEA7BF5008C3D6D /* HomeHeaderReusable.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AC2C362CEA7BF5008C3D6D /* HomeHeaderReusable.xib */; };
 		A9AC2CC62CEA7BF5008C3D6D /* TopSellingCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AC2C392CEA7BF5008C3D6D /* TopSellingCVCell.xib */; };
 		A9AC2CC72CEA7BF5008C3D6D /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AC2C3D2CEA7BF5008C3D6D /* HomeVC.xib */; };
-		A9AC2CC82CEA7BF5008C3D6D /* LoginPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AC2C402CEA7BF5008C3D6D /* LoginPasswordVC.xib */; };
 		A9AC2CC92CEA7BF5008C3D6D /* NotificationsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AC2C4F2CEA7BF5008C3D6D /* NotificationsVC.xib */; };
 		A9AC2CCC2CEA7BF5008C3D6D /* OrdersVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AC2C572CEA7BF5008C3D6D /* OrdersVC.xib */; };
 		A9AC2CCD2CEA7BF5008C3D6D /* OrderDetailsTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AC2C5A2CEA7BF5008C3D6D /* OrderDetailsTVCell.xib */; };
@@ -138,7 +139,6 @@
 		A9AC2CD12CEA7BF5008C3D6D /* ShopByCategoriesTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AC2C662CEA7BF5008C3D6D /* ShopByCategoriesTVCell.xib */; };
 		A9AC2CD22CEA7BF5008C3D6D /* ShopByCategoriesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AC2C692CEA7BF5008C3D6D /* ShopByCategoriesVC.xib */; };
 		A9AC2CD32CEA7BF5008C3D6D /* ShopByCategoriesNameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AC2C6C2CEA7BF5008C3D6D /* ShopByCategoriesNameVC.xib */; };
-		A9AC2CD42CEA7BF5008C3D6D /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AC2C6F2CEA7BF5008C3D6D /* SignInViewController.xib */; };
 		A9AC2CD52CEA7BF5008C3D6D /* SupportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AC2C722CEA7BF5008C3D6D /* SupportVC.xib */; };
 		A9AC2CD72CEA7BF5008C3D6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9AC2C782CEA7BF5008C3D6D /* Assets.xcassets */; };
 		A9AC2CD82CEA7BF5008C3D6D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9AC2C792CEA7BF5008C3D6D /* Colors.xcassets */; };
@@ -162,18 +162,29 @@
 		A9050A272D049B8200082847 /* NavBarImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarImg.swift; sourceTree = "<group>"; };
 		A9050A282D049B8200082847 /* VcTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcTitle.swift; sourceTree = "<group>"; };
 		A9050A292D049B8200082847 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
-		A9050A2A2D049B8200082847 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		A9050A2B2D049B8200082847 /* AlertTit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTit.swift; sourceTree = "<group>"; };
 		A9050A2C2D049B8200082847 /* BACK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BACK.swift; sourceTree = "<group>"; };
-		A9050A2E2D049B8200082847 /* TxtField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxtField.swift; sourceTree = "<group>"; };
+		A9050A2E2D049B8200082847 /* LocalizedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedTextField.swift; sourceTree = "<group>"; };
 		A9050A312D049B8200082847 /* lbls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lbls.swift; sourceTree = "<group>"; };
 		A9050A322D049B8200082847 /* ValidMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidMessage.swift; sourceTree = "<group>"; };
-		A9050A332D049B8200082847 /* BTNs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTNs.swift; sourceTree = "<group>"; };
+		A9050A332D049B8200082847 /* LocalizedButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedButtons.swift; sourceTree = "<group>"; };
 		A9050A412D049BB100082847 /* KHTxtField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KHTxtField.swift; sourceTree = "<group>"; };
-		A9050A432D049BBF00082847 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A9050A442D049BBF00082847 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A9050A482D049C4000082847 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		A9050BF22D04D86F00082847 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		A9050C4D2D05188300082847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SignInViewController.xib; sourceTree = "<group>"; };
+		A9050C502D05188300082847 /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/SignInViewController.xcstrings; sourceTree = "<group>"; };
+		A9050C512D05194800082847 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A9050C522D05195C00082847 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A9050C532D05308A00082847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoginPasswordVC.xib; sourceTree = "<group>"; };
+		A9050C562D05308A00082847 /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/LoginPasswordVC.xcstrings; sourceTree = "<group>"; };
+		A9050C572D05311700082847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ForgotPasswordVC.xib; sourceTree = "<group>"; };
+		A9050C5A2D05311700082847 /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/ForgotPasswordVC.xcstrings; sourceTree = "<group>"; };
+		A9050C5B2D053DC200082847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AboutYourselfViewController.xib; sourceTree = "<group>"; };
+		A9050C5E2D053DC200082847 /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/AboutYourselfViewController.xcstrings; sourceTree = "<group>"; };
+		A9050C5F2D054B1100082847 /* AgeRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeRange.swift; sourceTree = "<group>"; };
+		A9050C612D05511D00082847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CreateAccountVC.xib; sourceTree = "<group>"; };
+		A9050C642D05511D00082847 /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/CreateAccountVC.xcstrings; sourceTree = "<group>"; };
 		A951C7D82CEC0376006828F8 /* ProductDetailsCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsCVCell.swift; sourceTree = "<group>"; };
 		A951C7D92CEC0376006828F8 /* ProductDetailsCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailsCVCell.xib; sourceTree = "<group>"; };
 		A951C7DB2CEC0376006828F8 /* ProductDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
@@ -227,17 +238,14 @@
 		A96F647A2CEAC64300B5939B /* OrderSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummary.swift; sourceTree = "<group>"; };
 		A96F64D32CEBA4DE00B5939B /* PaymentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSection.swift; sourceTree = "<group>"; };
 		A96F64DE2CEBB9CC00B5939B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		A9AC2C0B2CEA7BF5008C3D6D /* AboutYourselfVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutYourselfVC.swift; sourceTree = "<group>"; };
-		A9AC2C0C2CEA7BF5008C3D6D /* AboutYourselfVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutYourselfVC.xib; sourceTree = "<group>"; };
+		A9AC2C0B2CEA7BF5008C3D6D /* AboutYourselfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutYourselfViewController.swift; sourceTree = "<group>"; };
 		A9AC2C0E2CEA7BF5008C3D6D /* AccountTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTVCell.swift; sourceTree = "<group>"; };
 		A9AC2C0F2CEA7BF5008C3D6D /* AccountTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTVCell.xib; sourceTree = "<group>"; };
 		A9AC2C112CEA7BF5008C3D6D /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 		A9AC2C122CEA7BF5008C3D6D /* AccountVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountVC.xib; sourceTree = "<group>"; };
 		A9AC2C152CEA7BF5008C3D6D /* AddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressVC.swift; sourceTree = "<group>"; };
 		A9AC2C182CEA7BF5008C3D6D /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
-		A9AC2C192CEA7BF5008C3D6D /* CreateAccountVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAccountVC.xib; sourceTree = "<group>"; };
 		A9AC2C292CEA7BF5008C3D6D /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
-		A9AC2C2A2CEA7BF5008C3D6D /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
 		A9AC2C2C2CEA7BF5008C3D6D /* HandleMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleMessageView.swift; sourceTree = "<group>"; };
 		A9AC2C2D2CEA7BF5008C3D6D /* HandleMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HandleMessageView.xib; sourceTree = "<group>"; };
 		A9AC2C2F2CEA7BF5008C3D6D /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
@@ -251,7 +259,6 @@
 		A9AC2C3C2CEA7BF5008C3D6D /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		A9AC2C3D2CEA7BF5008C3D6D /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		A9AC2C3F2CEA7BF5008C3D6D /* LoginPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPasswordVC.swift; sourceTree = "<group>"; };
-		A9AC2C402CEA7BF5008C3D6D /* LoginPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginPasswordVC.xib; sourceTree = "<group>"; };
 		A9AC2C422CEA7BF5008C3D6D /* MainTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
 		A9AC2C442CEA7BF5008C3D6D /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		A9AC2C452CEA7BF5008C3D6D /* HandleMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleMessageModel.swift; sourceTree = "<group>"; };
@@ -278,7 +285,6 @@
 		A9AC2C6B2CEA7BF5008C3D6D /* ShopByCategoriesNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopByCategoriesNameVC.swift; sourceTree = "<group>"; };
 		A9AC2C6C2CEA7BF5008C3D6D /* ShopByCategoriesNameVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopByCategoriesNameVC.xib; sourceTree = "<group>"; };
 		A9AC2C6E2CEA7BF5008C3D6D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		A9AC2C6F2CEA7BF5008C3D6D /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		A9AC2C712CEA7BF5008C3D6D /* SupportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportVC.swift; sourceTree = "<group>"; };
 		A9AC2C722CEA7BF5008C3D6D /* SupportVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupportVC.xib; sourceTree = "<group>"; };
 		A9AC2C742CEA7BF5008C3D6D /* WishlistVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistVC.swift; sourceTree = "<group>"; };
@@ -452,13 +458,13 @@
 				A9050A272D049B8200082847 /* NavBarImg.swift */,
 				A9050A282D049B8200082847 /* VcTitle.swift */,
 				A9050A292D049B8200082847 /* NavBar.swift */,
-				A9050A2A2D049B8200082847 /* Color.swift */,
 				A9050A2B2D049B8200082847 /* AlertTit.swift */,
 				A9050A2C2D049B8200082847 /* BACK.swift */,
-				A9050A2E2D049B8200082847 /* TxtField.swift */,
+				A9050A2E2D049B8200082847 /* LocalizedTextField.swift */,
+				A9050C5F2D054B1100082847 /* AgeRange.swift */,
 				A9050A312D049B8200082847 /* lbls.swift */,
 				A9050A322D049B8200082847 /* ValidMessage.swift */,
-				A9050A332D049B8200082847 /* BTNs.swift */,
+				A9050A332D049B8200082847 /* LocalizedButtons.swift */,
 				A9AC2C472CEA7BF5008C3D6D /* Message.swift */,
 				A96F64372CEA9F6800B5939B /* Images.swift */,
 				A96F64382CEA9F6800B5939B /* Status.swift */,
@@ -537,8 +543,8 @@
 		A9AC2C0D2CEA7BF5008C3D6D /* AboutYourself */ = {
 			isa = PBXGroup;
 			children = (
-				A9AC2C0B2CEA7BF5008C3D6D /* AboutYourselfVC.swift */,
-				A9AC2C0C2CEA7BF5008C3D6D /* AboutYourselfVC.xib */,
+				A9AC2C0B2CEA7BF5008C3D6D /* AboutYourselfViewController.swift */,
+				A9050C5C2D053DC200082847 /* AboutYourselfViewController.xib */,
 			);
 			path = AboutYourself;
 			sourceTree = "<group>";
@@ -576,7 +582,7 @@
 			isa = PBXGroup;
 			children = (
 				A9AC2C182CEA7BF5008C3D6D /* CreateAccountVC.swift */,
-				A9AC2C192CEA7BF5008C3D6D /* CreateAccountVC.xib */,
+				A9050C622D05511D00082847 /* CreateAccountVC.xib */,
 			);
 			path = CreateAccount;
 			sourceTree = "<group>";
@@ -585,7 +591,7 @@
 			isa = PBXGroup;
 			children = (
 				A9AC2C292CEA7BF5008C3D6D /* ForgotPasswordVC.swift */,
-				A9AC2C2A2CEA7BF5008C3D6D /* ForgotPasswordVC.xib */,
+				A9050C582D05311700082847 /* ForgotPasswordVC.xib */,
 			);
 			path = ForgotPasswordVC;
 			sourceTree = "<group>";
@@ -659,7 +665,7 @@
 			isa = PBXGroup;
 			children = (
 				A9AC2C3F2CEA7BF5008C3D6D /* LoginPasswordVC.swift */,
-				A9AC2C402CEA7BF5008C3D6D /* LoginPasswordVC.xib */,
+				A9050C542D05308A00082847 /* LoginPasswordVC.xib */,
 			);
 			path = LoginPassword;
 			sourceTree = "<group>";
@@ -796,7 +802,7 @@
 			isa = PBXGroup;
 			children = (
 				A9AC2C6E2CEA7BF5008C3D6D /* SignInViewController.swift */,
-				A9AC2C6F2CEA7BF5008C3D6D /* SignInViewController.xib */,
+				A9050C4E2D05188300082847 /* SignInViewController.xib */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -823,10 +829,12 @@
 		A9AC2C7F2CEA7BF5008C3D6D /* FashionApp */ = {
 			isa = PBXGroup;
 			children = (
-				A9050BF22D04D86F00082847 /* UserDefaultsManager.swift */,
+				A9050A462D049BBF00082847 /* Localization  */,
+				A9AC2C2B2CEA7BF5008C3D6D /* ForgotPasswordVC */,
+				A9AC2C412CEA7BF5008C3D6D /* LoginPassword */,
 				A9AC2C702CEA7BF5008C3D6D /* SignIn */,
 				A9AC2C1A2CEA7BF5008C3D6D /* CreateAccount */,
-				A9050A462D049BBF00082847 /* Localization  */,
+				A9AC2C0D2CEA7BF5008C3D6D /* AboutYourself */,
 				A951C8AF2CECF0E9006828F8 /* SearchByName */,
 				A9AC2C3E2CEA7BF5008C3D6D /* Home */,
 				A951C7DD2CEC0376006828F8 /* ProductDetails */,
@@ -834,8 +842,6 @@
 				A951C87D2CECD07B006828F8 /* OrderSuccess */,
 				A951C8762CECD00C006828F8 /* Checkout */,
 				A951C86C2CECD003006828F8 /* Cart */,
-				A9AC2C0D2CEA7BF5008C3D6D /* AboutYourself */,
-				A9AC2C412CEA7BF5008C3D6D /* LoginPassword */,
 				A9AC2C432CEA7BF5008C3D6D /* MainTabBar */,
 				A9AC2C502CEA7BF5008C3D6D /* Notifications */,
 				A9AC2C582CEA7BF5008C3D6D /* Order */,
@@ -851,9 +857,9 @@
 				A9AC2C612CEA7BF5008C3D6D /* Payment */,
 				A9AC2C2E2CEA7BF5008C3D6D /* HandleMessageView */,
 				A9AC2C172CEA7BF5008C3D6D /* Address */,
-				A9AC2C2B2CEA7BF5008C3D6D /* ForgotPasswordVC */,
 				A9AC2CF82CEA9654008C3D6D /* Add Address */,
 				A9AC2C4D2CEA7BF5008C3D6D /* Model */,
+				A9050BF22D04D86F00082847 /* UserDefaultsManager.swift */,
 				A96F64452CEA9F6800B5939B /* Utilties */,
 				A9AC2C772CEA7BF5008C3D6D /* AppDelegate.swift */,
 				A9AC2C782CEA7BF5008C3D6D /* Assets.xcassets */,
@@ -975,7 +981,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9AC2CB82CEA7BF5008C3D6D /* AboutYourselfVC.xib in Resources */,
+				A9050C5D2D053DC200082847 /* AboutYourselfViewController.xib in Resources */,
 				A9AC2CB92CEA7BF5008C3D6D /* AccountTVCell.xib in Resources */,
 				A96F64572CEAA0F400B5939B /* OrdersTVCell.xib in Resources */,
 				A9AC2CBA2CEA7BF5008C3D6D /* AccountVC.xib in Resources */,
@@ -986,7 +992,7 @@
 				A951C87A2CECD00C006828F8 /* CheckoutVC.xib in Resources */,
 				A9050A472D049BBF00082847 /* Localizable.strings in Resources */,
 				A951C8842CECD092006828F8 /* ProductReviewCell.xib in Resources */,
-				A9AC2CBC2CEA7BF5008C3D6D /* CreateAccountVC.xib in Resources */,
+				A9050C632D05511D00082847 /* CreateAccountVC.xib in Resources */,
 				A951C7E02CEC0376006828F8 /* ProductDetailsCVCell.xib in Resources */,
 				A951C88D2CECD2CA006828F8 /* ProductDropDownTVCell.xib in Resources */,
 				A951C88E2CECD2CA006828F8 /* ProductDropDownVC.xib in Resources */,
@@ -999,14 +1005,14 @@
 				A96F64492CEA9F6800B5939B /* Gabarito-Bold.ttf in Resources */,
 				A951C87F2CECD07B006828F8 /* OrderSuccessVC.xib in Resources */,
 				A9AC2CFC2CEA9654008C3D6D /* AddAddressVC.xib in Resources */,
-				A9AC2CC12CEA7BF5008C3D6D /* ForgotPasswordVC.xib in Resources */,
+				A9050C592D05311700082847 /* ForgotPasswordVC.xib in Resources */,
 				A9AC2CC22CEA7BF5008C3D6D /* HandleMessageView.xib in Resources */,
 				A9AC2CC32CEA7BF5008C3D6D /* HelpVC.xib in Resources */,
 				A9AC2CC42CEA7BF5008C3D6D /* CategoriesCVCell.xib in Resources */,
 				A9AC2CC52CEA7BF5008C3D6D /* HomeHeaderReusable.xib in Resources */,
 				A9AC2CC62CEA7BF5008C3D6D /* TopSellingCVCell.xib in Resources */,
 				A9AC2CC72CEA7BF5008C3D6D /* HomeVC.xib in Resources */,
-				A9AC2CC82CEA7BF5008C3D6D /* LoginPasswordVC.xib in Resources */,
+				A9050C552D05308A00082847 /* LoginPasswordVC.xib in Resources */,
 				A9AC2CC92CEA7BF5008C3D6D /* NotificationsVC.xib in Resources */,
 				A9AC2CCC2CEA7BF5008C3D6D /* OrdersVC.xib in Resources */,
 				A9AC2CCD2CEA7BF5008C3D6D /* OrderDetailsTVCell.xib in Resources */,
@@ -1016,7 +1022,7 @@
 				A9AC2CD22CEA7BF5008C3D6D /* ShopByCategoriesVC.xib in Resources */,
 				A951C8382CECBF1A006828F8 /* MyFavouritesVC.xib in Resources */,
 				A9AC2CD32CEA7BF5008C3D6D /* ShopByCategoriesNameVC.xib in Resources */,
-				A9AC2CD42CEA7BF5008C3D6D /* SignInViewController.xib in Resources */,
+				A9050C4F2D05188300082847 /* SignInViewController.xib in Resources */,
 				A9AC2CD52CEA7BF5008C3D6D /* SupportVC.xib in Resources */,
 				A9AC2CD72CEA7BF5008C3D6D /* Assets.xcassets in Resources */,
 				A9AC2CDC2CEA9194008C3D6D /* WishlistVC.xib in Resources */,
@@ -1035,7 +1041,7 @@
 			files = (
 				A9050A182D04974200082847 /* Size.swift in Sources */,
 				A9050A1F2D0497D900082847 /* Helper.swift in Sources */,
-				A9AC2C8A2CEA7BF5008C3D6D /* AboutYourselfVC.swift in Sources */,
+				A9AC2C8A2CEA7BF5008C3D6D /* AboutYourselfViewController.swift in Sources */,
 				A9AC2C8B2CEA7BF5008C3D6D /* AccountTVCell.swift in Sources */,
 				A9050A492D049C4000082847 /* String+Extensions.swift in Sources */,
 				A9AC2C8C2CEA7BF5008C3D6D /* AccountVC.swift in Sources */,
@@ -1076,11 +1082,10 @@
 				A9050A352D049B8200082847 /* lbls.swift in Sources */,
 				A9050A372D049B8200082847 /* NavBar.swift in Sources */,
 				A9050A382D049B8200082847 /* AlertTit.swift in Sources */,
-				A9050A392D049B8200082847 /* BTNs.swift in Sources */,
+				A9050A392D049B8200082847 /* LocalizedButtons.swift in Sources */,
 				A9050A3A2D049B8200082847 /* VcTitle.swift in Sources */,
-				A9050A3B2D049B8200082847 /* TxtField.swift in Sources */,
+				A9050A3B2D049B8200082847 /* LocalizedTextField.swift in Sources */,
 				A9050A3D2D049B8200082847 /* NavBarImg.swift in Sources */,
-				A9050A3E2D049B8200082847 /* Color.swift in Sources */,
 				A9050A3F2D049B8200082847 /* ValidMessage.swift in Sources */,
 				A951C7DE2CEC0376006828F8 /* ProductDetailsCVCell.swift in Sources */,
 				A951C9002CEE23C3006828F8 /* Constant.swift in Sources */,
@@ -1092,6 +1097,7 @@
 				A951C82C2CECB5F9006828F8 /* UITextField+Extesion.swift in Sources */,
 				A9AC2CA12CEA7BF5008C3D6D /* HomeHeaderModel.swift in Sources */,
 				A951C8322CECBE5E006828F8 /* UICollectionView+Extension.swift in Sources */,
+				A9050C602D054B1100082847 /* AgeRange.swift in Sources */,
 				A9AC2CA22CEA7BF5008C3D6D /* Message.swift in Sources */,
 				A9AC2CA32CEA7BF5008C3D6D /* OrdersModel.swift in Sources */,
 				A9AC2CA52CEA7BF5008C3D6D /* OrderStatusModel.swift in Sources */,
@@ -1135,16 +1141,62 @@
 		A9050A452D049BBF00082847 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A9050A432D049BBF00082847 /* Localizable.strings */,
 				A9050A442D049BBF00082847 /* Localizable.strings */,
+				A9050C522D05195C00082847 /* ar */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		A9050C4E2D05188300082847 /* SignInViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9050C4D2D05188300082847 /* Base */,
+				A9050C502D05188300082847 /* mul */,
+			);
+			name = SignInViewController.xib;
+			sourceTree = "<group>";
+		};
+		A9050C542D05308A00082847 /* LoginPasswordVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9050C532D05308A00082847 /* Base */,
+				A9050C562D05308A00082847 /* mul */,
+			);
+			name = LoginPasswordVC.xib;
+			sourceTree = "<group>";
+		};
+		A9050C582D05311700082847 /* ForgotPasswordVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9050C572D05311700082847 /* Base */,
+				A9050C5A2D05311700082847 /* mul */,
+			);
+			name = ForgotPasswordVC.xib;
+			sourceTree = "<group>";
+		};
+		A9050C5C2D053DC200082847 /* AboutYourselfViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9050C5B2D053DC200082847 /* Base */,
+				A9050C5E2D053DC200082847 /* mul */,
+			);
+			name = AboutYourselfViewController.xib;
+			sourceTree = "<group>";
+		};
+		A9050C622D05511D00082847 /* CreateAccountVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9050C612D05511D00082847 /* Base */,
+				A9050C642D05511D00082847 /* mul */,
+			);
+			name = CreateAccountVC.xib;
 			sourceTree = "<group>";
 		};
 		A9AC2C7C2CEA7BF5008C3D6D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A9AC2C7B2CEA7BF5008C3D6D /* Base */,
+				A9050C512D05194800082847 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1211,6 +1263,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1274,6 +1327,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

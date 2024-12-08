@@ -34,13 +34,13 @@ class OrderDetailsVC: UIViewController {
 
     func setupUI() {
         cornerRadiusViews.forEach{$0.addCornerRadius(8)}
-        titleLbl.setCustomFont(font: .GabaritoBold, size: .medium)
-        shippngDetailsLbl.setCustomFont(font: .GabaritoBold, size: .medium)
-        orderItemLbl.setCustomFont(font: .GabaritoBold, size: .medium)
-        viewAllBtn.setCustomFont(font: .GabaritoBold, size: .extraSmall)
-        viewAllBtn.setCustomFont(size: .medium)
-        phoneLbl.setCustomFont(size: .extraSmall)
-        addressLbl.setCustomFont(size: .extraSmall)
+        titleLbl.setCustomFont(font: .GabaritoBold, size: .size16)
+        shippngDetailsLbl.setCustomFont(font: .GabaritoBold, size: .size16)
+        orderItemLbl.setCustomFont(font: .GabaritoBold, size: .size16)
+        viewAllBtn.setCustomFont(font: .GabaritoBold, size: .size14)
+        viewAllBtn.setCustomFont(size: .size16)
+        phoneLbl.setCustomFont(size: .size14)
+        addressLbl.setCustomFont(size: .size14)
     }
 
     func setupDummyData() {

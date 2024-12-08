@@ -5,71 +5,155 @@
  Created by Engy on 2/13/2567 BE.
  */
 
-/* الخطوط */
-"BlackFont"="Cairo-Black";
-"BoldFont"="Cairo-Bold";
-"ExtraBoldFont"="Cairo-ExtraBold";
-"LightFont"="Cairo-Light";
-"MediumFont"="Cairo-Medium";
-"RegularFont"="Cairo-Regular";
-"SemiBoldFont"="Cairo-SemiBold";
+/* Fonts */
+"BlackFont" = "Cairo-Black";
+"BoldFont" = "Cairo-Bold";
+"ExtraBoldFont" = "Cairo-ExtraBold";
+"LightFont" = "Cairo-Light";
+"MediumFont" = "Cairo-Medium";
+"RegularFont" = "Cairo-Regular";
+"SemiBoldFont" = "Cairo-SemiBold";
 
-/* الرسائل */
+/* Labels */
 "none" = "";
-"firstNameEmpty" = "الاسم الاول فارغ";
+"firstNameEmpty" = "الاسم الأول فارغ";
 "lastNameEmpty" = "الاسم الثاني فارغ";
-"firstNameInvalid" = "الاسم الاول غير صالح";
+"firstName" = "الاسم الأول";
+"lastName" = "الاسم الثاني";
+"firstNameInvalid" = "الاسم الأول غير صالح";
 "lastNameInvalid" = "الاسم الثاني غير صالح";
-"emailEmpty" = "الايميل فارغ";
-"emailInvalid" = "الايميل غير صالح";
-"passwordEmpty" = "كلمه السر فارغه";
-"passwordInvalid" = "كلمه السر غير صالحه";
-"confirmPasswordEmpty" = "اعد كتابه كلمه السر فارغه";
-"confirmPasswordInvalid" = "اعد كتابه كلمه السر غير صالحه";
-"passwordsMismatch" = "كلمه السر غير متساويه";
+"emailEmpty" = "البريد الإلكتروني فارغ";
+"emailInvalid" = "البريد الإلكتروني غير صالح";
+"passwordEmpty" = "كلمة المرور فارغة";
+"passwordInvalid" = "كلمة المرور غير صالحة";
+"confirmPasswordEmpty" = "تأكيد كلمة المرور فارغ";
+"confirmPasswordInvalid" = "تأكيد كلمة المرور غير صالح";
+"passwordsMismatch" = "كلمة المرور غير متطابقة";
 "mobileInvalid" = "رقم الهاتف غير صالح";
 "mobileEmpty" = "رقم الهاتف فارغ";
-"termsConditionsNotAccepted" = "الموافقه علي الشروط والاحكام";
+"termsConditionsNotAccepted" = "موافقة على الشروط والأحكام";
 "success" = "نجاح";
 "notAvailable" = "غير متاح";
 "nameEmpty" = "الاسم فارغ";
 "nameValid" = "الاسم غير صالح";
-"emailValid" = "الايميل غير صالح";
-"passwordValid" = "كلمه السر غير صالحه";
-"reTypeEmpty" = "اعد كتابه كلمه السر فارغه";
-"reTypeValid" = "اعد كتابه كلمه السر غير صالحه";
-"passwordRetypeEqual" = "كلمه السر غير متساويه";
+"emailValid" = "البريد الإلكتروني غير صالح";
+"passwordValid" = "كلمة المرور غير صالحة";
+"reTypeEmpty" = "تأكيد كلمة المرور فارغ";
+"reTypeValid" = "تأكيد كلمة المرور غير صالحة";
+"passwordRetypeEqual" = "كلمة المرور غير متطابقة";
 "mobileValid" = "رقم الهاتف غير صالح";
 "addressEmpty" = "العنوان فارغ";
 "addressValid" = "العنوان غير صالح";
-"cityEmpty" = "المدينه فارغه";
-"cityValid" = "المدينه غير صالحه";
-"countryEmpty" = "الدوله فارغه";
-"countryValid" = "الدوله غير صالحه";
-"termsConditions" = "موافقه علي الشروط والاحكام";
+"cityEmpty" = "المدينة فارغة";
+"cityValid" = "المدينة غير صالحة";
+"countryEmpty" = "الدولة فارغة";
+"countryValid" = "الدولة غير صالحة";
+"termsConditions" = "موافقة على الشروط والأحكام";
 "successLogin" = "تم تسجيل الدخول بنجاح";
 "successRegister" = "تم التسجيل بنجاح";
-"checkingEmailFail" = "خطأ اثناء التحقق من البريد الالكتروني";
-"emailExist" = "البريد الالكتروني المدخل موجود بالفعل";
-"encodingFail" = "خطأ اثناء ترميز معلومات العميل";
+"checkingEmailFail" = "خطأ أثناء التحقق من البريد الإلكتروني";
+"emailExist" = "البريد الإلكتروني موجود بالفعل";
+"encodingFail" = "خطأ أثناء ترميز معلومات العميل";
 "customerCreationFail" = "فشل في إنشاء عميل جديد";
 "draftsCreationFail" = "فشل في إنشاء عربة التسوق أو قائمة الأمنيات";
-"emailDoesNotExist" = "البريد الالكتروني المدخل غير موجود";
-"passwordDoesNotMatch" = "كلمه المرور المدخله غير صحيحه";
-"addedToWishlist" = "تم اضافه المنتج الى قائمة الامنيات";
-"removedFromWishlist" = "تم ازاله المنتج من قائمة الامنيات";
-"addedToShoppingCart" = "تم اضافه المنتج الى عربة التسوق";
+"emailDoesNotExist" = "البريد الإلكتروني غير موجود";
+"passwordDoesNotMatch" = "كلمة المرور غير صحيحة";
+"addedToWishlist" = "تم إضافة المنتج إلى قائمة الأمنيات";
+"removedFromWishlist" = "تم إزالة المنتج من قائمة الأمنيات";
+"addedToShoppingCart" = "تم إضافة المنتج إلى عربة التسوق";
 "foundInShoppingCart" = "تم العثور على المنتج في عربة التسوق";
-"removedFromShoppingCart" = "تم ازاله المنتج من عربة التسوق";
+"removedFromShoppingCart" = "تم إزالة المنتج من عربة التسوق";
 "ordersFetchingFailed" = "خطأ حدث أثناء تحميل الطلبات";
 "addressesFetchingFailed" = "خطأ حدث أثناء تحميل العناوين";
 "newSelectedAddressFailed" = "خطأ حدث أثناء تحديث العنوان الافتراضي";
 "defaultAddressUpdated" = "تم تحديث العنوان الافتراضي بنجاح";
-"newAddressAdded" = "تم اضافه العنوان الجديد بنجاح";
+"newAddressAdded" = "تم إضافة العنوان الجديد بنجاح";
 "addressEdited" = "تم تعديل العنوان بنجاح";
 "discountCodeEmpty" = "لم تدخل كود الخصم";
 "discountCodeFailed" = "كود الخصم غير صالح";
 "discountCodeApplied" = "تهانينا، تم تطبيق كود الخصم";
-"placingOrderFailed" = "خطأ حدث أثناء ارسال الطلب";
+"placingOrderFailed" = "خطأ حدث أثناء إرسال الطلب";
 "emptyOrderArray" = "لم يتم العثور على طلب";
 "exchangeRateFailed" = "فشل في تحديث إعدادات العملة";
+
+/* Buttons */
+"submit" = "إرسال";
+"cancel" = "إلغاء";
+"ok" = "موافق";
+
+/* Text Fields */
+"none" = "";
+"welcome" = "مرحبا";
+"continueAs" = "تابع كـ";
+"agreeFor" = "أوافق على";
+"editProfileLbl" = "تعديل الملف الشخصي";
+"signinlabel" = "تسجيل الدخول";
+"createAccountLabel" = "إنشاء حساب";
+"forgotPasswordLabel" = "هل نسيت كلمة المرور؟";
+"tellUsAboutYourself" = "أخبرنا عن نفسك";
+"whoDoYouShopFor" = "من ستشتري له؟";
+"ageRange" = "نطاق العمر";
+"dontHaveAnAccount" = "ليس لديك حساب؟";
+"continueWithApple" = "تابع باستخدام Apple";
+"continueWithGoogle" = "تابع باستخدام Google";
+"continueWithFacebook" = "تابع باستخدام Facebook";
+"emailResetPassword" = "أرسلنا لك بريدًا لإعادة تعيين كلمة المرور.";
+"firstNameEmpty" = "الاسم الأول فارغ";
+"lastNameEmpty" = "الاسم الأخير فارغ";
+"emailEmpty" = "البريد الإلكتروني فارغ";
+"passwordEmpty" = "كلمة المرور فارغة";
+"confirmPasswordEmpty" = "تأكيد كلمة المرور فارغ";
+"invalidEmail" = "البريد الإلكتروني غير صالح";
+"passwordsDoNotMatch" = "كلمات المرور لا تتطابق";
+"none" = "لا شيء";
+"login" = "تسجيل الدخول";
+"logout" = "تسجيل الخروج";
+"newUser" = "مستخدم جديد";
+"save" = "حفظ";
+"send" = "إرسال";
+"register" = "تسجيل";
+"forgotPassword" = "نسيت كلمة المرور";
+"guest" = "ضيف";
+"termsAndConditions" = "الشروط والأحكام";
+"submit" = "إرسال";
+"cancel" = "إلغاء";
+"ok" = "حسناً";
+"editProfile" = "تعديل الملف الشخصي";
+"signIn" = "تسجيل الدخول";
+"createAccount" = "إنشاء حساب";
+"agreeToTerms" = "الموافقة على الشروط";
+"welcomeMessage" = "مرحباً";
+"dontHaveAccount" = "ليس لديك حساب؟";
+"tellUsAboutYou" = "أخبرنا عن نفسك";
+"whoDoYouShopFor" = "لمن تتسوق؟";
+"ageRange" = "الفئة العمرية";
+"emailResetPassword" = "إعادة تعيين كلمة المرور عبر البريد الإلكتروني";
+"continueAs" = "متابعة كـ";
+"continue" = "متابعه";
+"success" = "نجاح";
+"error" = "خطأ";
+"loading" = "جارٍ التحميل...";
+"name" = "الاسم";
+"email" = "البريد الإلكتروني";
+"mobile" = "رقم الجوال";
+"emailOrMobile" = "البريد الإلكتروني أو الجوال";
+"password" = "كلمة المرور";
+"retypePassword" = "أعد إدخال كلمة المرور";
+"message" = "الرسالة";
+"oldPassword" = "كلمة المرور القديمة";
+"newPassword" = "كلمة المرور الجديدة";
+"retypeNewPassword" = "أعد إدخال كلمة المرور الجديدة";
+"reset" = "إعادة تعيين";
+"howOldAreYou" = "كم عمرك؟";
+"success" = "نجاح";
+"finish" = "انهاء";
+"male" = "ذكر";
+"female" = "أنثى";
+"Under18" = "أقل من 18";
+
+
+
+
+
+
+

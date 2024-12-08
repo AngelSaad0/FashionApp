@@ -28,7 +28,15 @@ class LoginPasswordVC: UIViewController {
     }
 
     @IBAction func contineBtnClicked(_ sender: Any) {
-        UIWindow.setRootViewController(viewController: MainTabBarVC())
+        guard !(passwordTextField.text?.isEmpty ?? true) else{
+            displayMessage(massage: .passwordEmpty)
+            return
+        }
+        if checkUserData() {
+            UIWindow.setRootViewController(viewController: MainTabBarVC())
+        }else {
+            displayMessage(massage: .passwordsMismatch)
+        }
     }
 
     @IBAction func showOrHidePasswordButtonCliked(_ sender: UIButton) {
@@ -40,6 +48,7 @@ class LoginPasswordVC: UIViewController {
 
 // MARK: - Setup Methods
 extension LoginPasswordVC {
+
     private func setupUI() {
         setupLabels()
         setupTextFields()
@@ -48,17 +57,17 @@ extension LoginPasswordVC {
         configureKeyboardManager()
     }
     private func setupLabels() {
-        titleLabel.setCustomFont(font: .CircularStdBold, size: .extraExtraLarge)
-        forgetLabel.setCustomFont(size: .extraSmall)
+        titleLabel.customLabel(size: .size32, font: .GabaritoBold, text: .signinlabel)
+        forgetLabel.customLabel(size: .size14,text: .forgotPasswordLabel)
+
     }
     private func setupTextFields() {
-        passwordTextField.setCustomFont(size: .medium)
-
+        passwordTextField.customTextField(placeholder: .password)
     }
     private func setupButtons() {
         continueButton.addCornerRadius(20)
-        resetButton.setCustomFont(font: .CircularStdBold, size: .small)
-        continueButton.setCustomFont(size: .medium)
+        continueButton.customButton(title: .continue)
+        resetButton.customButton(font:.CircularStdBold, size: .size14,title: .reset)
 
     }
     private func setupContainerView() {
@@ -70,6 +79,14 @@ extension LoginPasswordVC {
         IQKeyboardManager.shared.keyboardDistance = 10
         IQKeyboardManager.shared.layoutIfNeededOnUpdate = true
     }
+
+}
+// MARK: - Helper Method
+extension LoginPasswordVC {
+    private func checkUserData()-> Bool {
+        return UserDefaultsManager.shared.password == passwordTextField.text! ?  true : false
+    }
+
 }
 
 

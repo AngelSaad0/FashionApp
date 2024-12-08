@@ -48,10 +48,10 @@ class ProductDetailsVC: UIViewController {
     }
 
     func setupUI() {
-        sizeLbl.setCustomFont(font: .GabaritoBold, size: .small)
-        allLabelFontGabarito.forEach{$0.setCustomFont(font: .GabaritoBold, size: .medium)}
-        allLabelFontCircular.forEach{$0.setCustomFont(size: .medium)}
-        allLabelCircularSize12.forEach{$0.setCustomFont(font: .CircularStdBold, size: .medium)}
+        sizeLbl.setCustomFont(font: .GabaritoBold, size: .size14)
+        allLabelFontGabarito.forEach{$0.setCustomFont(font: .GabaritoBold, size: .size16)}
+//        allLabelFontCircular.forEach{$0.setCustomFont(size: .size16)}
+        allLabelCircularSize12.forEach{$0.setCustomFont(font: .CircularStdBold, size: .size16)}
         roundedView.forEach{$0.layer.cornerRadius = $0.frame.height/2}
     }
 
@@ -73,7 +73,7 @@ class ProductDetailsVC: UIViewController {
         vc.vcTitle = "Size"
         vc.antherOptions = detatails.sizes
         if let presentationController = vc.presentationController as? UISheetPresentationController {
-            presentationController.detents = [.medium()]
+//            presentationController.detents = [.size16()]
         }
         vc.userSelection = { index in
             self.sizeLbl.text = self.detatails?.sizes[index]
@@ -87,7 +87,7 @@ class ProductDetailsVC: UIViewController {
         vc.vcTitle = "Color"
         vc.colorArray = detatails.colors
         if let presentationController = vc.presentationController as? UISheetPresentationController {
-            presentationController.detents = [.medium()]
+//            presentationController.detents = [.size16()]
         }
         vc.userSelection = { index in
             self.colorView.backgroundColor = UIColor(named: self.detatails!.colors[index])

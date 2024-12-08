@@ -39,7 +39,7 @@ extension UIButton {
         self.layer.cornerRadius = CGFloat(raduis)
     }
     //MARK: - add Under line Title TO Button
-    func addUnderlineTitle(titleColor: Colors = .CE2E2E2, font: Fonts = .regular, size: Size = .small, title: BTN){
+    func addUnderlineTitle(titleColor: Colors = .CE2E2E2, font: Fonts = .CircularStdMedium, size: Size = .size16, title: LocalizedButtons){
         self.tintColor = titleColor.hex
         let size = iPhoneXFactor*(CGFloat(size.rawValue))
         let yourAttributes: [NSAttributedString.Key: Any] = [
@@ -53,7 +53,7 @@ extension UIButton {
         self.setAttributedTitle(attributeString, for: .normal)
     }
     //MARK: - custom Button
-    func customBtn(titleColor: Colors = .CFFFFFF, font: Fonts = .regular , size: Size = .medium , title: BTN) {
+    func customButton(titleColor: Colors = .CFFFFFF, font: Fonts = .CircularStdBook , size: Size = .size16 , title: LocalizedButtons) {
         self.tintColor = UIColor(named: titleColor.rawValue)
         let size = iPhoneXFactor*(CGFloat(size.rawValue))
         self.titleLabel?.font = UIFont(name: (font.rawValue.localized), size: size)

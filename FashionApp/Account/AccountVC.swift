@@ -27,9 +27,9 @@ class AccountVC: UIViewController {
 
     private func setupUI() {
         cornerRaduisView.addCornerRadius(8)
-        accountNameLbl.setCustomFont(font: .GabaritoBold, size: .medium)
-        phoneLbl.setCustomFont(font: .GabaritoBold, size: .medium)
-        editBtn.setCustomFont(font: .GabaritoBold, size: .extraSmall)
+        accountNameLbl.setCustomFont(font: .GabaritoBold, size: .size16)
+        phoneLbl.setCustomFont(font: .GabaritoBold, size: .size16)
+        editBtn.setCustomFont(font: .GabaritoBold, size: .size14)
     }
 
     private func setupTableView() {

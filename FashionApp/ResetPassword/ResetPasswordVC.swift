@@ -16,8 +16,8 @@ class ResetPasswordVC: UIViewController {
     }
 
     func setupUI() {
-        returnToLogin.setCustomFont(size: .medium)
-        messageLbl.setCustomFont(size: .extraLarge)
+        returnToLogin.setCustomFont(size: .size18)
+        messageLbl.setCustomFont(size: .size18)
         returnToLogin.addCornerRadius(20)
     }
     

@@ -18,7 +18,7 @@ class OrdersCVCell: UICollectionViewCell {
     }
     func setupUI() {
         containerView.addCornerRadius(16)
-        titleLbl.setCustomFont(size: .extraSmall)
+        titleLbl.setCustomFont(size: .size14)
     }
 
     func confige(_ item: OrdersStateModel) {

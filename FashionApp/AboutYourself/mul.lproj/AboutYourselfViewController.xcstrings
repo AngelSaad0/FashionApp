@@ -1,0 +1,90 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "3IA-F5-o0W.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Finish\"; ObjectID = \"3IA-F5-o0W\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Finish"
+          }
+        }
+      }
+    },
+    "cm5-B3-iWy.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Who do you shop for ?\"; ObjectID = \"cm5-B3-iWy\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Who do you shop for ?"
+          }
+        }
+      }
+    },
+    "D7j-Oe-q6a.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Age Range\"; ObjectID = \"D7j-Oe-q6a\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Age Range"
+          }
+        }
+      }
+    },
+    "HeT-OA-HdA.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Men\"; ObjectID = \"HeT-OA-HdA\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Men"
+          }
+        }
+      }
+    },
+    "JbG-fM-xNn.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"How Old are you ?\"; ObjectID = \"JbG-fM-xNn\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "How Old are you ?"
+          }
+        }
+      }
+    },
+    "pOR-wL-hVF.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Tell us About yourself\"; ObjectID = \"pOR-wL-hVF\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Tell us About yourself"
+          }
+        }
+      }
+    },
+    "pTN-mt-vIU.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Women\"; ObjectID = \"pTN-mt-vIU\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Women"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

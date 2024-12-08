@@ -167,7 +167,7 @@ extension SearchByNameVC: UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let header = view as? UITableViewHeaderFooterView else { return }
         header.textLabel?.textColor = .label
-        header.textLabel?.setCustomFont(font: .GabaritoBold, size: .extraLarge)
+        header.textLabel?.setCustomFont(font: .GabaritoBold, size: .size14)
         header.textLabel?.frame = header.bounds.offsetBy(dx: 24, dy: 0)
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -192,7 +192,7 @@ extension SearchByNameVC: UICollectionViewDelegate {
         vc.vcTitle = filterOption.title
         vc.antherOptions = filterOption.options
         if let presentationController = vc.presentationController as? UISheetPresentationController {
-            presentationController.detents = [.medium()]
+//            presentationController.detents = [size16()]
         }
         present(vc, animated: true)
 

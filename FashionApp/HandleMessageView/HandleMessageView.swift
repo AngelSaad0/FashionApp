@@ -25,8 +25,8 @@ class HandleMessageView: UIView {
     }
 
     func updateUI() {
-        messageLbl.setCustomFont(font: .GabaritoBold, size: .extraLarge)
-        massageBtn.setCustomFont(size: .medium)
+        messageLbl.setCustomFont(font: .GabaritoBold, size: .size14)
+        massageBtn.setCustomFont(size: .size16)
     }
 
     func confige(_ item: HandleMessageModel) {

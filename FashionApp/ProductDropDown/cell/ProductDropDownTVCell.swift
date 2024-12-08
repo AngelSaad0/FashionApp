@@ -25,7 +25,7 @@ class ProductDropDownTVCell: UITableViewCell {
         colorView.layer.borderColor =  UIColor.white.cgColor
         colorView.layer.cornerRadius = colorView.frame.height/2
         containerView.layer.cornerRadius = 20
-        titleLbl.setCustomFont(size: .medium)
+        titleLbl.setCustomFont(size: .size16)
     }
 
     func configCellForSize(_ item: String) {

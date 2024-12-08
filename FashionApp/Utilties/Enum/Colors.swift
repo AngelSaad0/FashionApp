@@ -1,5 +1,5 @@
 //
-//  Colors.swift
+//  Color.swift
 //  FashionApp
 //
 //  Created by Engy on 12/7/24.
@@ -41,10 +41,16 @@ enum Colors: String {
     case CE7F0E1 = "#E7F0E1"
     case CF0E1EF = "#F0E1EF"
     case CC328B9 = "#C328B9"
+    case CF4F4F4 = "#F4F4F4"
+    case C272727 = "#272727"
+    case C8E6CEF = "#8E6CEF"
+    case none = ""
+
+
     var hex: UIColor {
-           return UIColor(hexString: self.rawValue)
-       }
-       var cgColor: CGColor{
-           return UIColor(hexString: self.rawValue).cgColor
-       }
+        return UIColor(hexString: self.rawValue)
+    }
+    var cgColor: CGColor{
+        return UIColor(hexString: self.rawValue).cgColor
+    }
 }

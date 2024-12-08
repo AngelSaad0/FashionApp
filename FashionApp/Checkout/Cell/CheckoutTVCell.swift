@@ -26,8 +26,8 @@ class CheckoutTVCell: UITableViewCell {
 
     func updateUI() {
         containerView.layer.cornerRadius = 8
-        titleLbl.setCustomFont(size: .extraSmall)
-        subtitleLbl.setCustomFont(size: .medium)
+        titleLbl.setCustomFont(size: .size14)
+        subtitleLbl.setCustomFont(size: .size16)
     }
 
     func configure(title: String, subtitle: String) {

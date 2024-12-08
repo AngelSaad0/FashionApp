@@ -20,7 +20,7 @@ class PaymentVC: UIViewController {
     }
 
     func initUI() {
-        titleLbl.setCustomFont(font: .CircularStdBold, size: .extraLarge)
+        titleLbl.setCustomFont(font: .CircularStdBold, size: .size25)
     }
     func setupTableView() {
         tableView.delegate = self
@@ -72,7 +72,7 @@ extension PaymentVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let header = view as? UITableViewHeaderFooterView else { return }
         header.textLabel?.textColor = .label
-        header.textLabel?.setCustomFont(font: .GabaritoBold, size: .small)
+        header.textLabel?.setCustomFont(font: .GabaritoBold, size: .size14)
         header.textLabel?.frame = header.bounds.offsetBy(dx: 20, dy: 0)
     }
 

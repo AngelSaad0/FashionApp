@@ -49,7 +49,7 @@ class CreateAccountVC: UIViewController {
             }
         }
         saveData()
-        presentDetail(AboutYourselfVC())
+        presentDetail(AboutYourselfViewController())
     }
 
     @IBAction func resetButtonClicked(_ sender: Any) {
@@ -76,17 +76,23 @@ extension CreateAccountVC {
         configureKeyboardManager()
     }
     private func setupLabels() {
-        titleLabel.setCustomFont(font: .CircularStdBold, size: .extraExtraLarge)
-        forgetLabel.setCustomFont(size: .extraSmall)
+        titleLabel.customLabel(size: .size32, font: .GabaritoBold, text: .createAccountLabel)
+        forgetLabel.customLabel(size: .size14, text: .forgotPasswordLabel)
     }
+
     private func setupTextFields() {
-        textFields.forEach{$0.setCustomFont(size: .medium)}
+        firstNameTextField.customTextField(placeholder: .firstName)
+        lastNameTextField.customTextField(placeholder: .lastName)
+        emailTextField.customTextField(placeholder: .email)
+        passwordTextField.customTextField(placeholder: .password)
     }
     private func setupButtons() {
-        continueButton.setCustomFont(font: .CircularStdBold, size: .medium)
-        resetButton.setCustomFont(size: .small)
         continueButton.addCornerRadius(20)
+        continueButton.customButton(title: .continue)
+        resetButton.customButton(title: .reset)
+        continueButton.customButton(title: .continue)
     }
+
     private func setupContainerView() {
         roundedContainerView.forEach{$0.layer.cornerRadius = 12}
     }
@@ -95,7 +101,6 @@ extension CreateAccountVC {
         IQKeyboardManager.shared.keyboardDistance = 10
         IQKeyboardManager.shared.layoutIfNeededOnUpdate = true
     }
-
 
 }
 // MARK: - Helper Method

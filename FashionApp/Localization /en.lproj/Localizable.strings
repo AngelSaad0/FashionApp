@@ -6,17 +6,21 @@
 */
 
 /* Fonts */
-"BlackFont"="Poppins-Black";
-"BoldFont"="Poppins-Bold";
-"ExtraBoldFont"="Poppins-ExtraBold";
-"LightFont"="Poppins-Light";
-"MediumFont"="Poppins-Medium";
-"RegularFont"="Poppins-Regular";
-"SemiBoldFont"="Poppins-SemiBold"; 
+"BlackFont" = "Poppins-Black";
+"BoldFont" = "Poppins-Bold";
+"ExtraBoldFont" = "Poppins-ExtraBold";
+"LightFont" = "Poppins-Light";
+"MediumFont" = "Poppins-Medium";
+"RegularFont" = "Poppins-Regular";
+"SemiBoldFont" = "Poppins-SemiBold";
+
 /* Messages */
+// Labels
 "none" = "";
 "firstNameEmpty" = "First name is empty";
+"firstName" = "First name";
 "lastNameEmpty" = "Last name is empty";
+"lastName" = "Last name";
 "firstNameInvalid" = "First name is not valid";
 "lastNameInvalid" = "Last name is not valid";
 "emailEmpty" = "Email is empty";
@@ -48,7 +52,7 @@
 "termsConditions" = "Agree to terms and conditions";
 "successLogin" = "Logged in successfully";
 "successRegister" = "Registered successfully";
-"checkingEmailFail" = "Error checking if email not already registered";
+"checkingEmailFail" = "Error checking if email is already registered";
 "emailExist" = "Entered email already exists";
 "encodingFail" = "Error encoding customer info";
 "customerCreationFail" = "Failed to create new customer";
@@ -60,15 +64,91 @@
 "addedToShoppingCart" = "Item successfully added to shopping cart";
 "foundInShoppingCart" = "Item found in shopping cart";
 "removedFromShoppingCart" = "Item successfully removed from shopping cart";
-"ordersFetchingFailed" = "Error happened while loading your orders";
-"addressesFetchingFailed" = "Error happened while loading your addresses";
-"newSelectedAddressFailed" = "Error happened while updating your default address";
+"ordersFetchingFailed" = "Error occurred while loading your orders";
+"addressesFetchingFailed" = "Error occurred while loading your addresses";
+"newSelectedAddressFailed" = "Error occurred while updating your default address";
 "defaultAddressUpdated" = "Default address updated successfully";
 "newAddressAdded" = "New address added successfully";
 "addressEdited" = "Address has been edited successfully";
 "discountCodeEmpty" = "You have not entered a discount code";
 "discountCodeFailed" = "Entered discount code is not valid";
 "discountCodeApplied" = "Congratulations, discount code applied";
-"placingOrderFailed" = "Error happened while sending your order";
+"placingOrderFailed" = "Error occurred while sending your order";
 "emptyOrderArray" = "No order found";
-"exchangeRateFailed" = "Failed to update currency setting";
+"exchangeRateFailed" = "Failed to update currency settings";
+
+// Texts
+"welcome" = "Welcome";
+"agreeFor" = "Agree for";
+"editProfileLbl" = "Edit Profile";
+"signinlabel" = "Sign In";
+"createAccountLabel" = "Create Account";
+"forgotPasswordLabel" = "Forgot Password";
+"tellUsAboutYourself" = "Tell us About yourself";
+"whoDoYouShopFor" = "Who do you shop for?";
+"ageRange" = "Age Range";
+"dontHaveAnAccount" = "Don't have an account?";
+"continueWithApple" = "Continue with Apple";
+"continueWithGoogle" = "Continue with Google";
+"continueWithFacebook" = "Continue with Facebook";
+"continueAs" = "Continue as";
+"continue" = "Continue";
+
+"emailResetPassword" = "We sent you an email to reset your password.";
+"invalidEmail" = "Invalid email address";
+"passwordsDoNotMatch" = "Passwords do not match";
+
+// Buttons
+"submit" = "Submit";
+"cancel" = "Cancel";
+"ok" = "OK";
+
+// Miscellaneous
+"error" = "Error";
+"loading" = "Loading...";
+"none" = "None";
+"login" = "Login";
+"logout" = "Logout";
+"newUser" = "New User";
+"save" = "Save";
+"send" = "Send";
+"register" = "Register";
+"forgotPassword" = "Forgot Password";
+"guest" = "Guest";
+"termsAndConditions" = "Terms and Conditions";
+"submit" = "Submit";
+"cancel" = "Cancel";
+"ok" = "OK";
+"editProfile" = "Edit Profile";
+"signIn" = "Sign In";
+"createAccount" = "Create Account";
+"agreeToTerms" = "Agree to Terms";
+"welcomeMessage" = "Welcome";
+"dontHaveAccount" = "Don’t have an account?";
+"tellUsAboutYou" = "Tell us about yourself";
+"whoDoYouShopFor" = "Who do you shop for?";
+"ageRange" = "Age Range";
+"emailResetPassword" = "Reset Password via Email";
+"success" = "Success";
+"error" = "Error";
+"loading" = "Loading...";
+"name" = "Name";
+"email" = "Email";
+"mobile" = "Mobile Number";
+"emailOrMobile" = "Email or Mobile";
+"password" = "Password";
+"retypePassword" = "Retype Password";
+"message" = "Message";
+"oldPassword" = "Old Password";
+"newPassword" = "New Password";
+"retypeNewPassword" = "Retype New Password";
+"reset" = "Reset";
+"howOldAreYou" = "How old are you?";
+"success" = "Success";
+"finish" = "Finish";
+"male" = "Male";
+"female" = "Female";
+"Under18" = "Under 18";
+
+
+

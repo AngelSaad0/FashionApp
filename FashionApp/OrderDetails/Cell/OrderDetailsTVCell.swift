@@ -17,8 +17,8 @@ class OrderDetailsTVCell: UITableViewCell {
     }
 
     func setupUI() {
-        stateLbl.setCustomFont(size: .medium)
-        dateLbl.setCustomFont(size: .extraSmall)
+        stateLbl.setCustomFont(size: .size16)
+        dateLbl.setCustomFont(size: .size14)
         img.image = UIImage(named: Images.none.rawValue)
     }
 

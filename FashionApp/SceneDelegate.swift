@@ -15,8 +15,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else {return}
         window = UIWindow(windowScene: windowScene)
-//        let vc = UIStoryboard(name: "MainTabBarVC", bundle: nil).instantiateViewController(withIdentifier: "MainTabBar")
-        window?.rootViewController = SignInViewController()
+
+        if UserDefaultsManager.shared.isLogin || UserDefaultsManager.shared.isBoarding {
+            window?.rootViewController = MainTabBarVC()
+        } else {
+                window?.rootViewController = SignInViewController()
+        }
+
         window?.makeKeyAndVisible()
 
         guard let _ = (scene as? UIWindowScene) else { return }

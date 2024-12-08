@@ -17,7 +17,7 @@ class MyFavouritesVC: UIViewController {
     }
 
     func setupUI() {
-        titleLbl.setCustomFont(font: .GabaritoBold, size: .extraExtraLarge)
+        titleLbl.setCustomFont(font: .GabaritoBold, size: .size32)
     }
 
     func setupCollectionView() {

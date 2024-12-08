@@ -18,9 +18,9 @@ class AddAddressVC: UIViewController {
         setupUI()
     }
     func setupUI() {
-        titleLbl.setCustomFont(font: .CircularStdBold, size: .extraLarge)
-        saveBtn.setCustomFont(size: .medium)
-        allTtx.forEach{$0.setCustomFont(size: .medium)}
+        titleLbl.setCustomFont(font: .CircularStdBold, size: .size18)
+        saveBtn.setCustomFont(size: .size16)
+        allTtx.forEach{$0.setCustomFont(size: .size16)}
         saveBtn.addCornerRadius(20)
         allCornerView.forEach{$0.addCornerRadius(8)}
     }

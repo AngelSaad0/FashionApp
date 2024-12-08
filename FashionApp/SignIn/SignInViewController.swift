@@ -12,9 +12,11 @@ class SignInViewController: UIViewController {
 
     @IBOutlet var emailContainerView: UIView!
     @IBOutlet var roundedViews: [UIView]!
-    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var signTitleLabel: UILabel!
     @IBOutlet var haveAccountLabel: UILabel!
-    @IBOutlet var continueWithLabels: [UILabel]!
+    @IBOutlet var continueWithAppleLabel: UILabel!
+    @IBOutlet var continueWithGoogleLabel: UILabel!
+    @IBOutlet var continueWithFacebookLabel: UILabel!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var continueButton: UIButton!
     @IBOutlet var createAccountButton: UIButton!
@@ -64,18 +66,19 @@ extension SignInViewController {
         configureKeyboardManager()
     }
     private func setupLabels() {
-        titleLabel.setCustomFont(size: .extraExtraLarge)
-        continueWithLabels.forEach{$0.setCustomFont(font: .CircularStdBold, size: .medium)}
-        haveAccountLabel.setCustomFont(size: .extraSmall)
-
+        signTitleLabel.customLabel(size: .size32, font: .GabaritoBold, text: .signinlabel)
+        haveAccountLabel.customLabel(size: .size12, text: .dontHaveAnAccount)
+        continueWithAppleLabel.customLabel(text: .continueWithApple)
+        continueWithGoogleLabel.customLabel(text: .continueWithGoogle)
+        continueWithFacebookLabel.customLabel(text: .continueWithFacebook)
     }
-    private func setupTextFields() {
-        emailTextField.setCustomFont(size: .medium)
 
+    private func setupTextFields() {
+        emailTextField.customTextField(placeholder: .email)
     }
     private func setupButtons() {
-        continueButton.setCustomFont(size: .medium)
-        createAccountButton.setCustomFont(font: .CircularStdBold, size: .small)
+        continueButton.customButton(title: .continue)
+        createAccountButton.customButton(size: .size15, title: .createAccount)
 
     }
 

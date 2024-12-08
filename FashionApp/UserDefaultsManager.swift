@@ -15,6 +15,7 @@ class UserDefaultsManager {
     var darkModeEnabled: Bool = false
 
     var gender: String = ""
+    var age: String = ""
     var name: String = ""
     var firstName: String = ""
     var lastName: String = ""
@@ -40,6 +41,7 @@ class UserDefaultsManager {
         self.darkModeEnabled  = getSharedBool(forKey: "darkMode")
         self.gender = getSharedString(forKey: "gender")
         self.name = getSharedString(forKey: "name")
+        self.age = getSharedString(forKey: "age")
         self.firstName = getSharedString(forKey: "firstName")
         self.lastName = getSharedString(forKey: "lastName")
         self.phone = getSharedString(forKey: "phone")
@@ -67,6 +69,7 @@ class UserDefaultsManager {
         setSharedValue("darkMode",value: darkModeEnabled)
         setSharedValue("gender", value: gender)
         setSharedValue("name", value: name)
+        setSharedValue("age", value: name)
         setSharedValue("firstName", value: firstName)
         setSharedValue("lastName", value: lastName)
         setSharedValue("phone", value: phone)
@@ -86,6 +89,7 @@ class UserDefaultsManager {
         removeValue(forKey: "darkMode")
         removeValue(forKey: "gender")
         removeValue(forKey: "name")
+        removeValue(forKey: "age")
         removeValue(forKey: "firstName")
         removeValue(forKey: "lastName")
         removeValue(forKey: "phone")
